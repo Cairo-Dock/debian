@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Comment=A dock to launch your programs easily.
+Exec=cairo-dock -o
+Icon=cairo-dock.svg
+Terminal=false
+
+Name=Cairo-Dock with OpenGL
+Name[fr]=Cairo-Dock avec l'OpenGL
+
+GenericName=Multi-purpose Dock
+GenericName[fr]=Dock multi-usage
+Categories=Utility;

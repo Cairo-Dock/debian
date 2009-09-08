@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Exec=cairo-dock -c
+Icon=cairo-dock.svg
+Terminal=false
+
+Name=Cairo-Dock without OpenGL
+Name[fr]=Cairo-Dock sans l'OpenGL
+
+GenericName=Multi-purpose Dock
+GenericName[fr]=Dock multi-usage
+Categories=Utility;

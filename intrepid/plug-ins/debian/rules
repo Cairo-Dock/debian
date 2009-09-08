@@ -1,0 +1,42 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE=1
+
+DH_ALWAYS_EXCLUDE=CVS:.svn
+
+configure_flags += \
+		--enable-gnome-integration \
+		--enable-xfce-integration \
+		--disable-old-gnome-integration \
+		--enable-alsa-mixer \
+		--enable-terminal \
+		--enable-powermanager \
+		--enable-wifi \
+		--enable-tomboy \
+		--enable-compiz-icon \
+		--enable-xgamma \
+		--enable-gmenu \
+		--disable-gio-in-gmenu \
+		--enable-mail \
+		--enable-weblets \
+		--enable-keyboard-indicator \
+		--enable-exif \
+		--enable-dnd2share \
+		--enable-musicplayer
+# default flags 
+
+%:
+	dh $@
+
+build: build-stamp
+build-stamp:
+	dh build --before dh_auto_configure
+	dh_auto_configure -- 	$(configure_flags)
+	dh_makeshlibs -a -n --exclude=*
+	dh build --before dh_auto_test
+	dh build --after dh_auto_test
+	touch $@
+
+
+get-orig-source:
+	dh_testdir
+	uscan --force-download --verbose --repack

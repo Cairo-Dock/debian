@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE=1
+
+DH_ALWAYS_EXCLUDE=CVS:.svn
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/autotools.mk
+include /usr/share/cdbs/1/rules/simple-patchsys.mk
+
+DEB_INSTALL_MANPAGES_cairo-dock-core := debian/cairo-dock.1
+
+DEB_INSTALL_CHANGELOGS_ALL := data/ChangeLog.txt
+
+get-orig-source:
+	dh_testdir
+	uscan --force-download --verbose --repack

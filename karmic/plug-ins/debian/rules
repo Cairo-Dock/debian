@@ -1,0 +1,41 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE=1
+
+DH_ALWAYS_EXCLUDE=CVS:.svn
+
+configure_flags += \
+		--enable-gnome-integration \
+		--enable-xfce-integration \
+		--disable-old-gnome-integration \
+		--enable-alsa-mixer \
+		--enable-terminal \
+		--enable-powermanager \
+		--enable-wifi \
+		--enable-tomboy \
+		--enable-compiz-icon \
+		--enable-xgamma \
+		--enable-gmenu \
+		--disable-gio-in-gmenu \
+		--enable-mail \
+		--enable-weblets \
+		--enable-keyboard-indicator \
+		--enable-exif \
+		--enable-dnd2share \
+		--enable-musicplayer
+# default flags 
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- 	$(configure_flags)
+
+override_dh_makeshlibs:
+	dh_makeshlibs -a -n --exclude=*
+
+override_dh_auto_test:
+	# Skip dh_auto_test because it's FTBFS
+
+get-orig-source:
+	dh_testdir
+	uscan --force-download --verbose --repack
