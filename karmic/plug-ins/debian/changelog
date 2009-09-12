@@ -1,4 +1,4 @@
-cairo-dock-plug-ins (2.1.0-beta1-20090912~ppa0~karmic) karmic; urgency=low
+cairo-dock-plug-ins (2.1.0-rc1-20090912~ppa0~karmic) karmic; urgency=low
 
   * New Weekly Version.
   * debian/rules
