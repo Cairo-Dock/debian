@@ -135,7 +135,7 @@ Files: 	alsaMixer/*
 	motion-blur/*
 	quick-browser/*
 	rendering/*
-	Scooby-Do
+	Scooby-Do/*
 	showDesklets/*
 	show-mouse/*
 	Toons/*

@@ -6,7 +6,7 @@ DH_ALWAYS_EXCLUDE=CVS:.svn
 configure_flags += \
 		--enable-gnome-integration \
 		--enable-xfce-integration \
-		--disable-old-gnome-integration \
+		--enable-old-gnome-integration \
 		--enable-alsa-mixer \
 		--enable-terminal \
 		--enable-powermanager \

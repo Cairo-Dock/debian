@@ -1,10 +1,10 @@
-cairo-dock (2.1.0-alpha1-20090902~ppa0~intrepid) intrepid; urgency=low
+cairo-dock (2.1.0-rc1-20090912~ppa0~intrepid) intrepid; urgency=low
 
   * New Weekly Version. (BZR Sync.)
   * debian/control:
     - Added : "Replaces: cairo-dock (<= 2.0.9)"
 
- -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Fri, 21 Aug 2009 15:35:04 +0200
+ -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Sat, 12 Sep 2009 14:26:45 +0200
 
 cairo-dock (2.0.8.2-0ubuntu0) karmic; urgency=low
 

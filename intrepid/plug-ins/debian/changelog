@@ -1,14 +1,15 @@
-cairo-dock-plug-ins (2.1.0-alpha1-20090902~ppa0~intrepid) intrepid; urgency=low
+cairo-dock-plug-ins (2.1.0-rc1-20090912~ppa0~intrepid) intrepid; urgency=low
 
   * New Weekly Version.
   * debian/rules
    - Added mail, dnd2share and musicPlayer
+   - enabled gnome-integration-old
   * debian/control
    - Added curl and libetpan-dev as depends for cairo-dock-plug-ins
    - Replaced cairo-dock to cairo-dock-core as dependances
   * Updated cairo-dock-plug-ins.*.install (names have changed)
 
- -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Fri, 21 Aug 2009 15:56:16 +0200
+ -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Sat, 12 Sep 2009 14:26:45 +0200
 
 cairo-dock-plug-ins (2.0.8.2-0ubuntu1) karmic; urgency=low
 
