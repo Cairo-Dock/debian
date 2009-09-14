@@ -1,16 +1,17 @@
-cairo-dock-plug-ins (2.1.0-rc1-20090912~ppa0~jaunty) jaunty; urgency=low
+cairo-dock-plug-ins (2.1.0-rc2-20090914~ppa0) jaunty; urgency=low
 
   * New Weekly Version.
   * debian/rules
-   - Added mail, dnd2share and musicPlayer
+   - Added dnd2share and musicPlayer
    - enabled gnome-integration-old
   * debian/control
    - Added curl and libetpan-dev as depends for cairo-dock-plug-ins
    - Replaced cairo-dock to cairo-dock-core as dependances
    - Removed ${shlibs:Depends} for integration plug-ins
+   - Added dependances manually (for debian and hardy).
   * Updated cairo-dock-plug-ins.*.install (names have changed)
 
- -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Sat, 12 Sep 2009 14:26:45 +0200
+ -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Mon, 14 Sep 2009 19:27:54 +0200
 
 cairo-dock-plug-ins (2.0.8.2-0ubuntu1) karmic; urgency=low
 

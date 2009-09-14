@@ -7,6 +7,7 @@ cairo-dock-plug-ins (2.1.0-rc1-20090912~ppa0~karmic) karmic; urgency=low
   * debian/control
    - Added curl and libetpan-dev as depends for cairo-dock-plug-ins
    - Replaced cairo-dock to cairo-dock-core as dependances
+   - Removed ${shlibs:Depends} for integration plug-ins
   * Updated cairo-dock-plug-ins.*.install (names have changed)
 
  -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Sat, 12 Sep 2009 14:26:45 +0200

@@ -16,7 +16,7 @@ configure_flags += \
 		--enable-xgamma \
 		--enable-gmenu \
 		--disable-gio-in-gmenu \
-		--enable-mail \
+		--disable-mail \
 		--enable-weblets \
 		--enable-keyboard-indicator \
 		--enable-exif \

@@ -1,8 +1,8 @@
 Source: cairo-dock-plug-ins
 Section: x11
 Priority: optional
-Maintainer: Matthieu Baerts <matttbe@gmail.com>
-XSBC-Original-Maintainer: Julien Lavergne <julien.lavergne@gmail.com>, Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>, Matthew Walker <matthaeus123@gmail.com>, Fabrice Rey <fabounet@users.berlios.de>, Matthieu Baerts <matttbe@gmail.com>
+Maintainer: Matthieu Baerts (matttbe) <matttbe@gmail.com>
+XSBC-Original-Maintainer: Julien Lavergne <julien.lavergne@gmail.com>, Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>, Matthew Walker <matthaeus123@gmail.com>, Fabrice Rey <fabounet@users.berlios.de>, Matthieu Baerts (matttbe) <matttbe@gmail.com>
 Build-Depends: 	cdbs,
 		gawk, 
 		libxxf86vm-dev,
@@ -32,8 +32,8 @@ Build-Depends: 	cdbs,
 		libwebkit-dev,
 		libexif-dev,
 		libxklavier12-dev,
-		libasound2,
-		libexif12,
+		libasound2-dev,
+		libexif-dev,
 		libgtkglext1-dev,
 		libgvfscommon-dev,
 		libetpan-dev
@@ -47,7 +47,6 @@ Conflicts: 	cairo-dock-plug-ins (<= 2.0.9)
 Replaces: 	cairo-dock-plug-ins (<= 2.0.9)
 Depends: 	cairo-dock-plug-ins-data (>= ${source:Version}),
 		cairo-dock-core (>= 2.0.9),
-		${shlibs:Depends},
 		${misc:Depends}
 Description: Two plug-ins for cairo-dock for a better integration in GNOME or Xfce
  Cairo-dock-plug-ins is a set of plug-ins for Cairo-dock. It provides some new 

@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Matthieu Baerts (matttbe) <matttbe@gmail.com>
 XSBC-Original-Maintainer: Julien Lavergne <julien.lavergne@gmail.com>, Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>, Fabrice Rey <fabounet@users.berlios.de>, Matthieu Baerts (matttbe) <matttbe@gmail.com>
 Build-Depends: 	cdbs, 
-		debhelper (>= 7), 
+		debhelper, 
 		automake,
 		libtool,
 		intltool,
@@ -46,8 +46,8 @@ Description: A light and eye-candy dock to launch your programs (metapackage)
 Package: cairo-dock-core
 Section: graphics
 Architecture: any
-Conflicts:	cairo-dock (<= 2.0.9)
-Replaces:	cairo-dock (<= 2.0.9)
+Conflicts: 	cairo-dock (<= 2.0.9)
+Replaces: 	cairo-dock (<= 2.0.9)
 Depends: 	cairo-dock-data (>= ${source:Version}),
 		${shlibs:Depends}, 
 		${misc:Depends}
@@ -89,8 +89,8 @@ Description: A light and eye-candy dock to launch your programs (dev package)
 Package: cairo-dock-data
 Section: graphics
 Architecture: all
-Conflicts:	 cairo-dock (<= 2.0.9)
-Replaces:	 cairo-dock (<= 2.0.9)
+Conflicts: 	cairo-dock (<= 2.0.9)
+Replaces: 	cairo-dock (<= 2.0.9)
 Depends: 	${shlibs:Depends}, 
 		${misc:Depends}
 Description: A light and eye-candy dock to launch your programs (common files)

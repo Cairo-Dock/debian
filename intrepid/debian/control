@@ -1,8 +1,8 @@
 Source: cairo-dock
 Section: x11
 Priority: optional
-Maintainer: Matthieu Baerts <matttbe@gmail.com>
-XSBC-Original-Maintainer: Julien Lavergne <julien.lavergne@gmail.com>, Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>, Fabrice Rey <fabounet@users.berlios.de>, Matthieu Baerts <matttbe@gmail.com>
+Maintainer: Matthieu Baerts (matttbe) <matttbe@gmail.com>
+XSBC-Original-Maintainer: Julien Lavergne <julien.lavergne@gmail.com>, Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>, Fabrice Rey <fabounet@users.berlios.de>, Matthieu Baerts (matttbe) <matttbe@gmail.com>
 Build-Depends: 	cdbs, 
 		debhelper (>= 7), 
 		automake,
