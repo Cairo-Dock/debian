@@ -17,7 +17,7 @@ Build-Depends: 	cdbs,
 		libxml2-dev,
 		libxtst-dev,
 		libglib2.0-dev,
-		cairo-dock-dev (>= 2.0.9),
+		cairo-dock-dev (>= 2.0.8.0),
 		libasound2-dev,
 		libvte-dev,
 		x11proto-xf86vidmode-dev,
@@ -43,10 +43,10 @@ Homepage: http://www.cairo-dock.org/
 Package: cairo-dock-plug-ins-integration
 Section: graphics
 Architecture: any
-Conflicts: 	cairo-dock-plug-ins (<= 2.0.9)
-Replaces: 	cairo-dock-plug-ins (<= 2.0.9)
+Conflicts: 	cairo-dock-plug-ins (<= 2.0.8.0)
+Replaces: 	cairo-dock-plug-ins (<= 2.0.8.0)
 Depends: 	cairo-dock-plug-ins-data (>= ${source:Version}),
-		cairo-dock-core (>= 2.0.9),
+		cairo-dock-core (>= 2.0.8.0),
 		${misc:Depends}
 Description: Two plug-ins for cairo-dock for a better integration in GNOME or Xfce
  Cairo-dock-plug-ins is a set of plug-ins for Cairo-dock. It provides some new 
@@ -58,10 +58,10 @@ Description: Two plug-ins for cairo-dock for a better integration in GNOME or Xf
 Package: cairo-dock-plug-ins
 Section: graphics
 Architecture: any
-Conflicts: 	cairo-dock-plug-ins (<= 2.0.9)
+Conflicts: 	cairo-dock-plug-ins (<= 2.0.8.0)
 Depends: 	cairo-dock-plug-ins-data (>= ${source:Version}),
 		cairo-dock-plug-ins-integration (>= ${source:Version}),
-		cairo-dock-core (>= 2.0.9),
+		cairo-dock-core (>= 2.0.8.0),
 		${shlibs:Depends}, 
 		${misc:Depends}
 Suggests:	compiz,
@@ -74,8 +74,8 @@ Description: A set of plug-ins for cairo-dock
 Package: cairo-dock-plug-ins-data
 Section: graphics
 Architecture: all
-Conflicts: 	cairo-dock-plug-ins (<= 2.0.9)
-Replaces: 	cairo-dock-plug-ins (<= 2.0.9)
+Conflicts: 	cairo-dock-plug-ins (<= 2.0.8.0)
+Replaces: 	cairo-dock-plug-ins (<= 2.0.8.0)
 Depends: 	${misc:Depends}
 Description: Common files for cairo-dock-plug-ins
  Cairo-dock-plug-ins is a set of plug-ins for Cairo-dock. It provides some new 

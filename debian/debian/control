@@ -25,8 +25,8 @@ Homepage: http://www.cairo-dock.org/
 Package: cairo-dock
 Section: graphics
 Architecture: all
-Conflicts: 	cairo-dock (<= 2.0.9)
-Replaces: 	cairo-dock (<= 2.0.9)
+Conflicts: 	cairo-dock (<= 2.0.8)
+Replaces: 	cairo-dock (<= 2.0.8)
 Depends: 	cairo-dock-core (>= ${source:Version}),
 		cairo-dock-plug-ins (>= 2.0.0),
                 ${misc:Depends}
@@ -46,8 +46,8 @@ Description: A light and eye-candy dock to launch your programs (metapackage)
 Package: cairo-dock-core
 Section: graphics
 Architecture: any
-Conflicts: 	cairo-dock (<= 2.0.9)
-Replaces: 	cairo-dock (<= 2.0.9)
+Conflicts: 	cairo-dock (<= 2.0.8)
+Replaces: 	cairo-dock (<= 2.0.8)
 Depends: 	cairo-dock-data (>= ${source:Version}),
 		libatk1.0-0,
 		libc6,
@@ -113,10 +113,9 @@ Description: A light and eye-candy dock to launch your programs (dev package)
 Package: cairo-dock-data
 Section: graphics
 Architecture: all
-Conflicts: 	cairo-dock (<= 2.0.9)
-Replaces: 	cairo-dock (<= 2.0.9)
-Depends: 	${shlibs:Depends}, 
-		${misc:Depends}
+Conflicts: 	cairo-dock (<= 2.0.8)
+Replaces: 	cairo-dock (<= 2.0.8)
+Depends: 	${misc:Depends}
 Description: A light and eye-candy dock to launch your programs (common files)
  It uses Cairo / OpenGL to render graphics (many in correlation
  with Compiz) with full hardware acceleration. It's fully configurable and
