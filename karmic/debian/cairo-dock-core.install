@@ -1,3 +1,4 @@
 debian/*.desktop usr/share/applications
 debian/tmp/usr/bin/cairo-dock
 debian/tmp/usr/share/locale
+debian/apport/cairo-dock.py usr/share/apport/package-hooks/
