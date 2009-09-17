@@ -1,8 +1,10 @@
 cairo-dock (2.1.0-rc1-20090912~ppa0~intrepid) intrepid; urgency=low
 
   * New Weekly Version. (BZR Sync.)
-  * debian/control:
-    - Added : "Replaces: cairo-dock (<= 2.0.9)"
+  * Removed debian/*.dekstop
+  * debian/cairo-dock-core.install
+    - Removed "debian/*.desktop usr/share/applications"
+    - Added debian/tmp/usr/share/applications
 
  -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Sat, 12 Sep 2009 14:26:45 +0200
 
