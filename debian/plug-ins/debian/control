@@ -101,7 +101,8 @@ Depends: 	cairo-dock-plug-ins-data (>= ${source:Version}),
 		libxrender1,
 		libxt6,
 		libxtst6,
-		libxxf86vm1, 
+		libxxf86vm1,
+		curl,
 		${misc:Depends}
 Suggests:	compiz,
 		gnote

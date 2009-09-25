@@ -46,8 +46,10 @@ Description: A light and eye-candy dock to launch your programs (metapackage)
 Package: cairo-dock-core
 Section: graphics
 Architecture: any
-Conflicts:	cairo-dock (<= 2.0.8.0)
-Replaces:	cairo-dock (<= 2.0.8.0)
+Conflicts:	cairo-dock (<= 2.0.8.0),
+		cairo-dock (= 2.0.9-0ubuntu0)
+Replaces:	cairo-dock (<= 2.0.8.0),
+		cairo-dock (= 2.0.9-0ubuntu0)
 Depends: 	cairo-dock-data (>= ${source:Version}),
 		${shlibs:Depends}, 
 		${misc:Depends}

@@ -62,6 +62,7 @@ Conflicts: 	cairo-dock-plug-ins (<= 2.0.8.0)
 Depends: 	cairo-dock-plug-ins-data (>= ${source:Version}),
 		cairo-dock-plug-ins-integration (>= ${source:Version}),
 		cairo-dock-core (>= 2.0.8.0),
+		curl,
 		${shlibs:Depends}, 
 		${misc:Depends}
 Suggests:	compiz,
