@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ln -s -f /usr/lib/libxcb-render.so.0 /usr/lib/libxcb-render-util.so.0

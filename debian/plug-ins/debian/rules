@@ -22,9 +22,9 @@ configure_flags += \
 		--enable-exif \
 		--enable-dnd2share \
 		--enable-musicplayer \
-		--enable-network-monitor \
+		--disable-network-monitor \
 		--disable-scooby-do
-# FOR STABLE RELEASE => To DISABLE : mail, network-manager
+# FOR STABLE RELEASE => To DISABLE : scooby-do, network-manager
 
 %:
 	dh $@

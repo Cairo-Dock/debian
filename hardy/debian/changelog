@@ -1,12 +1,19 @@
-cairo-dock (2.1.0-rc1-20090912~ppa0~hardy) hardy; urgency=low
+cairo-dock (2.1.1-2~hardy) hardy; urgency=low
 
-  * New Weekly Version. (BZR Sync.)
+  * New Upstream Version (sync from BZR).
+
+ -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Wed, 28 Oct 2009 14:01:34 +0100 
+
+cairo-dock (2.1.0-4ubuntu1~ppa0~hardy) hardy; urgency=low
+
+  * New Upstream Version.
   * Removed debian/*.dekstop
   * debian/cairo-dock-core.install
     - Removed "debian/*.desktop usr/share/applications"
     - Added debian/tmp/usr/share/applications
+  * Add dependances manually
 
- -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Sat, 12 Sep 2009 14:26:45 +0200
+ -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Wed, 30 Sep 2009 10:30:03 +0200 
 
 cairo-dock (2.0.8.2-0ubuntu0) karmic; urgency=low
 

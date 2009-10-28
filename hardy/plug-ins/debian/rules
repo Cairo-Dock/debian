@@ -17,7 +17,7 @@ configure_flags += \
 		--enable-gmenu \
 		--disable-gio-in-gmenu \
 		--enable-mail \
-		--enable-weblets \
+		--disable-weblets \
 		--enable-keyboard-indicator \
 		--enable-exif \
 		--enable-dnd2share \
@@ -25,18 +25,20 @@ configure_flags += \
 		--disable-network-monitor \
 		--disable-scooby-do
 # FOR STABLE RELEASE => To DISABLE : mail, network-manager
+# Hardy => disable weblets !
 
 %:
 	dh $@
 
-override_dh_auto_configure:
+build: build-stamp
+build-stamp:
+	dh build --before dh_auto_configure
 	dh_auto_configure -- 	$(configure_flags)
-
-override_dh_makeshlibs:
 	dh_makeshlibs -a -n --exclude=*
+	dh build --before dh_auto_test
+	dh build --after dh_auto_test
+	touch $@
 
-override_dh_auto_test:
-	# Skip dh_auto_test because it's FTBFS
 
 get-orig-source:
 	dh_testdir

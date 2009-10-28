@@ -1,4 +1,4 @@
-cairo-dock-plug-ins (2.1.1-2~intrepid) intrepid; urgency=low
+cairo-dock-plug-ins (2.1.1-2~hardy) hardy; urgency=low
 
   * New Upstream Version (sync from BZR).
   * debian/rules
@@ -8,14 +8,21 @@ cairo-dock-plug-ins (2.1.1-2~intrepid) intrepid; urgency=low
 
  -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Wed, 28 Oct 2009 14:01:34 +0100 
 
-cairo-dock-plug-ins (2.1.0-4ubuntu1~ppa0~intrepid) intrepid; urgency=low
+cairo-dock-plug-ins (2.1.0-5ubuntu1~hardy) intrepid; urgency=low
+
+  * Removed Weblets
+  * Added a postinst rule
+
+ -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Sun, 11 Oct 2009 14:38:05 +0200
+
+cairo-dock-plug-ins (2.1.0-4ubuntu1~ppa0) jaunty; urgency=low
 
   * New Upstream Version.
   * debian/rules
    - Added dnd2share and musicPlayer
    - enabled gnome-integration-old
   * debian/control
-   - Added curl as depends for cairo-dock-plug-ins
+   - Added curl and libetpan-dev as depends for cairo-dock-plug-ins
    - Replaced cairo-dock to cairo-dock-core as dependances
    - Removed ${shlibs:Depends} for integration plug-ins
   * Updated cairo-dock-plug-ins.*.install (names have changed)
