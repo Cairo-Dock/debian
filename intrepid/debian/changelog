@@ -1,3 +1,9 @@
+cairo-dock (2.1.2-4~intrepid) intrepid; urgency=low
+
+  * New Upstream Version.
+
+ -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Fri, 18 Dec 2009 19:59:49 +0100 
+
 cairo-dock (2.1.1-2~intrepid) intrepid; urgency=low
 
   * New Upstream Version (sync from BZR).

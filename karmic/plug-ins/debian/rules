@@ -23,8 +23,9 @@ configure_flags += \
 		--enable-dnd2share \
 		--enable-musicplayer \
 		--disable-network-monitor \
-		--disable-scooby-do
-# FOR STABLE RELEASE => To DISABLE : mail, network-manager
+		--enable-rssreader \
+		--enable-scooby-do
+# FOR STABLE RELEASE => To DISABLE : rssreader, network-manager, scooby-do
 
 %:
 	dh $@
