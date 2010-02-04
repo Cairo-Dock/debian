@@ -1,0 +1,145 @@
+cairo-dock-plug-ins (2.1.3-1~debian2) debian2; urgency=low
+
+  * New Upstream Version.
+
+ -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Thu, 04 Feb 2010 19:38:31 +0100 
+
+cairo-dock-plug-ins (2.1.2-4~debian) debian; urgency=low
+
+  * New Upstream Version.
+  * debian/rules
+   - Added RSSreader
+
+ -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Fri, 18 Dec 2009 19:59:49 +0100 
+
+cairo-dock-plug-ins (2.1.1-2~debian) debian; urgency=low
+
+  * New Upstream Version (sync from BZR).
+  * debian/rules
+   - Added mail and network-manager
+  * debian/control
+   - Added libetpan-dev as depends for cairo-dock-plug-ins
+
+ -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Wed, 28 Oct 2009 14:01:34 +0100 
+
+cairo-dock-plug-ins (2.1.0-4ubuntu1~ppa0) jaunty; urgency=low
+
+  * New Upstream Version.
+  * debian/rules
+   - Added dnd2share and musicPlayer
+   - enabled gnome-integration-old
+  * debian/control
+   - Added curl as depends for cairo-dock-plug-ins
+   - Replaced cairo-dock to cairo-dock-core as dependances
+   - Removed ${shlibs:Depends} for integration plug-ins
+  * Updated cairo-dock-plug-ins.*.install (names have changed)
+
+ -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Wed, 30 Sep 2009 10:45:46 +0200 
+
+cairo-dock-plug-ins (2.0.8.2-0ubuntu1) karmic; urgency=low
+
+  * New upstream version (Fix licence issues)
+  * Modify debian/copyright to comply with licence issue fixes
+
+ -- Didier Roche <didrocks@ubuntu.com>  Wed, 26 Aug 2009 23:31:05 +0200
+
+cairo-dock-plug-ins (2.0.8.1-0ubuntu1) karmic; urgency=low
+
+  [ Matthieu Baerts (matttbe) ]
+  * New Upstream Version.
+  * debian/control
+   - Fix conflict with cairo-dock-plug-ins (<= 2.0.8)
+  * Add licences
+
+  [ Didier Roche ]
+  * Repackage to have a separated diff.gz (as debian/ directory is not in
+    upstream bz2)
+  * Add debian/cairo-dock-data.lintian-overrides as plugin config file
+    uses a shebang (upstream warned)
+  * debian/control:
+    - add missing ${shlibs:Depends} to cairo-dock-plug-ins-integration
+    - remove cairo-dock-plug-ins replacing itself
+    - Fix spelling-error-in-description: Gnome -> GNOME, XFCE -> Xfce
+    - bump Standard-Version to 3.8.3
+
+ -- Didier Roche <didrocks@ubuntu.com>  Wed, 26 Aug 2009 21:07:39 +0200
+
+cairo-dock-plug-ins (2.0.8-0~ppa3~karmic2) karmic; urgency=low
+
+  * New upstream release.
+  * Rename package (cairo-dock-plugins to cairo-dock-plug-ins).
+  * debian/control:
+   - Added libxklavier-dev as depends for cairo-dock-dev.
+  * Changed debian/rules
+  * Add debian/watch
+  * Update debian/copyright
+  * Rename package (cairo-dock-plug-ins) in debian/rules
+  * debian/rules
+   - Removed override_dh_installdeb
+   - changed flags of configure
+  * debian/control
+   - Added a new package cairo-dock-plug-ins-integration (in order to remove unnecessary dependencies)
+  * Creation of cairo-dock-plug-ins-integration.install
+
+ -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Wed, 12 Aug 2009 01:32:24 +0200
+
+cairo-dock-plug-ins (2.0.7-1) karmic; urgency=low
+
+  * New upstream release.
+
+ -- Matthew Walker <matthaeus123@gmail.com>  Wed, 1 Jul 2009 20:25:15 -0700
+
+cairo-dock-plug-ins (2.0.5-1) karmic; urgency=low
+	
+  * New upstream release.
+  * Removed debian/watch
+
+ -- Matthew Walker <matthaeus123@gmail.com>  Wed, 10 Jun 2009 11:23:15 -0700
+
+cairo-dock-plug-ins (2.0.3-1) karmic; urgency=low
+  
+  * New upstream release.
+  * Regenerate all global *.PO files.
+  
+ -- Matthew Walker <matthaeus123@gmail.com>  Sat, 23 May 2009 9:23:15 -0700
+
+cairo-dock-plug-ins (2.0.1-2) karmic; urgency=low
+  
+  * New release.
+  * SVN sync with trunk.
+  
+ -- Matthew Walker <matthaeus123@gmail.com>  Sun, 17 May 2009 19:33:15 -0700
+
+cairo-dock-plug-ins (2.0.0-3) karmic; urgency=low
+	
+  * SVN sync with trunk.
+  - Removed debian/watch
+  
+ -- Matthew Walker <matthaeus123@gmail.com>  Sun, 10 May 2009 20:21:15 -0700
+
+cairo-dock-plug-ins (2.0.0-2) karmic; urgency=low
+	
+  * Real new upstream release.
+  + Changed debian/control dependencies
+    - Removed libglitz1-dev, and libglitz-glx1-dev
+  * Changed debian/rules
+    - disable-gnome-integration-old, enable-terminal, disable-cairo-penguin
+      enable-Animated-icons, 
+    + disable-old-gnome-integration
+
+ -- Matthew Walker <matthaeus123@gmail.com>  Sun, 10 May 2009 20:21:15 -0700
+
+cairo-dock-plug-ins (2.0.0-1) karmic; urgency=low
+	
+  * Fix build error.
+  * Debian/control
+  * Removed dependencies for glitz, because it won't work with
+    new Cairo versions.
+
+ -- Matthew Walker <matthaeus123@gmail.com>  Sat, 9 May 2009 11:21:15 -0700
+
+cairo-dock-plug-ins (2.0.0-0) karmic; urgency=low
+	
+  * New upstream release.
+
+ -- Matthew Walker <matthaeus123@gmail.com>  Fri, 8 May 2009 20:00:37 -0700

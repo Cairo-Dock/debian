@@ -1,4 +1,2 @@
 debian/tmp/usr/include
-debian/tmp/usr/lib/libcairo-dock.a
-debian/tmp/usr/lib/libcairo-dock.so
 debian/tmp/usr/lib/pkgconfig

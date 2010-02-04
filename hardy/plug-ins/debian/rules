@@ -24,9 +24,9 @@ configure_flags += \
 		--enable-musicplayer \
 		--disable-network-monitor \
 		--enable-rssreader \
-		--disable-scooby-do
-# FOR STABLE RELEASE => To DISABLE : rssreader, network-manager, scooby-do
-# Hardy => disable weblets !
+		--disable-scooby-do \
+		--enable-doncky
+# FOR STABLE RELEASE => To DISABLE : network-manager, scooby-do
 
 %:
 	dh $@

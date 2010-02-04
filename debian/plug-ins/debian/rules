@@ -22,10 +22,11 @@ configure_flags += \
 		--enable-exif \
 		--enable-dnd2share \
 		--enable-musicplayer \
-		--disable-network-monitor \
+		--enable-network-monitor \
 		--enable-rssreader \
-		--enable-scooby-do
-# FOR STABLE RELEASE => To DISABLE : rssreader, network-manager, scooby-do
+		--enable-scooby-do \
+		--enable-doncky
+# FOR STABLE RELEASE => To DISABLE : network-manager, scooby-do
 
 %:
 	dh $@
