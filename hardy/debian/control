@@ -20,7 +20,7 @@ Build-Depends: 	cdbs,
 		libxinerama-dev,
 		gawk
 Standards-Version: 3.8.3
-Homepage: http://www.cairo-dock.org/
+Homepage: http://www.glx-dock.org/
 
 Package: cairo-dock
 Section: graphics
@@ -37,7 +37,7 @@ Description: A light and eye-candy dock to launch your programs (metapackage)
  You can easily add applets in the dock or as a desklet.
  It is recommended to install the PLUG-INS package (cairo-dock-plug-ins) to
  have acces to more views, dialogs and many plug-ins and applets.
- Some screenshots are available : http://www.cairo-dock.org/mc_album.php?a=3
+ Some screenshots are available : http://www.glx-dock.org/mc_album.php?a=3
  .
  This metapackage provides the components necessary for running Cairo-Dock. It
  provides the Cairo-Dock core, a set of standard plugins and the files necessary
@@ -60,7 +60,7 @@ Description: A light and eye-candy dock to launch your programs (core package)
  You can easily add applets in the dock or as a desklet.
  It is recommended to install the PLUG-INS package (cairo-dock-plug-ins) to
  have acces to more views, dialogs and many plug-ins and applets.
- Some screenshots are available : http://www.cairo-dock.org/mc_album.php?a=3
+ Some screenshots are available : http://www.glx-dock.org/mc_album.php?a=3
  .
  This package is the core of Cairo-Dock project.
 
@@ -81,7 +81,7 @@ Description: A light and eye-candy dock to launch your programs (dev package)
  You can easily add applets in the dock or as a desklet.
  It is recommended to install the PLUG-INS package (cairo-dock-plug-ins) to
  have acces to more views, dialogs and many plug-ins and applets.
- Some screenshots are available : http://www.cairo-dock.org/mc_album.php?a=3
+ Some screenshots are available : http://www.glx-dock.org/mc_album.php?a=3
  .
  This package provides the include files and static library for cairo-dock 
  functions.
@@ -100,6 +100,6 @@ Description: A light and eye-candy dock to launch your programs (common files)
  You can easily add applets in the dock or as a desklet.
  It is recommended to install the PLUG-INS package (cairo-dock-plug-ins) to
  have acces to more views, dialogs and many plug-ins and applets.
- Some screenshots are available : http://www.cairo-dock.org/mc_album.php?a=3
+ Some screenshots are available : http://www.glx-dock.org/mc_album.php?a=3
  .
  This package contains default icons and themes for Cairo-Dock.

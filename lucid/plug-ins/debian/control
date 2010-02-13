@@ -38,7 +38,7 @@ Build-Depends: 	cdbs,
 		libgvfscommon-dev,
 		libetpan-dev
 Standards-Version: 3.8.3
-Homepage: http://www.cairo-dock.org/
+Homepage: http://www.glx-dock.org/
 
 Package: cairo-dock-plug-ins-integration
 Section: graphics
