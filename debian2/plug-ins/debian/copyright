@@ -2,7 +2,7 @@ X-Format-Specification: http://wiki.debian.org/Proposals/CopyrightFormat
 X-Debianized-By: Julien Lavergne <julien.lavergne@gmail.com>
 X-Debianized-Date: Wed, 16 Jun 2008 13:13:07 +0000.
 X-Source-Downloaded-From: http://developer.berlios.de/projects/cairo-dock/
-X-Upstream-Author: Fabrice Rey <fabounet@users.berlios.de>.
+X-Upstream-Author: Fabrice Rey <fabounet@glx-dock.org>.
 
 Files: systray/src/cd-tray.c: LGPL (v2 or later)
 Copyright: 2007 Neil Jagdish Patel
@@ -82,10 +82,6 @@ Files: 	powermanager/*
 Copyright: 2008 Adrien Pilleboue
 Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
 
-Files: 	rhythmbox/*
-Copyright: 2008 Adrien Pilleboue and 2009 Yann Dulieu
-Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
-
 Files: 	mail/*
 Copyright: Christophe Chapuis and Fabrice Rey
 Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
@@ -104,15 +100,27 @@ Copyright: Romain PEROL
 Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
 
 Files: 	switcher/*
-Copyright: Cchumi and Fabrice Rey <fabounet@users.berlios.de>
+Copyright: Cchumi and Fabrice Rey <fabounet@glx-dock.org>
 Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
 
 Files: 	musicPlayer/*
-Copyright: Rémy Robertson, Yann Sladek and Fabrice Rey <fabounet@users.berlios.de>
+Copyright: Rémy Robertson, Yann Sladek, Yann Dulieu and Fabrice Rey <fabounet@glx-dock.org>
 Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
 
 Files: dnd2share/*
-Copyright: Yann Dulieu and Fabrice Rey <fabounet@users.berlios.de>
+Copyright: Yann Dulieu and Fabrice Rey <fabounet@glx-dock.org>
+Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
+
+Files: 	RSSreader/*
+Copyright: 2008 Yann Dulieu and Fabrice Rey <fabounet@glx-dock.org>
+Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
+
+Files: 	Doncky/*
+Copyright: 2008 Yann Dulieu
+Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
+
+Files: 	Network-Monitor/*
+Copyright: 2008 Yann Sladek and Fabrice Rey <fabounet@glx-dock.org>
 Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
 
 
@@ -141,7 +149,7 @@ Files: 	alsaMixer/*
 	Toons/*
 	weather/*
 	Xgamma/*
-Copyright: Fabrice Rey <fabounet@users.berlios.de>
+Copyright: Fabrice Rey <fabounet@glx-dock.org>
 Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
 
 Files: 	debian/*

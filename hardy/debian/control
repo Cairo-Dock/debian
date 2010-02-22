@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Matthieu Baerts (matttbe) <matttbe@gmail.com>
 XSBC-Original-Maintainer: Julien Lavergne <julien.lavergne@gmail.com>, Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>, Fabrice Rey <fabounet@users.berlios.de>, Matthieu Baerts (matttbe) <matttbe@gmail.com>
 Build-Depends: 	cdbs, 
-		debhelper, 
+		debhelper (>= 7),
 		automake,
 		libtool,
 		intltool,
@@ -25,10 +25,9 @@ Homepage: http://www.glx-dock.org/
 Package: cairo-dock
 Section: graphics
 Architecture: all
-Conflicts: 	cairo-dock (<= 2.0.8)
-Replaces: 	cairo-dock (<= 2.0.8)
+Conflicts: 	cairo-dock (<= 2.0.8.0)
 Depends: 	cairo-dock-core (>= ${source:Version}),
-		cairo-dock-plug-ins (>= 2.0.0),
+		cairo-dock-plug-ins (> 2.1.2),
                 ${misc:Depends}
 Description: A light and eye-candy dock to launch your programs (metapackage)
  It uses Cairo / OpenGL to render graphics (many in correlation
@@ -37,7 +36,7 @@ Description: A light and eye-candy dock to launch your programs (metapackage)
  You can easily add applets in the dock or as a desklet.
  It is recommended to install the PLUG-INS package (cairo-dock-plug-ins) to
  have acces to more views, dialogs and many plug-ins and applets.
- Some screenshots are available : http://www.glx-dock.org/mc_album.php?a=3
+ Some screenshots are available : http://pics.glx-dock.org
  .
  This metapackage provides the components necessary for running Cairo-Dock. It
  provides the Cairo-Dock core, a set of standard plugins and the files necessary
@@ -46,8 +45,8 @@ Description: A light and eye-candy dock to launch your programs (metapackage)
 Package: cairo-dock-core
 Section: graphics
 Architecture: any
-Conflicts: 	cairo-dock (<= 2.0.8)
-Replaces: 	cairo-dock (<= 2.0.8)
+Conflicts: cairo-dock (<= 2.0.8.0)
+Replaces: cairo-dock (<= 2.0.8.0) 
 Depends: 	cairo-dock-data (>= ${source:Version}),
 		${shlibs:Depends}, 
 		${misc:Depends}
@@ -60,13 +59,13 @@ Description: A light and eye-candy dock to launch your programs (core package)
  You can easily add applets in the dock or as a desklet.
  It is recommended to install the PLUG-INS package (cairo-dock-plug-ins) to
  have acces to more views, dialogs and many plug-ins and applets.
- Some screenshots are available : http://www.glx-dock.org/mc_album.php?a=3
+ Some screenshots are available : http://pics.glx-dock.org
  .
  This package is the core of Cairo-Dock project.
 
 Package: cairo-dock-dev
 Section: libdevel
-Architecture: any
+Architecture: all
 Depends: 	cairo-dock-core (= ${binary:Version}),
 		${misc:Depends},
 		libdbus-glib-1-dev,
@@ -81,7 +80,7 @@ Description: A light and eye-candy dock to launch your programs (dev package)
  You can easily add applets in the dock or as a desklet.
  It is recommended to install the PLUG-INS package (cairo-dock-plug-ins) to
  have acces to more views, dialogs and many plug-ins and applets.
- Some screenshots are available : http://www.glx-dock.org/mc_album.php?a=3
+ Some screenshots are available : http://pics.glx-dock.org
  .
  This package provides the include files and static library for cairo-dock 
  functions.
@@ -89,8 +88,8 @@ Description: A light and eye-candy dock to launch your programs (dev package)
 Package: cairo-dock-data
 Section: graphics
 Architecture: all
-Conflicts: 	cairo-dock (<= 2.0.8)
-Replaces: 	cairo-dock (<= 2.0.8)
+Conflicts: cairo-dock (<= 2.0.8.0)
+Replaces: cairo-dock (<= 2.0.8.0) 
 Depends: 	${shlibs:Depends}, 
 		${misc:Depends}
 Description: A light and eye-candy dock to launch your programs (common files)
@@ -100,6 +99,6 @@ Description: A light and eye-candy dock to launch your programs (common files)
  You can easily add applets in the dock or as a desklet.
  It is recommended to install the PLUG-INS package (cairo-dock-plug-ins) to
  have acces to more views, dialogs and many plug-ins and applets.
- Some screenshots are available : http://www.glx-dock.org/mc_album.php?a=3
+ Some screenshots are available : http://pics.glx-dock.org
  .
  This package contains default icons and themes for Cairo-Dock.

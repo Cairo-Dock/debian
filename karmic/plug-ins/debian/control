@@ -32,8 +32,6 @@ Build-Depends: 	cdbs,
 		libwebkit-dev,
 		libexif-dev,
 		libxklavier-dev,
-		libasound2-dev,
-		libexif-dev,
 		libgtkglext1-dev,
 		libgvfscommon-dev,
 		libetpan-dev
