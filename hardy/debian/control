@@ -5,7 +5,7 @@ Maintainer: Matthieu Baerts (matttbe) <matttbe@gmail.com>
 XSBC-Original-Maintainer: Julien Lavergne <julien.lavergne@gmail.com>, Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>, Fabrice Rey <fabounet@users.berlios.de>, Matthieu Baerts (matttbe) <matttbe@gmail.com>
 Build-Depends: 	cdbs, 
 		debhelper (>= 7),
-		automake,
+		cmake,
 		libtool,
 		intltool,
 		libcairo2-dev, 
@@ -18,6 +18,7 @@ Build-Depends: 	cdbs,
 		libxcomposite-dev,
 		libgtkglext1-dev,
 		libxinerama-dev,
+		libglib2.0-dev,
 		gawk
 Standards-Version: 3.8.3
 Homepage: http://www.glx-dock.org/

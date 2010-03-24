@@ -1,45 +1,26 @@
 #!/usr/bin/make -f
 #export DH_VERBOSE=1
 
-DH_ALWAYS_EXCLUDE=CVS:.svn
+DH_ALWAYS_EXCLUDE=CVS:.bzr
 
-configure_flags += \
-		--enable-gnome-integration \
-		--enable-xfce-integration \
-		--enable-old-gnome-integration \
-		--enable-alsa-mixer \
-		--enable-terminal \
-		--enable-powermanager \
-		--enable-wifi \
-		--enable-tomboy \
-		--enable-compiz-icon \
-		--enable-xgamma \
-		--enable-gmenu \
-		--disable-gio-in-gmenu \
-		--enable-mail \
-		--disable-weblets \
-		--enable-keyboard-indicator \
-		--enable-exif \
-		--enable-dnd2share \
-		--enable-musicplayer \
-		--disable-network-monitor \
-		--enable-rssreader \
-		--disable-scooby-do \
-		--enable-doncky
+DEB_CMAKE_EXTRA_FLAGS += -Denable_alsa_mixer=yes \
+	-Denable-doncky=yes \
+	-Denable_gnome_integration=yes \
+	-Denable_old_gnome_integration=yes \
+	-Denable_gmenu=yes \
+	-Denable_kde_integration=yes \
+	-Denable-network-monitor=yes \
+	-Denable-scooby-do=no \
+	-Denable_xfce_integration=yes \
+	-Denable_weblets=no
+
 # FOR STABLE RELEASE => To DISABLE : network-manager, scooby-do
 
-%:
-	dh $@
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/cmake.mk
+include /usr/share/cdbs/1/rules/simple-patchsys.mk
 
-build: build-stamp
-build-stamp:
-	dh build --before dh_auto_configure
-	dh_auto_configure -- 	$(configure_flags)
-	dh_makeshlibs -a -n --exclude=*
-	dh build --before dh_auto_test
-	dh build --after dh_auto_test
-	touch $@
-
+DEB_INSTALL_CHANGELOGS_ALL := ChangeLog
 
 get-orig-source:
 	dh_testdir
