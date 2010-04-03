@@ -33,6 +33,7 @@ Build-Depends: 	cdbs,
 		libexif-dev,
 		libgtkglext1-dev,
 		libgvfscommon-dev,
+		libcurl4-gnutls-dev,
 		libetpan-dev
 Standards-Version: 3.8.3
 Homepage: http://www.glx-dock.org/

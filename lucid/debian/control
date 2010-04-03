@@ -19,6 +19,7 @@ Build-Depends: 	cdbs,
 		libgtkglext1-dev,
 		libxinerama-dev,
 		libglib2.0-dev,
+		libcurl4-gnutls-dev,
 		gawk
 Standards-Version: 3.8.3
 Homepage: http://www.glx-dock.org/
