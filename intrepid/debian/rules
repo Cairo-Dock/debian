@@ -7,8 +7,6 @@ include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/cmake.mk
 include /usr/share/cdbs/1/rules/simple-patchsys.mk
 
-DEB_INSTALL_MANPAGES_cairo-dock-core := debian/cairo-dock.1
-
 DEB_INSTALL_CHANGELOGS_ALL := ChangeLog
 
 get-orig-source:

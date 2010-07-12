@@ -19,18 +19,18 @@ Build-Depends: 	cdbs,
 		libgtkglext1-dev,
 		libxinerama-dev,
 		libglib2.0-dev,
-		libcurl4-gnutls-dev,
+		libcurl4-gnutls-dev | libcurl3-gnutls-dev,
 		gawk
 Standards-Version: 3.8.3
 Homepage: http://www.glx-dock.org/
 
 Package: cairo-dock
 Section: graphics
-Architecture: all
-Conflicts: 	cairo-dock (< 2.0.9)
-Replaces: 	cairo-dock (< 2.0.9)
+Architecture: i386 amd64
+Conflicts: 	cairo-dock (< 2.1.4)
+Replaces: 	cairo-dock (< 2.1.4)
 Depends: 	cairo-dock-core (>= ${source:Version}),
-		cairo-dock-plug-ins (> 2.1.2),
+		cairo-dock-plug-ins (>= 2.1.4),
                 ${misc:Depends}
 Description: A light and eye-candy dock to launch your programs (metapackage)
  It uses Cairo / OpenGL to render graphics (many in correlation
@@ -47,9 +47,9 @@ Description: A light and eye-candy dock to launch your programs (metapackage)
 
 Package: cairo-dock-core
 Section: graphics
-Architecture: any
-Conflicts: 	cairo-dock (< 2.0.9)
-Replaces: 	cairo-dock (< 2.0.9)
+Architecture: i386 amd64
+Conflicts: 	cairo-dock (< 2.1.4)
+Replaces: 	cairo-dock (< 2.1.4)
 Depends: 	cairo-dock-data (>= ${source:Version}),
 		libatk1.0-0,
 		libc6,
@@ -76,6 +76,7 @@ Depends: 	cairo-dock-data (>= ${source:Version}),
 		libxrender1,
 		libxt6,
 		libxtst6,
+		libcurl3-gnutls | libcurl3,
 		${misc:Depends}
 Recommends:	cairo-dock-plug-ins,
 		xdotool
@@ -115,8 +116,8 @@ Description: A light and eye-candy dock to launch your programs (dev package)
 Package: cairo-dock-data
 Section: graphics
 Architecture: all
-Conflicts: 	cairo-dock (< 2.0.9)
-Replaces: 	cairo-dock (< 2.0.9)
+Conflicts: 	cairo-dock (< 2.1.4)
+Replaces: 	cairo-dock (< 2.1.4)
 Depends: 	${misc:Depends}
 Description: A light and eye-candy dock to launch your programs (common files)
  It uses Cairo / OpenGL to render graphics (many in correlation

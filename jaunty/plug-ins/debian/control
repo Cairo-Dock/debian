@@ -37,8 +37,9 @@ Build-Depends: 	cdbs,
 		libgtkglext1-dev,
 		libgvfscommon-dev,
 		libcurl4-gnutls-dev,
-		libetpan-dev
-Standards-Version: 3.8.3
+		libetpan-dev,
+		libical-dev
+Standards-Version: 3.8.4
 Homepage: http://www.glx-dock.org/
 
 Package: cairo-dock-plug-ins-integration
@@ -64,6 +65,7 @@ Depends: 	cairo-dock-plug-ins-data (>= ${source:Version}),
 		cairo-dock-plug-ins-integration (>= ${source:Version}),
 		cairo-dock-core (>= 2.0.8.0),
 		curl,
+		wget,
 		${shlibs:Depends}, 
 		${misc:Depends}
 Suggests:	compiz,

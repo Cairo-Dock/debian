@@ -32,8 +32,9 @@ Build-Depends: 	cdbs,
 		libxklavier12-dev,
 		libgtkglext1-dev,
 		libgvfscommon-dev,
-		libcurl4-gnutls-dev,
-		libetpan-dev
+		libcurl4-gnutls-dev | libcurl3-gnutls-dev,
+		libetpan-dev,
+		libical-dev
 Standards-Version: 3.8.3
 Homepage: http://www.glx-dock.org/
 
@@ -58,12 +59,12 @@ Architecture: any
 Conflicts: 	cairo-dock-plug-ins (<= 2.0.8.0)
 Depends: 	cairo-dock-plug-ins-data (>= ${source:Version}),
 		cairo-dock-plug-ins-integration (>= ${source:Version}),
-		cairo-dock-core (>= 2.0.8.0),
+		cairo-dock-core (>= 2.1.4),
 		libasound2,
 		libatk1.0-0,
 		libc6,
 		libcairo2,
-		libcurl3-gnutls,
+		libcurl3-gnutls | libcurl3,
 		libdb4.7 | libdb4.6,
 		libdbus-1-3,
 		libdbus-glib-1-2,
@@ -99,6 +100,8 @@ Depends: 	cairo-dock-plug-ins-data (>= ${source:Version}),
 		libxtst6,
 		libxxf86vm1,
 		curl,
+		wget,
+		libical0,
 		${misc:Depends}
 Suggests:	compiz,
 		gnote
