@@ -2,14 +2,12 @@ Source: cairo-dock-plug-ins
 Section: x11
 Priority: optional
 Maintainer: Matthieu Baerts (matttbe) <matttbe@gmail.com>
-XSBC-Original-Maintainer: Julien Lavergne <julien.lavergne@gmail.com>, Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>, Matthew Walker <matthaeus123@gmail.com>, Fabrice Rey <fabounet@users.berlios.de>, Matthieu Baerts (matttbe) <matttbe@gmail.com>
+XSBC-Original-Maintainer: Julien Lavergne <julien.lavergne@gmail.com>, Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>, Matthew Walker <matthaeus123@gmail.com>, Fabrice Rey <fabounet@glx-dock.org>, Matthieu Baerts (matttbe) <matttbe@gmail.com>
 Build-Depends: 	cdbs,
 		gawk, 
 		libxxf86vm-dev,
 		debhelper,
 		cmake,
-		libtool,
-		intltool,
 		libcairo2-dev, 
 		libgtk2.0-dev, 
 		librsvg2-dev,
@@ -17,7 +15,8 @@ Build-Depends: 	cdbs,
 		libxml2-dev,
 		libxtst-dev,
 		libglib2.0-dev,
-		cairo-dock-dev (>= 2.0.8.0),
+		cairo-dock-dev (>= 2.2.0-2),
+		cairo-dock-core (>= 2.2.0-2),
 		libasound2-dev,
 		libvte-dev,
 		x11proto-xf86vidmode-dev,
@@ -25,7 +24,6 @@ Build-Depends: 	cdbs,
 		libgnomevfs2-dev,
 		libgnomeui-dev,
 		libthunar-vfs-1-dev,
-		libasound2-dev,
 		libetpan-dev,
 		libgnome-keyring-dev,
 		libgnutls-dev,

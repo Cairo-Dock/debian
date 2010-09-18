@@ -12,9 +12,11 @@ DEB_CMAKE_EXTRA_FLAGS += -Denable_alsa_mixer=yes \
 	-Denable-network-monitor=yes \
 	-Denable-scooby-do=no \
 	-Denable_xfce_integration=yes \
-	-Denable_weblets=no
+	-Denable_weblets=no \
+	-Denable-folders=yes \
+	-Denable_remote_control=yes
 
-# FOR STABLE RELEASE => To DISABLE : network-manager, scooby-do
+# FOR STABLE RELEASE => To DISABLE : network-manager, scooby-do, doncky, folders
 
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/cmake.mk

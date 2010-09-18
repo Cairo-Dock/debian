@@ -2,7 +2,7 @@ X-Format-Specification: http://wiki.debian.org/Proposals/CopyrightFormat
 X-Debianized-By: Julien Lavergne <julien.lavergne@gmail.com>
 X-Debianized-Date: Sun, 27 Apr 2008 13:13:07 +0000.
 X-Source-Downloaded-From: http://developer.berlios.de/projects/cairo-dock/
-X-Upstream-Author: Fabrice Rey <fabounet@users.berlios.de>.
+X-Upstream-Author: Fabrice Rey <fabounet@glx-dock.org>.
 
 Files: 	src/cairo-dock.*, 
 	src/cairo-dock-animations-*,
@@ -41,7 +41,7 @@ Files: 	src/cairo-dock.*,
 	src/cairo-dock-task.*,
 	src/cairo-dock-themes-manager.*,
 	src/cairo-dock-X-utilities.*
-Copyright: Fabrice Rey <fabounet@users.berlios.de>
+Copyright: Fabrice Rey <fabounet@glx-dock.org>
 Licence: GPL 2+ (See /usr/share/common-licenses/GPL-3 for complete licence)
 
 Files: 	src/cairo-dock-dbus.*

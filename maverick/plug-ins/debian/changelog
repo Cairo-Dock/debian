@@ -1,34 +1,122 @@
-cairo-dock-plug-ins (2.1.2-4~karmic) karmic; urgency=low
+cairo-dock-plug-ins (2.2.0-0beta4-0ubuntu1) maverick; urgency=low
 
-  * New Upstream Version.
-  * debian/rules
-   - Added RSSreader
+  * New Upstream Version (LP: #614625)
+  * Fixed a few bugs on LP:
+   - LP: #483963: Dustbin applet does not display trashes on all volumes
+   - LP: #485159: Some apps have problem with Systray
+   - LP: #500677: ~/.xsession-errors is too much used by CD
+   - LP: #500979: Shortcuts: the order gets messed up
+   - LP: #521531: Mail: crashes on Maildir
+   - LP: #519915: GTG: create a new applet to control GTG
+   - LP: #526138: GMenu doesn't handle desktop file exec strings properly
+   - LP: #531317: CMake: Added an error if the prefix of 'cairo-dock-plugins'
+                   is not the same 'cairo-dock-core'
+   - LP: #531319: CMake: check the version of 'cairo-dock' when building
+                   'cairo-dock-plugins'
+   - LP: #537115: Click at the position where icon lavel was, the icon
+                   and dock still receive the event
+   - LP: #537943: Terminal applet shortkey behaviour
+   - LP: #538637: Trash applet doesn't create .trashinfo files on XFCE
+   - More details on the 'ChangeLog' file
+  * debian/rules:
+   - Autotools has been replaced by CMake
+   - cdbs is now used.
+  * debian/copyright:
+   - Updated with the new applets
+  * debian/control:
+   - Autotools has been replaced by CMake
+   - Added libcurl4-gnutls-dev, libindicator-dev, libdbusmenu-glib-dev
+     libido-0.1-dev, libical-dev, libdbusmenu-gtk-dev as Build-deps
+   - Bump Standard-Version to 3.9.1
+   - Wget is required for dnd2share applet
+   - Added the exact realease for 'cairo-dock-dev' in order to prevent any
+      build error if this package is not already available (thx to didrocks)
+  * debian/cairo-dock-plug-ins*.install:
+   - All sonames are now installed into lib32 or lib64 (lib*)
 
- -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Fri, 18 Dec 2009 19:59:49 +0100 
+ -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Tue, 10 Aug 2010 00:05:57 +0200
 
-cairo-dock-plug-ins (2.1.1-2~karmic) karmic; urgency=low
+cairo-dock-plug-ins (2.1.3-10-lucid-0ubuntu2) lucid; urgency=low
 
-  * New Upstream Version (sync from BZR).
-  * debian/rules
-   - Added mail and network-manager
-  * debian/control
-   - Added libetpan-dev as depends for cairo-dock-plug-ins
+  [ Matthieu Baerts (matttbe) ]
+  * LP: #568258 (Rebuild plug-ins with the same version of cairo-dock (core))
 
- -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Wed, 28 Oct 2009 14:01:34 +0100 
+  [ Iain Lane ]
+  * debian/control: Update versioned BD on cairo-dock-dev to be restricted to
+    applicable upstream versions.
 
-cairo-dock-plug-ins (2.1.0-4ubuntu1~ppa0~karmic) karmic; urgency=low
+ -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Thu, 22 Apr 2010 11:15:36 +0200
 
-  * New Upstream Version.
-  * debian/rules
-   - Added dnd2share and musicPlayer
-   - enabled gnome-integration-old
-  * debian/control
+cairo-dock-plug-ins (2.1.3-10-lucid-0ubuntu1) lucid; urgency=low
+
+  [ Matthieu Baerts (matttbe) ]
+  * New upstream release (LP: #568083)
+  * Fixed some bugs:
+   - LP: #455261 (Cannot Modify / Add Custom Launchers)
+   - LP: #449422 (Cairo-Dock resize problem)
+   - LP: #489349 (showDesktop Applet only seems to work
+          every second time you click on it)
+   - LP: #526742 (The system monitor plugin and netspeed
+          plugin inverts upside-down continuously)
+   - Dbus: Used the right DBus API of Cairo-Dock (2.1.3 stable)
+   - Used icons of the system
+   - alsaMixer: fixed a crash when read several xml data
+   - musicPlayer:
+    * Removed some annoying warnings
+    * Banshee-plugin: fixed some bugs due to the new version (1.4.0)
+
+  [ Iain Lane ]
+  * debian/watch: Update to match against current version
+
+ -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Tue, 20 Apr 2010 01:52:21 +0200
+
+cairo-dock-plug-ins (2.1.3-6-0ubuntu1) lucid; urgency=low
+
+  [ Matthieu Baerts (matttbe) ]
+  * New upstream release (LP: #521536)
+  * debian/control:
+   - Remove some duplicated build-depends
+   - Update the website (cairo-dock.org -> glx-dock.org)
+   - Added libetpan-dev as depends for cairo-dock-plug-ins (mail applet).
+   - Updated cairo-dock-core and cairo-dock-dev minimal version.
+  * Updated debian/watch and debian/copyright with LP account.
+  * debian/rules:
+   - Added --enable-mail and --enable-rssreader to enable new stable applets.
+
+  [ Didier Roche ]
+  * Fix debian/watch
+  * Fix some issue in versionning
+  * cleaning the package in debian/control to have good build-dep and deps
+
+ -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Sun, 14 Feb 2010 00:51:22 +0100
+
+cairo-dock-plug-ins (2.0.9-0ubuntu1) karmic; urgency=low
+
+  [ Matthieu Baerts (matttbe) ]
+  * New upstream release (LP: #435590)
+  * debian/control: 
+   - Remove ${shlibs:Depends} for integration plug-ins to avoid
+     pulling shared libraries which are detected automatically.
    - Added curl as depends for cairo-dock-plug-ins
-   - Replaced cairo-dock to cairo-dock-core as dependances
-   - Removed ${shlibs:Depends} for integration plug-ins
-  * Updated cairo-dock-plug-ins.*.install (names have changed)
+  * debian/rules:
+   - Add --enable-dnd2share and --enable-musicplayer to enable new applets.
+   - Remove --enable-rhythmbox and --enable-nvidia to remove those applets,
+     not maintained upstream.
+  * Update *.install to take all generated applets.
 
- -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Wed, 30 Sep 2009 10:45:46 +0200 
+  [ Julien Lavergne ]
+  * Adjust changelog with Daniel Holbach suggestions.
+  * cairo-dock-plug-ins.changelogs:  Install specific changelog for 2.0.9
+  * Build-depends on cairo-dock-dev (>= 2.0.9)
+
+ -- Julien Lavergne <gilir@ubuntu.com>  Mon, 05 Oct 2009 19:27:17 +0200
+
+cairo-dock-plug-ins (2.0.8.2-0ubuntu2) karmic; urgency=low
+
+  * debian/control:
+   - Replaced cairo-dock to cairo-dock-core as dependancies (LP: #426436)
+
+ -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Thu, 10 Sep 2009 16:49:42 +0200
 
 cairo-dock-plug-ins (2.0.8.2-0ubuntu1) karmic; urgency=low
 
