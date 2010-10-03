@@ -3,20 +3,20 @@
 
 DH_ALWAYS_EXCLUDE=CVS:.bzr
 
-DEB_CMAKE_EXTRA_FLAGS += -Denable_alsa_mixer=yes \
+DEB_CMAKE_EXTRA_FLAGS += -Denable-alsa-mixer=yes \
 	-Denable-doncky=yes \
-	-Denable_gnome_integration=yes \
-	-Denable_old_gnome_integration=no \
-	-Denable_gmenu=yes \
-	-Denable_kde_integration=yes \
+	-Denable-gnome-integration=yes \
+	-Denable-old-gnome-integration=no \
+	-Denable-gmenu=yes \
+	-Denable-kde-integration=yes \
 	-Denable-memenu=yes \
 	-Denable-network-monitor=yes \
 	-Denable-scooby-do=yes \
 	-Denable-status-notifier=yes \
-	-Denable_xfce_integration=yes \
-	-Denable_weblets=yes \
+	-Denable-xfce-integration=yes \
+	-Denable-weblets=yes \
 	-Denable-folders=yes \
-	-Denable_remote_control=yes
+	-Denable-remote-control=yes
 
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/cmake.mk

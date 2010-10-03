@@ -35,7 +35,8 @@ Build-Depends: 	cdbs,
 		libgvfscommon-dev,
 		libcurl4-gnutls-dev,
 		libetpan-dev,
-		libical-dev
+		libical-dev,
+		libsensors4-dev
 Standards-Version: 3.8.4
 Homepage: http://www.glx-dock.org/
 

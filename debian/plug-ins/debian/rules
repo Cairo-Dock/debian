@@ -3,18 +3,18 @@
 
 DH_ALWAYS_EXCLUDE=CVS:.bzr
 
-DEB_CMAKE_EXTRA_FLAGS += -Denable_alsa_mixer=yes \
+DEB_CMAKE_EXTRA_FLAGS += -Denable-alsa-mixer=yes \
 	-Denable-doncky=yes \
-	-Denable_gnome_integration=yes \
-	-Denable_old_gnome_integration=yes \
-	-Denable_gmenu=yes \
-	-Denable_kde_integration=yes \
+	-Denable-gnome-integration=yes \
+	-Denable-old-gnome-integration=no \
+	-Denable-gmenu=yes \
+	-Denable-kde-integration=yes \
 	-Denable-network-monitor=yes \
 	-Denable-scooby-do=yes \
-	-Denable_xfce_integration=yes \
-	-Denable_weblets=yes \
+	-Denable-xfce-integration=yes \
+	-Denable-weblets=yes \
 	-Denable-folders=yes \
-	-Denable_remote_control=yes
+	-Denable-remote-control=yes
 
 # FOR STABLE RELEASE => To DISABLE : network-manager, scooby-do, doncky, folders
 

@@ -37,7 +37,8 @@ Build-Depends: 	cdbs,
 		libindicator-dev,
 		libido-0.1-dev,
 		libdbusmenu-gtk-dev,
-		libdbusmenu-glib-dev
+		libdbusmenu-glib-dev,
+		libsensors4-dev
 Standards-Version: 3.8.4
 Homepage: http://www.glx-dock.org/
 

@@ -15,8 +15,8 @@ Build-Depends: 	cdbs,
 		libxml2-dev,
 		libxtst-dev,
 		libglib2.0-dev (>= 2.20),
-		cairo-dock-dev (>= 2.2.0-2),
-		cairo-dock-core (>= 2.2.0-2),
+		cairo-dock-dev (>= 2.2.1),
+		cairo-dock-core (>= 2.2.1),
 		libasound2-dev,
 		libvte-dev,
 		x11proto-xf86vidmode-dev,
@@ -37,7 +37,8 @@ Build-Depends: 	cdbs,
 		libindicator-dev,
 		libido-0.1-dev,
 		libdbusmenu-gtk-dev,
-		libdbusmenu-glib-dev
+		libdbusmenu-glib-dev,
+		libsensors4-dev
 Standards-Version: 3.9.1
 Homepage: http://www.glx-dock.org/
 

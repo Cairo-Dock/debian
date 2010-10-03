@@ -31,13 +31,16 @@ Depends: 	cairo-dock-core (>= ${source:Version}),
 		cairo-dock-plug-ins (> 2.1.2),
                 ${misc:Depends}
 Description: A light and eye-candy dock to launch your programs (metapackage)
- It uses Cairo / OpenGL to render graphics (many in correlation
- with Compiz) with full hardware acceleration. It's fully configurable and
- fully customisable and can be used as a taskbar too.
- You can easily add applets in the dock or as a desklet.
- It is recommended to install the PLUG-INS package (cairo-dock-plug-ins) to
- have acces to more views, dialogs and many plug-ins and applets.
+ Cairo-Dock is a pretty, light and convenient interface to your desktop,
+  able to replace advantageously your system panel! 
+ It features multi-docks, taskbar, launchers and a lot of useful applets. 
+ Applets can be detached from the dock to act as desktop widgets. 
+ Numerous ready-to-use themes are downloadable in 1 click, and can be easily
+  customized at your convenience.
+ It can use hardware acceleration to be very fast and low on CPU.
+ .
  Some screenshots are available : http://pics.glx-dock.org
+ Development site: https://launchpad.net/cairo-dock
  .
  This metapackage provides the components necessary for running Cairo-Dock. It
  provides the Cairo-Dock core, a set of standard plugins and the files necessary
@@ -76,16 +79,18 @@ Depends: 	cairo-dock-data (>= ${source:Version}),
 		libxtst6,
 		libcurl3-gnutls | libcurl3,
 		${misc:Depends}
-Recommends:	cairo-dock-plug-ins,
-		xdotool
+Suggests:	cairo-dock-plug-ins
 Description: A light and eye-candy dock to launch your programs (core package)
- It uses Cairo / OpenGL to render graphics (many in correlation
- with Compiz) with full hardware acceleration. It's fully configurable and
- fully customisable and can be used as a taskbar too.
- You can easily add applets in the dock or as a desklet.
- It is recommended to install the PLUG-INS package (cairo-dock-plug-ins) to
- have acces to more views, dialogs and many plug-ins and applets.
+ Cairo-Dock is a pretty, light and convenient interface to your desktop,
+  able to replace advantageously your system panel! 
+ It features multi-docks, taskbar, launchers and a lot of useful applets. 
+ Applets can be detached from the dock to act as desktop widgets. 
+ Numerous ready-to-use themes are downloadable in 1 click, and can be easily
+  customized at your convenience.
+ It can use hardware acceleration to be very fast and low on CPU.
+ .
  Some screenshots are available : http://pics.glx-dock.org
+ Development site: https://launchpad.net/cairo-dock
  .
  This package is the core of Cairo-Dock project.
 
@@ -98,15 +103,18 @@ Depends: 	cairo-dock-core (= ${binary:Version}),
 		libxml2-dev,
 		librsvg2-dev,
 		libgtkglext1-dev
-Recommends:	cairo-dock-plug-ins
+Suggests:	cairo-dock-plug-ins
 Description: A light and eye-candy dock to launch your programs (dev package)
- It uses Cairo / OpenGL to render graphics (many in correlation
- with Compiz) with full hardware acceleration. It's fully configurable and
- fully customisable and can be used as a taskbar too.
- You can easily add applets in the dock or as a desklet.
- It is recommended to install the PLUG-INS package (cairo-dock-plug-ins) to
- have acces to more views, dialogs and many plug-ins and applets.
+ Cairo-Dock is a pretty, light and convenient interface to your desktop,
+  able to replace advantageously your system panel! 
+ It features multi-docks, taskbar, launchers and a lot of useful applets. 
+ Applets can be detached from the dock to act as desktop widgets. 
+ Numerous ready-to-use themes are downloadable in 1 click, and can be easily
+  customized at your convenience.
+ It can use hardware acceleration to be very fast and low on CPU.
+ .
  Some screenshots are available : http://pics.glx-dock.org
+ Development site: https://launchpad.net/cairo-dock
  .
  This package provides the include files and static library for cairo-dock 
  functions.
@@ -118,12 +126,15 @@ Conflicts: 	cairo-dock (< 2.0.9)
 Replaces: 	cairo-dock (< 2.0.9)
 Depends: 	${misc:Depends}
 Description: A light and eye-candy dock to launch your programs (common files)
- It uses Cairo / OpenGL to render graphics (many in correlation
- with Compiz) with full hardware acceleration. It's fully configurable and
- fully customisable and can be used as a taskbar too.
- You can easily add applets in the dock or as a desklet.
- It is recommended to install the PLUG-INS package (cairo-dock-plug-ins) to
- have acces to more views, dialogs and many plug-ins and applets.
+ Cairo-Dock is a pretty, light and convenient interface to your desktop,
+  able to replace advantageously your system panel! 
+ It features multi-docks, taskbar, launchers and a lot of useful applets. 
+ Applets can be detached from the dock to act as desktop widgets. 
+ Numerous ready-to-use themes are downloadable in 1 click, and can be easily
+  customized at your convenience.
+ It can use hardware acceleration to be very fast and low on CPU.
+ .
  Some screenshots are available : http://pics.glx-dock.org
+ Development site: https://launchpad.net/cairo-dock
  .
  This package contains default icons and themes for Cairo-Dock.
