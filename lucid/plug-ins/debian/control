@@ -17,6 +17,7 @@ Build-Depends: 	cdbs,
 		libglib2.0-dev (>= 2.20),
 		cairo-dock-dev (>= 2.2.0-2),
 		cairo-dock-core (>= 2.2.0-2),
+		cairo-dock-data (>= 2.2.0-2),
 		libasound2-dev,
 		libvte-dev,
 		x11proto-xf86vidmode-dev,
@@ -38,7 +39,9 @@ Build-Depends: 	cdbs,
 		libido-0.1-dev,
 		libdbusmenu-gtk-dev,
 		libdbusmenu-glib-dev,
-		libsensors4-dev
+		libsensors4-dev,
+		python,
+		ruby
 Standards-Version: 3.8.4
 Homepage: http://www.glx-dock.org/
 

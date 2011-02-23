@@ -1,1 +1,3 @@
 usr/lib*/cairo-dock/libcd-*.so
+usr/lib*/python*/
+usr/lib*/ruby*/

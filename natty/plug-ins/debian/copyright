@@ -1,8 +1,8 @@
 X-Format-Specification: http://wiki.debian.org/Proposals/CopyrightFormat
-X-Debianized-By: Julien Lavergne <julien.lavergne@gmail.com>
-X-Debianized-Date: Wed, 16 Jun 2008 13:13:07 +0000.
-X-Source-Downloaded-From: http://developer.berlios.de/projects/cairo-dock/
-X-Upstream-Author: Fabrice Rey <fabounet@glx-dock.org>.
+X-Debianized-By: Matthieu Baerts (matttbe) <matttbe@gmail.com>
+X-Debianized-Date: Sat, 07 Aug 2010 03:37:36 +0200
+X-Source-Downloaded-From: https://launchpad.net/cairo-dock
+X-Upstream-Author: Fabrice Rey <fabounet@glx-dock.org>
 
 Files: systray/src/cd-tray.c: LGPL (v2 or later)
 Copyright: 2007 Neil Jagdish Patel
@@ -149,6 +149,12 @@ Files: 	alsaMixer/*
 	Toons/*
 	weather/*
 	Xgamma/*
+	*Menu/*
+	Folders/*
+	Indicator-applet/*
+	Status-Notifier/*
+	gvfs-integration/*
+	*/*
 Copyright: Fabrice Rey <fabounet@glx-dock.org>
 Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
 

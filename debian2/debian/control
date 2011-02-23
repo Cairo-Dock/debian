@@ -24,12 +24,12 @@ Homepage: http://www.glx-dock.org/
 
 Package: cairo-dock
 Section: graphics
-Architecture: all
-Conflicts: 	cairo-dock (< 2.0.9)
-Replaces: 	cairo-dock (< 2.0.9)
+Architecture: i386 amd64
+Conflicts: 	cairo-dock (< 2.1.4)
+Replaces: 	cairo-dock (< 2.1.4)
 Depends: 	cairo-dock-core (>= ${source:Version}),
-		cairo-dock-plug-ins (> 2.1.2),
-                ${misc:Depends}
+		cairo-dock-plug-ins (>= 2.1.4),
+		${misc:Depends}
 Description: A light and eye-candy dock to launch your programs (metapackage)
  Cairo-Dock is a pretty, light and convenient interface to your desktop,
   able to replace advantageously your system panel! 
@@ -48,9 +48,9 @@ Description: A light and eye-candy dock to launch your programs (metapackage)
 
 Package: cairo-dock-core
 Section: graphics
-Architecture: any
-Conflicts: 	cairo-dock (< 2.0.9)
-Replaces: 	cairo-dock (< 2.0.9)
+Architecture: i386 amd64
+Conflicts: 	cairo-dock (< 2.1.4)
+Replaces: 	cairo-dock (< 2.1.4)
 Depends: 	cairo-dock-data (>= ${source:Version}),
 		libatk1.0-0,
 		libc6,
@@ -79,7 +79,7 @@ Depends: 	cairo-dock-data (>= ${source:Version}),
 		libxtst6,
 		libcurl3-gnutls | libcurl3,
 		${misc:Depends}
-Suggests:	cairo-dock-plug-ins
+Recommends:	cairo-dock-plug-ins
 Description: A light and eye-candy dock to launch your programs (core package)
  Cairo-Dock is a pretty, light and convenient interface to your desktop,
   able to replace advantageously your system panel! 
@@ -103,7 +103,7 @@ Depends: 	cairo-dock-core (= ${binary:Version}),
 		libxml2-dev,
 		librsvg2-dev,
 		libgtkglext1-dev
-Suggests:	cairo-dock-plug-ins
+Recommends:	cairo-dock-plug-ins
 Description: A light and eye-candy dock to launch your programs (dev package)
  Cairo-Dock is a pretty, light and convenient interface to your desktop,
   able to replace advantageously your system panel! 
@@ -122,8 +122,8 @@ Description: A light and eye-candy dock to launch your programs (dev package)
 Package: cairo-dock-data
 Section: graphics
 Architecture: all
-Conflicts: 	cairo-dock (< 2.0.9)
-Replaces: 	cairo-dock (< 2.0.9)
+Conflicts: 	cairo-dock (< 2.1.4)
+Replaces: 	cairo-dock (< 2.1.4)
 Depends: 	${misc:Depends}
 Description: A light and eye-candy dock to launch your programs (common files)
  Cairo-Dock is a pretty, light and convenient interface to your desktop,

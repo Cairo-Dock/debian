@@ -3,9 +3,11 @@
 
 DH_ALWAYS_EXCLUDE=CVS:.bzr
 
+DEB_CMAKE_EXTRA_FLAGS += -Denable_gtk_grip=yes
+
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/cmake.mk
-include /usr/share/cdbs/1/rules/simple-patchsys.mk
+# include /usr/share/cdbs/1/rules/patchsys-quilt.mk
 
 DEB_INSTALL_CHANGELOGS_ALL := ChangeLog
 

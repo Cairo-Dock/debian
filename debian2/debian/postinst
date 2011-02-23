@@ -1,0 +1,43 @@
+#!/bin/bash
+set -e
+
+RIGHT="\e["70"\`" # => [ OK ]
+OK="$RIGHT [ OK ]"
+FAIL="$RIGHT [ FAIL ]"
+
+case "$1" in
+	configure)
+		# We have to change the directory in the ppa
+		BEFORE="jaunty"
+		AFTER="lucid"
+		if [[ `grep -re "http://ppa.launchpad.net/cairo-dock-team/debian/ubuntu $BEFORE" /etc/apt/` ]]; then
+			echo -e -n "[Cairo-Dock-Team] Debian PPA: \n * Updated your sources.list ($BEFORE => $AFTER)"
+			mkdir /tmp/cairo-dock-dpkg
+			for i in `grep -rl "http://ppa.launchpad.net/cairo-dock-team/debian/ubuntu $BEFORE" /etc/apt/`; do
+				cp $i /tmp/cairo-dock-dpkg/
+			done
+			grep -rl "http://ppa.launchpad.net/cairo-dock-team/debian/ubuntu $BEFORE" /etc/apt/ | xargs sed -i "s/http:\/\/ppa\.launchpad\.net\/cairo-dock-team\/debian\/ubuntu $BEFORE/http:\/\/ppa.launchpad.net\/cairo-dock-team\/debian\/ubuntu $AFTER/g"
+			if [ $? -eq 0 ]; then
+				rm -r /tmp/cairo-dock-dpkg
+				echo -e "$OK"
+			else
+				echo -e "$FAIL\nPlease update our ppa (cairo-dock-team/debian/ubuntu) from $BEFORE to $AFTER in your sources.list"
+			fi
+		elif [[ `grep -re "http://ppa.launchpad.net/cairo-dock-team/weekly-debian/ubuntu $BEFORE" /etc/apt/` ]]; then
+			echo -e -n "[Cairo-Dock-Team] Weekly-Debian PPA: \n * Updated your sources.list ($BEFORE => $AFTER)"
+			mkdir /tmp/cairo-dock-dpkg
+			for i in `grep -rl "http://ppa.launchpad.net/cairo-dock-team/weekly-debian/ubuntu $BEFORE" /etc/apt/`; do
+				cp $i /tmp/cairo-dock-dpkg/
+			done
+			grep -rl "http://ppa.launchpad.net/cairo-dock-team/weekly-debian/ubuntu $BEFORE" /etc/apt/ | xargs sed -i "s/http:\/\/ppa\.launchpad\.net\/cairo-dock-team\/weekly-debian\/ubuntu $BEFORE/http:\/\/ppa.launchpad.net\/cairo-dock-team\/weekly-debian\/ubuntu $AFTER/g"
+			if [ $? -eq 0 ]; then
+				rm -r /tmp/cairo-dock-dpkg
+				echo -e "$OK"
+			else
+				echo -e "$FAIL\nPlease update our ppa (cairo-dock-team/weekly-debian/ubuntu) from $BEFORE to $AFTER in your sources.list"
+			fi
+		
+		fi
+	;;
+esac
+
