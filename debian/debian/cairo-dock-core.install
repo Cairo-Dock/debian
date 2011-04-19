@@ -1,5 +1,5 @@
-debian/tmp/usr/share/applications
-debian/tmp/usr/bin/cairo-dock
-debian/tmp/usr/share/locale
-debian/tmp/usr/share/man/
-debian/tmp/usr/lib*/*.so*
+usr/bin/cairo-dock
+usr/share/locale
+usr/share/applications
+usr/share/man/
+usr/lib*/*.so*

@@ -18,13 +18,14 @@ Build-Depends: 	cdbs,
 		libxinerama-dev,
 		libglib2.0-dev,
 		libcurl4-gnutls-dev | libcurl3-gnutls-dev,
-		gawk
-Standards-Version: 3.8.3
+		gawk,
+		quilt
+Standards-Version: 3.9.1
 Homepage: http://www.glx-dock.org/
 
 Package: cairo-dock
 Section: graphics
-Architecture: i386 amd64
+Architecture: all
 Conflicts: 	cairo-dock (< 2.1.4)
 Replaces: 	cairo-dock (< 2.1.4)
 Depends: 	cairo-dock-core (>= ${source:Version}),
@@ -80,6 +81,7 @@ Depends: 	cairo-dock-data (>= ${source:Version}),
 		libcurl3-gnutls | libcurl3,
 		${misc:Depends}
 Recommends:	cairo-dock-plug-ins
+Suggests:	cairo-dock-plug-ins
 Description: A light and eye-candy dock to launch your programs (core package)
  Cairo-Dock is a pretty, light and convenient interface to your desktop,
   able to replace advantageously your system panel! 

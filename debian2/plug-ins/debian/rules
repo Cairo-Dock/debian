@@ -22,7 +22,12 @@ DEB_CMAKE_EXTRA_FLAGS += -Denable-alsa-mixer=yes \
 
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/cmake.mk
-include /usr/share/cdbs/1/rules/simple-patchsys.mk
+# include /usr/share/cdbs/1/rules/patchsys-quilt.mk
+
+ifeq (,$(findstring kfreebsd,$(DEB_BUILD_ARCH)))
+     DEB_CONFIGURE_EXTRA_FLAGS += -Denable-alsa-mixer=no
+endif
+
 
 DEB_INSTALL_CHANGELOGS_ALL := ChangeLog
 

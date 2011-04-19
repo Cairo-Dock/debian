@@ -44,8 +44,13 @@ Homepage: http://www.glx-dock.org/
 Package: cairo-dock-plug-ins-integration
 Section: graphics
 Architecture: i386 amd64
-Conflicts: 	cairo-dock-plug-ins (<= 2.0.8.0), cairo-dock-gnome-integration-plugin, cairo-dock-kde-integration-plugin, cairo-dock-xfce-integration-plugin
-Replaces: 	cairo-dock-plug-ins (<= 2.0.8.0), cairo-dock-gnome-integration-plugin, cairo-dock-kde-integration-plugin, cairo-dock-xfce-integration-plugin
+Conflicts: 	cairo-dock-plug-ins (<= 2.0.8.0)
+Replaces: 	cairo-dock-plug-ins (<= 2.0.8.0),
+	cairo-dock-gnome-integration-plugin,
+	cairo-dock-kde-integration-plugin,
+	cairo-dock-xfce-integration-plugin,
+	cairo-dock-plugins,
+	cairo-dock-plugin-data
 Depends: 	cairo-dock-plug-ins-data (>= ${source:Version}),
 		cairo-dock-core (>= 2.0.8.0),
 		${misc:Depends}
@@ -59,8 +64,51 @@ Description: Two plug-ins for cairo-dock for a better integration in GNOME, KDE 
 Package: cairo-dock-plug-ins
 Section: graphics
 Architecture: i386 amd64
-Conflicts: 	cairo-dock-plug-ins (<= 2.0.8.0), cairo-dock-alsamixer-plugin, cairo-dock-animated-icons-plugin, cairo-dock-cairo-penguin-plugin, cairo-dock-clipper-plugin, cairo-dock-clock-plugin, cairo-dock-compiz-icon-plugin, cairo-dock-dbus-plugin, cairo-dock-desklet-rendering-plugin, cairo-dock-dialog-rendering-plugin, cairo-dock-dnd2share-plugin, cairo-dock-drop-indicator-plugin, cairo-dock-dustbin-plugin, cairo-dock-gmenu-plugin, cairo-dock-gnome-integration-plugin, cairo-dock-icon-effect-plugin, cairo-dock-illusion-plugin, cairo-dock-keyboard-indicator-plugin, cairo-dock-kde-integration-plugin, cairo-dock-logout-plugin, cairo-dock-mail-plugin, cairo-dock-motion-blur-plugin, cairo-dock-musicplayer-plugin, cairo-dock-netspeed-plugin, cairo-dock-network-monitor-plugin, cairo-dock-plugins, cairo-dock-plugin-data, cairo-dock-powermanager-plugin, cairo-dock-quick-browser-plugin, cairo-dock-rendering-plugin, cairo-dock-rssreader-plugin, cairo-dock-scooby-do-plugin, cairo-dock-shortcuts-plugin, cairo-dock-showdesktop-plugin, cairo-dock-showmouse-plugin, cairo-dock-slider-plugin, cairo-dock-stack-plugin, cairo-dock-switcher-plugin, cairo-dock-system-monitor-plugin, cairo-dock-systray-plugin, cairo-dock-terminal-plugin, cairo-dock-tomboy-plugin, cairo-dock-toons-plugin, cairo-dock-weather-plugin, cairo-dock-weblets-plugin, cairo-dock-wifi-plugin, cairo-dock-xfce-integration-plugin, cairo-dock-xgamma-plugin
-Replaces:	cairo-dock-alsamixer-plugin, cairo-dock-animated-icons-plugin, cairo-dock-cairo-penguin-plugin, cairo-dock-clipper-plugin, cairo-dock-clock-plugin, cairo-dock-compiz-icon-plugin, cairo-dock-dbus-plugin, cairo-dock-desklet-rendering-plugin, cairo-dock-dialog-rendering-plugin, cairo-dock-dnd2share-plugin, cairo-dock-drop-indicator-plugin, cairo-dock-dustbin-plugin, cairo-dock-gmenu-plugin, cairo-dock-gnome-integration-plugin, cairo-dock-icon-effect-plugin, cairo-dock-illusion-plugin, cairo-dock-keyboard-indicator-plugin, cairo-dock-kde-integration-plugin, cairo-dock-logout-plugin, cairo-dock-mail-plugin, cairo-dock-motion-blur-plugin, cairo-dock-musicplayer-plugin, cairo-dock-netspeed-plugin, cairo-dock-network-monitor-plugin, cairo-dock-plugins, cairo-dock-plugin-data, cairo-dock-powermanager-plugin, cairo-dock-quick-browser-plugin, cairo-dock-rendering-plugin, cairo-dock-rssreader-plugin, cairo-dock-scooby-do-plugin, cairo-dock-shortcuts-plugin, cairo-dock-showdesktop-plugin, cairo-dock-showmouse-plugin, cairo-dock-slider-plugin, cairo-dock-stack-plugin, cairo-dock-switcher-plugin, cairo-dock-system-monitor-plugin, cairo-dock-systray-plugin, cairo-dock-terminal-plugin, cairo-dock-tomboy-plugin, cairo-dock-toons-plugin, cairo-dock-weather-plugin, cairo-dock-weblets-plugin, cairo-dock-wifi-plugin, cairo-dock-xfce-integration-plugin, cairo-dock-xgamma-plugin
+Conflicts: 	cairo-dock-plug-ins (<= 2.0.8.0)
+Replaces:	cairo-dock-plugin-data,
+	cairo-dock-plugins,
+	cairo-dock-alsamixer-plugin,
+	cairo-dock-animated-icons-plugin,
+	cairo-dock-cairo-penguin-plugin,
+	cairo-dock-clipper-plugin,
+	cairo-dock-clock-plugin,
+	cairo-dock-compiz-icon-plugin,
+	cairo-dock-dbus-plugin,
+	cairo-dock-desklet-rendering-plugin,
+	cairo-dock-dialog-rendering-plugin,
+	cairo-dock-drop-indicator-plugin,
+	cairo-dock-dustbin-plugin,
+	cairo-dock-icon-effect-plugin,
+	cairo-dock-illusion-plugin,
+	cairo-dock-logout-plugin,
+	cairo-dock-motion-blur-plugin,
+	cairo-dock-netspeed-plugin,
+	cairo-dock-powermanager-plugin,
+	cairo-dock-quick-browser-plugin,
+	cairo-dock-rendering-plugin,
+	cairo-dock-shortcuts-plugin,
+	cairo-dock-showdesktop-plugin,
+	cairo-dock-showmouse-plugin,
+	cairo-dock-slider-plugin,
+	cairo-dock-stack-plugin,
+	cairo-dock-switcher-plugin,
+	cairo-dock-systray-plugin,
+	cairo-dock-tomboy-plugin,
+	cairo-dock-toons-plugin,
+	cairo-dock-weather-plugin,
+	cairo-dock-wifi-plugin,
+	cairo-dock-xgamma-plugin,
+	cairo-dock-gmenu-plugin,
+	cairo-dock-keyboard-indicator-plugin,
+	cairo-dock-terminal-plugin,
+	cairo-dock-mail-plugin,
+	cairo-dock-rssreader-plugin,
+	cairo-dock-scooby-do-plugin,
+	cairo-dock-system-monitor-plugin,
+	cairo-dock-dnd2share-plugin,
+	cairo-dock-musicplayer-plugin,
+	cairo-dock-weblets-plugin,
+	cairo-dock-network-monitor-plugin
 Depends: 	cairo-dock-plug-ins-data (>= ${source:Version}),
 		cairo-dock-plug-ins-integration (>= ${source:Version}),
 		cairo-dock-core (>= 2.1.4),
@@ -118,8 +166,55 @@ Description: A set of plug-ins for cairo-dock
 Package: cairo-dock-plug-ins-data
 Section: graphics
 Architecture: all
-Conflicts: 	cairo-dock-plug-ins (<= 2.0.8.0), cairo-dock-alsamixer-plugin, cairo-dock-animated-icons-plugin, cairo-dock-cairo-penguin-plugin, cairo-dock-clipper-plugin, cairo-dock-clock-plugin, cairo-dock-compiz-icon-plugin, cairo-dock-dbus-plugin, cairo-dock-desklet-rendering-plugin, cairo-dock-dialog-rendering-plugin, cairo-dock-dnd2share-plugin, cairo-dock-drop-indicator-plugin, cairo-dock-dustbin-plugin, cairo-dock-gmenu-plugin, cairo-dock-gnome-integration-plugin, cairo-dock-icon-effect-plugin, cairo-dock-illusion-plugin, cairo-dock-keyboard-indicator-plugin, cairo-dock-kde-integration-plugin, cairo-dock-logout-plugin, cairo-dock-mail-plugin, cairo-dock-motion-blur-plugin, cairo-dock-musicplayer-plugin, cairo-dock-netspeed-plugin, cairo-dock-network-monitor-plugin, cairo-dock-plugins, cairo-dock-plugin-data, cairo-dock-powermanager-plugin, cairo-dock-quick-browser-plugin, cairo-dock-rendering-plugin, cairo-dock-rssreader-plugin, cairo-dock-scooby-do-plugin, cairo-dock-shortcuts-plugin, cairo-dock-showdesktop-plugin, cairo-dock-showmouse-plugin, cairo-dock-slider-plugin, cairo-dock-stack-plugin, cairo-dock-switcher-plugin, cairo-dock-system-monitor-plugin, cairo-dock-systray-plugin, cairo-dock-terminal-plugin, cairo-dock-tomboy-plugin, cairo-dock-toons-plugin, cairo-dock-weather-plugin, cairo-dock-weblets-plugin, cairo-dock-wifi-plugin, cairo-dock-xfce-integration-plugin, cairo-dock-xgamma-plugin
-Replaces: 	cairo-dock-plug-ins (<= 2.0.8.0), cairo-dock-alsamixer-plugin, cairo-dock-animated-icons-plugin, cairo-dock-cairo-penguin-plugin, cairo-dock-clipper-plugin, cairo-dock-clock-plugin, cairo-dock-compiz-icon-plugin, cairo-dock-dbus-plugin, cairo-dock-desklet-rendering-plugin, cairo-dock-dialog-rendering-plugin, cairo-dock-dnd2share-plugin, cairo-dock-drop-indicator-plugin, cairo-dock-dustbin-plugin, cairo-dock-gmenu-plugin, cairo-dock-gnome-integration-plugin, cairo-dock-icon-effect-plugin, cairo-dock-illusion-plugin, cairo-dock-keyboard-indicator-plugin, cairo-dock-kde-integration-plugin, cairo-dock-logout-plugin, cairo-dock-mail-plugin, cairo-dock-motion-blur-plugin, cairo-dock-musicplayer-plugin, cairo-dock-netspeed-plugin, cairo-dock-network-monitor-plugin, cairo-dock-plugins, cairo-dock-plugin-data, cairo-dock-powermanager-plugin, cairo-dock-quick-browser-plugin, cairo-dock-rendering-plugin, cairo-dock-rssreader-plugin, cairo-dock-scooby-do-plugin, cairo-dock-shortcuts-plugin, cairo-dock-showdesktop-plugin, cairo-dock-showmouse-plugin, cairo-dock-slider-plugin, cairo-dock-stack-plugin, cairo-dock-switcher-plugin, cairo-dock-system-monitor-plugin, cairo-dock-systray-plugin, cairo-dock-terminal-plugin, cairo-dock-tomboy-plugin, cairo-dock-toons-plugin, cairo-dock-weather-plugin, cairo-dock-weblets-plugin, cairo-dock-wifi-plugin, cairo-dock-xfce-integration-plugin, cairo-dock-xgamma-plugin
+Conflicts: 	cairo-dock-plug-ins (<= 2.0.8.0)
+Replaces: 	cairo-dock-plug-ins (<= 2.0.8.0),
+	cairo-dock-plugin-data,
+	cairo-dock-plugins,
+	cairo-dock-alsamixer-plugin,
+	cairo-dock-animated-icons-plugin,
+	cairo-dock-cairo-penguin-plugin,
+	cairo-dock-clipper-plugin,
+	cairo-dock-clock-plugin,
+	cairo-dock-compiz-icon-plugin,
+	cairo-dock-dbus-plugin,
+	cairo-dock-desklet-rendering-plugin,
+	cairo-dock-dialog-rendering-plugin,
+	cairo-dock-drop-indicator-plugin,
+	cairo-dock-dustbin-plugin,
+	cairo-dock-icon-effect-plugin,
+	cairo-dock-illusion-plugin,
+	cairo-dock-logout-plugin,
+	cairo-dock-motion-blur-plugin,
+	cairo-dock-netspeed-plugin,
+	cairo-dock-powermanager-plugin,
+	cairo-dock-quick-browser-plugin,
+	cairo-dock-rendering-plugin,
+	cairo-dock-shortcuts-plugin,
+	cairo-dock-showdesktop-plugin,
+	cairo-dock-showmouse-plugin,
+	cairo-dock-slider-plugin,
+	cairo-dock-stack-plugin,
+	cairo-dock-switcher-plugin,
+	cairo-dock-systray-plugin,
+	cairo-dock-tomboy-plugin,
+	cairo-dock-toons-plugin,
+	cairo-dock-weather-plugin,
+	cairo-dock-wifi-plugin,
+	cairo-dock-xgamma-plugin,
+	cairo-dock-gmenu-plugin,
+	cairo-dock-keyboard-indicator-plugin,
+	cairo-dock-terminal-plugin,
+	cairo-dock-mail-plugin,
+	cairo-dock-rssreader-plugin,
+	cairo-dock-scooby-do-plugin,
+	cairo-dock-system-monitor-plugin,
+	cairo-dock-dnd2share-plugin,
+	cairo-dock-musicplayer-plugin,
+	cairo-dock-weblets-plugin,
+	cairo-dock-network-monitor-plugin,
+	cairo-dock-gnome-integration-plugin,
+	cairo-dock-kde-integration-plugin,
+	cairo-dock-xfce-integration-plugin
 Depends: 	${misc:Depends}
 Description: Common files for cairo-dock-plug-ins
  Cairo-dock-plug-ins is a set of plug-ins for Cairo-dock. It provides some new 

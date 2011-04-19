@@ -54,6 +54,7 @@ Depends: 	cairo-dock-data (>= ${source:Version}),
 		${shlibs:Depends}, 
 		${misc:Depends}
 Recommends:	cairo-dock-plug-ins
+Suggests:	cairo-dock-plug-ins
 Description: A light and eye-candy dock to launch your programs (core package)
  Cairo-Dock is a pretty, light and convenient interface to your desktop,
   able to replace advantageously your system panel! 
