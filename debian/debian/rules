@@ -8,9 +8,9 @@ include /usr/share/cdbs/1/class/cmake.mk
 include /usr/share/cdbs/1/rules/patchsys-quilt.mk
 
 # Because there is a patch in gtk+2.0 only in Ubuntu: 044_grips.patch
-ifeq ($(shell dpkg-vendor --derives-from Ubuntu && echo yes),yes)
-    DEB_CMAKE_EXTRA_FLAGS += -Denable_gtk_grip=yes
-endif
+#ifeq ($(shell dpkg-vendor --derives-from Ubuntu && echo yes),yes)
+#    DEB_CMAKE_EXTRA_FLAGS += -Denable_gtk_grip=yes
+#endif
 
 DEB_INSTALL_CHANGELOGS_ALL := ChangeLog
 
