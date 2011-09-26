@@ -3,18 +3,10 @@
 
 DH_ALWAYS_EXCLUDE=CVS:.bzr
 
-DEB_CMAKE_EXTRA_FLAGS += -Denable-alsa-mixer=yes \
-	-Denable-doncky=yes \
-	-Denable-gnome-integration=yes \
+DEB_CMAKE_EXTRA_FLAGS += -Denable-gnome-integration=yes \
 	-Denable-old-gnome-integration=no \
-	-Denable-gmenu=yes \
 	-Denable-kde-integration=yes \
-	-Denable-network-monitor=yes \
-	-Denable-scooby-do=yes \
 	-Denable-xfce-integration=yes \
-	-Denable-weblets=yes \
-	-Denable-folders=yes \
-	-Denable-disks=yes \
 	-DROOT_PREFIX=$(CURDIR)/debian/tmp \
 	-DWITH_VALA=no
 

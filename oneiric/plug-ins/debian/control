@@ -2,7 +2,7 @@ Source: cairo-dock-plug-ins
 Section: x11
 Priority: optional
 Maintainer: Matthieu Baerts (matttbe) <matttbe@gmail.com>
-XSBC-Original-Maintainer: Julien Lavergne <julien.lavergne@gmail.com>, Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>, Matthew Walker <matthaeus123@gmail.com>, Fabrice Rey <fabounet@glx-dock.org>, Matthieu Baerts (matttbe) <matttbe@gmail.com>
+XSBC-Original-Maintainer: Matthieu Baerts (matttbe) <matttbe@gmail.com>, Julien Lavergne <julien.lavergne@gmail.com>, Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>, Matthew Walker <matthaeus123@gmail.com>, Fabrice Rey <fabounet@glx-dock.org>
 Build-Depends: 	cdbs,
 		libxxf86vm-dev,
 		debhelper (>= 7.2.6),
@@ -26,11 +26,10 @@ Build-Depends: 	cdbs,
 		libthunar-vfs-1-dev,
 		libgnome-keyring-dev,
 		libgnutls-dev,
-		libwebkit-dev,
+		libwebkitgtk-dev,
 		libxklavier-dev,
 		libexif-dev,
 		libgtkglext1-dev,
-		libgvfscommon-dev,
 		libcurl4-gnutls-dev,
 		libetpan-dev,
 		libical-dev,
@@ -39,8 +38,14 @@ Build-Depends: 	cdbs,
 		libdbusmenu-gtk-dev,
 		libdbusmenu-glib-dev,
 		libsensors4-dev,
+		libzeitgeist-dev,
 		python,
+		valac,
 		ruby,
+		mono-gmcs,
+		libglib2.0-cil-dev,
+		libndesk-dbus1.0-cil-dev,
+		libndesk-dbus-glib1.0-cil-dev,
 		libfftw3-dev,
 		libpulse-dev,
 		libupower-glib-dev
@@ -54,6 +59,7 @@ Conflicts: 	cairo-dock-plug-ins (<= 2.0.8.0)
 Replaces: 	cairo-dock-plug-ins (<= 2.0.8.0)
 Depends: 	cairo-dock-plug-ins-data (>= ${source:Version}),
 		cairo-dock-core (>= 2.0.8.0),
+		gvfs,
 		${misc:Depends}
 Description: Two plug-ins for cairo-dock for a better integration in GNOME or Xfce
  Cairo-dock-plug-ins is a set of plug-ins for Cairo-dock. It provides some new
@@ -75,8 +81,7 @@ Depends: 	cairo-dock-plug-ins-data (>= ${source:Version}),
 		${misc:Depends}
 Suggests:	compiz,
 		gnote,
-		indicator-messages,
-		indicator-me
+		indicator-messages
 Description: A set of plug-ins for cairo-dock
  Cairo-dock-plug-ins is a set of plug-ins for Cairo-dock. It provides some new
  functionnalities like controling music players or note-taking, a clock or a

@@ -4,4 +4,4 @@ usr/lib*/python*/
 usr/lib*/libCDApplet*.so
 usr/lib*/ruby*/
 usr/lib*/pkgconfig/
-usr/bin/
+usr/lib*/cairo-dock/status-notifier-watcher

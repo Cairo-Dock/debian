@@ -17,8 +17,7 @@ Build-Depends: 	cdbs,
 		libgtkglext1-dev,
 		libxinerama-dev,
 		libglib2.0-dev,
-		libcurl4-gnutls-dev,
-		gawk
+		libcurl4-gnutls-dev
 Standards-Version: 3.9.1
 Homepage: http://www.glx-dock.org/
 
@@ -53,8 +52,8 @@ Replaces: cairo-dock (<= 2.0.8.0)
 Depends: 	cairo-dock-data (>= ${source:Version}),
 		${shlibs:Depends}, 
 		${misc:Depends}
-Recommends:	cairo-dock-plug-ins
-Suggests:	cairo-dock-plug-ins
+Recommends:	cairo-dock, cairo-dock-plug-ins
+Suggests:	firefox, gnome-terminal, empathy, inkscape, gimp, shotwell, rhythmbox
 Description: A light and eye-candy dock to launch your programs (core package)
  Cairo-Dock is a pretty, light and convenient interface to your desktop,
   able to replace advantageously your system panel! 
@@ -85,8 +84,7 @@ Depends: 	cairo-dock-core (>= ${source:Version}),
 		libxcomposite-dev,
 		libgtkglext1-dev,
 		libxinerama-dev,
-		libglib2.0-dev,
-		gawk
+		libglib2.0-dev
 Recommends:	cairo-dock-plug-ins
 Description: A light and eye-candy dock to launch your programs (dev package)
  Cairo-Dock is a pretty, light and convenient interface to your desktop,

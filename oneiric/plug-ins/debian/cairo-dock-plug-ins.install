@@ -1,4 +1,7 @@
 usr/lib*/cairo-dock/libcd-*.so
+usr/lib*/cli/CDApplet*.dll
 usr/lib*/python*/
 usr/lib*/ruby*/
 usr/lib*/cairo-dock/status-notifier-watcher
+usr/lib*/libCDApplet*.so
+usr/lib*/pkgconfig/

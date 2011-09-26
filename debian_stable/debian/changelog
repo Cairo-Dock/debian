@@ -1,0 +1,146 @@
+cairo-dock (2.3.0~0rc1) unstable; urgency=low
+
+  * New upstream version: 2.3.0~0rc1 (Closes: #)
+  * Sync the debian directory given by the upstream and used in Ubuntu
+  * debian/control:
+   - Changed the priority to optional
+   - Added a new uploader.
+   - CMake is now used instead of autotools
+   - Updated the description (https://launchpad.net/cairo-dock)
+   - cairo-dock:
+    + Replaced cairo-dock-plugins by cairo-dock-plug-ins
+    + Change the architecture to all (it's a meta-package)
+    + This version is in conflict with the previous one
+   - cairo-dock-core:
+    + Added cairo-dock-data as new dependence.
+   - cairo-dock-dev:
+    + Changed the section to libdevel
+    + Changed the architecture to all (only contains include dirs and .pc)
+   - cairo-dock-data:
+    + Added this new package which is in conflict with cairo-dock
+       and cairo-dock-core packages
+    + It only contains images and text files so the architecture is all
+  * debian/manpages:
+   - Manpages are provided by the upstream
+  * debian/copyright: sync with copyright file from upstream
+  * debian/README.Debian:
+   - Removed some wrong/useless topic.
+   - Added a link to the wiki of the upstream.
+  * debian/rules:
+   - CMake is now used instead of autotools
+   - Added a flag for Ubuntu to remove gtk3 grips on the dock.
+   - Install apport script (for Ubuntu only)
+  * patches:
+   - Removed modified_clean_target patch: CMake is now used.
+   - Removed replace_gnome-terminal_to_x-terminal-emulator patch
+
+ -- Matthieu Baerts (matttbe) <matttbe@gmail.com>  Sat, 19 Feb 2011 22:20:07 +0100
+
+cairo-dock (2.1.3.10-4) unstable; urgency=low
+
+  * Fix typo of install path.
+    Changed from usr/share/dock to usr/share/doc.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Sat, 09 Oct 2010 06:57:03 +0900
+
+cairo-dock (2.1.3.10-3) unstable; urgency=low
+
+  * Add curl to Recommends (Closes: #594998).
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Wed, 01 Sep 2010 06:02:54 +0900
+
+cairo-dock (2.1.3.10-2) unstable; urgency=low
+
+  [ Nobuhiro Iwamatsu ]
+  * Change to upstream version.
+
+  [ Youhei SASAKI ]
+  * Add patch: replace_gnome-terminal_to_x-terminal-emulator.patch
+    - use x-terminal-emulator in default launcher
+  * Add patch: modified_clean_target.patch
+    - don't remove data/*.conf 
+  * Bump Standard Version: 3.9.1
+  * Change cairo-dock metapackage: all -> any
+    - cairo-dock depends cairo-dock-core package (any)
+  * Add libxtst-dev to Build-Depends (Closes: #589073)
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Fri, 06 Aug 2010 01:11:32 +0900
+
+cairo-dock (2.1.3.10-1) unstable; urgency=low
+
+  [ Youhei SASAKI ]
+  * New upstream: 2.1.3.10
+  * Drop obsoulte patches:
+    - fix_lintian_interpreter_error.patch
+    - replace_thunderbird_to_icedove.patch
+  * Add patche: replace_firefox_to_iceweasel
+  * remove unused files: dirs, lintian-overrides
+  * update README.Debian:
+    - add description about cairo-dock-package-theme,
+      launch-cairo-dock-after-compiz.
+  * update README.source: now using quilt instead of dpatch
+
+  [ Nobuhiro Iwamatsu ]
+  * Update debain/control.
+   - Changed cairo-dock to metapackage.
+   - Add cairo-dock-core package.
+      This package provides cairo-dock core application.
+   - Update description.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Fri, 14 May 2010 22:33:37 +0900
+
+cairo-dock (2.1.3.5-2) unstable; urgency=low
+
+  [ Youhei SASAKI ]
+  * Update man file.
+
+  [ Nobuhiro Iwamatsu ]
+  * Add cairo-dock-plugins to Recommends.
+  * Change source format 3.0/quilt.
+  * Update debain/control.
+    - Remove dpatch from build-depends.
+    - Add quilt to build-depends.
+  * Add debian/source/format.
+  * Update debian/patches.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Thu, 25 Mar 2010 05:02:16 +0900
+
+cairo-dock (2.1.3.5-1) unstable; urgency=low
+
+  [ Nobuhiro Iwamatsu ]
+  * New Upstream version 2.1.3.5
+  * Update debian/control.
+    - Update Homepage URL. (Closes: #570238)
+  * Update man file.
+    - Remove description of -F. (Closes: #572323)
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Thu, 04 Mar 2010 21:29:33 +0900
+
+cairo-dock (2.1.3.1-1) unstable; urgency=low
+
+  [ Nobuhiro Iwamatsu ]
+  * New Upstream version 2.1.3.1
+    - Xinerama support. 
+      Thanks package test for Pedro R. (Closes: #549005)
+  * Update debian/control.
+    - Change Maintainer.
+      Debian Cairo-dock Maintainers
+      <pkg-cairo-dock-devel@lists.alioth.debian.org>
+    - Add Nobuhiro Iwamatsu and Youhei SASAKI to Uploaders.
+    - Add VCS field.
+    - Change section of cairo-dock-dev from x11 to devel.
+    - Update description. (Closes: #551320)
+  * Update debian/README.debian.
+    - Add infomation of glitz support.
+  * Update 01_fix_lintian_interpreter_error.dpatch
+
+  [ Youhei SASAKI ]
+  * Typo Fixed in README.debian
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Wed, 10 Feb 2010 01:38:19 +0900
+
+cairo-dock (2.0.8.2-1) unstable; urgency=low
+
+  * Initial release. (Closes: #493736)
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Fri, 25 Sep 2009 07:34:31 +0900

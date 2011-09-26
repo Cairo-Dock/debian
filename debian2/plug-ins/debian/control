@@ -4,20 +4,19 @@ Priority: optional
 Maintainer: Matthieu Baerts (matttbe) <matttbe@gmail.com>
 XSBC-Original-Maintainer: Julien Lavergne <julien.lavergne@gmail.com>, Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>, Matthew Walker <matthaeus123@gmail.com>, Fabrice Rey <fabounet@glx-dock.org>, Matthieu Baerts (matttbe) <matttbe@gmail.com>
 Build-Depends: 	cdbs,
-		gawk, 
 		libxxf86vm-dev,
 		debhelper,
 		cmake,
-		libcairo2-dev, 
-		libgtk2.0-dev, 
+		libcairo2-dev,
+		libgtk2.0-dev,
 		librsvg2-dev,
 		libdbus-glib-1-dev,
 		libxml2-dev,
 		libxtst-dev,
 		libglib2.0-dev,
-		cairo-dock-core (>= 2.3.1~0alpha0~20110424),
-		cairo-dock-dev (>= 2.3.1~0alpha0~20110424),
-		cairo-dock-data (>= 2.3.1~0alpha0~20110424),
+		cairo-dock-data (>= 2.4.0~1),
+		cairo-dock-core (>= 2.4.0~1),
+		cairo-dock-dev (>= 2.4.0~1),
 		libasound2-dev,
 		libvte-dev,
 		x11proto-xf86vidmode-dev,
@@ -37,7 +36,10 @@ Build-Depends: 	cdbs,
 		libical-dev,
 		libsensors4-dev,
 		python,
-		ruby
+		ruby,
+		libfftw3-dev,
+		libpulse-dev,
+		libupower-glib-dev
 Standards-Version: 3.8.3
 Homepage: http://www.glx-dock.org/
 
@@ -55,7 +57,7 @@ Depends: 	cairo-dock-plug-ins-data (>= ${source:Version}),
 		cairo-dock-core (>= 2.0.8.0),
 		${misc:Depends}
 Description: Two plug-ins for cairo-dock for a better integration in GNOME, KDE or Xfce
- Cairo-dock-plug-ins is a set of plug-ins for Cairo-Dock. It provides some new 
+ Cairo-dock-plug-ins is a set of plug-ins for Cairo-Dock. It provides some new
  functionnalities like controling music players or note-taking, a clock or a
  desktop switcher but also some views, dialogs and desklets skins, etc.
  .
@@ -157,9 +159,11 @@ Depends: 	cairo-dock-plug-ins-data (>= ${source:Version}),
 		libical0,
 		${misc:Depends}
 Suggests:	compiz,
-		gnote
+		gnote,
+		indicator-messages,
+		indicator-me
 Description: A set of plug-ins for cairo-dock
- Cairo-dock-plug-ins is a set of plug-ins for Cairo-dock. It provides some new 
+ Cairo-dock-plug-ins is a set of plug-ins for Cairo-dock. It provides some new
  functionnalities like controling music players or note-taking, a clock or a
  desktop switcher but also some views, dialogs and desklets skins, etc.
 
@@ -217,9 +221,9 @@ Replaces: 	cairo-dock-plug-ins (<= 2.0.8.0),
 	cairo-dock-xfce-integration-plugin
 Depends: 	${misc:Depends}
 Description: Common files for cairo-dock-plug-ins
- Cairo-dock-plug-ins is a set of plug-ins for Cairo-dock. It provides some new 
+ Cairo-dock-plug-ins is a set of plug-ins for Cairo-dock. It provides some new
  functionnalities like controling music players or note-taking, a clock or a
  desktop switcher but also some views, dialogs and desklets skins, etc.
  .
- This package contains all images, locales and configuration files for 
+ This package contains all images, locales and configuration files for
  cairo-dock-plug-ins.
