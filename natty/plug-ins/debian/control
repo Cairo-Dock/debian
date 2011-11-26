@@ -23,7 +23,6 @@ Build-Depends: 	cdbs,
 		libgnome-menu-dev,
 		libgnomevfs2-dev,
 		libgnomeui-dev,
-		libthunar-vfs-1-dev,
 		libgnome-keyring-dev,
 		libgnutls-dev,
 		libwebkitgtk-dev,
@@ -60,8 +59,8 @@ Conflicts: 	cairo-dock-plug-ins (<= 2.0.8.0)
 Replaces: 	cairo-dock-plug-ins (<= 2.0.8.0)
 Depends: 	cairo-dock-plug-ins-data (>= ${source:Version}),
 		cairo-dock-core (>= 2.0.8.0),
-		libgvfscommon0,
 		${misc:Depends}
+Suggests:	libgvfscommon0
 Description: Two plug-ins for cairo-dock for a better integration in GNOME or Xfce
  Cairo-dock-plug-ins is a set of plug-ins for Cairo-dock. It provides some new
  functionnalities like controling music players or note-taking, a clock or a
