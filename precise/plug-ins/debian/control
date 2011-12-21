@@ -1,0 +1,174 @@
+Source: cairo-dock-plug-ins
+Section: x11
+Priority: optional
+Maintainer: Matthieu Baerts (matttbe) <matttbe@gmail.com>
+XSBC-Original-Maintainer: Matthieu Baerts (matttbe) <matttbe@gmail.com>, Julien Lavergne <julien.lavergne@gmail.com>, Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>, Matthew Walker <matthaeus123@gmail.com>, Fabrice Rey <fabounet@glx-dock.org>
+Build-Depends: 	cdbs,
+		libxxf86vm-dev,
+		debhelper (>= 8.1.3),
+		cmake,
+		libcairo2-dev (>= 1.8.0),
+		libgtk2.0-dev (>= 2.16),
+		librsvg2-dev (>= 2.22.0),
+		libdbus-glib-1-dev,
+		libxml2-dev,
+		libxtst-dev,
+		libglib2.0-dev (>= 2.20),
+		libgl1-mesa-dev | libgl-dev,
+		libglu1-mesa-dev | libglu-dev,
+		libpango1.0-dev,
+		libgldi-dev (>= 3.0.0.0alpha1~20111212),
+		libasound2-dev,
+		libvte-dev,
+		x11proto-xf86vidmode-dev,
+		libgnome-menu-dev,
+		libgnomevfs2-dev,
+		libgnomeui-dev,
+		libgnome-keyring-dev,
+		libgnutls-dev,
+		libwebkitgtk-dev,
+		libxklavier-dev,
+		libexif-dev,
+		libcurl4-gnutls-dev,
+		libetpan-dev,
+		libical-dev,
+		libindicator3-dev,
+		libdbusmenu-gtk3-dev,
+		libdbusmenu-glib-dev,
+		libido3-0.1-dev,
+		libsensors4-dev,
+		libzeitgeist-dev,
+		python,
+		valac,
+		ruby,
+		cli-common-dev (>= 0.7),
+		mono-devel,
+		mono-gmcs,
+		libglib2.0-cil-dev,
+		libndesk-dbus1.0-cil-dev,
+		libndesk-dbus-glib1.0-cil-dev,
+		libpulse-dev,
+		libupower-glib-dev
+Standards-Version: 3.9.2
+Homepage: http://www.glx-dock.org/
+
+Package: cairo-dock-plug-ins-integration
+Section: graphics
+Architecture: any
+Conflicts: 	cairo-dock-plug-ins (<= 2.0.8.0)
+Replaces: 	cairo-dock-plug-ins (<= 2.0.8.0)
+Depends: 	cairo-dock-plug-ins-data (>= ${source:Version}),
+		cairo-dock-core (>= 3.0.0.0alpha1~20111212),
+		${misc:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Suggests:	gvfs
+Multi-Arch: same
+Description: Three plug-ins for Cairo-Dock for a better integration in GNOME, KDE and Xfce
+ Cairo-Dock-plug-ins is a set of plug-ins for Cairo-Dock. It provides some new
+ functionnalities like controling music players or note-taking, a clock or a
+ desktop switcher but also some views, dialogs and desklets skins, etc.
+ .
+ This package contains two plug-ins for a better integration in GNOME, KDE and Xfce.
+
+Package: cairo-dock-plug-ins
+Section: graphics
+Architecture: any
+Conflicts: 	cairo-dock-plug-ins (<= 2.0.8.0)
+Depends: 	cairo-dock-plug-ins-data (>= ${source:Version}),
+		cairo-dock-core (>= 3.0.0.0alpha1~20111212),
+		curl,
+		wget,
+		${shlibs:Depends},
+		${misc:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Recommends:	cairo-dock-plug-ins-integration (>= ${source:Version}),
+		cairo-dock-plug-ins-dbus-interface-python (>= ${source:Version})
+Suggests:	compiz,
+		gnote,
+		indicator-messages,
+		indicator-sound,
+		cairo-dock-plug-ins-dbus-interface-ruby (>= ${source:Version}),
+		cairo-dock-plug-ins-dbus-interface-vala (>= ${source:Version}),
+		cairo-dock-plug-ins-dbus-interface-mono (>= ${source:Version})
+Multi-Arch: same
+Description: A set of plug-ins for Cairo-Dock
+ Cairo-Dock-plug-ins is a set of plug-ins for Cairo-Dock. It provides some new
+ functionnalities like controling music players or note-taking, a clock or a
+ desktop switcher but also some views, dialogs and desklets skins, etc.
+
+Package: cairo-dock-plug-ins-data
+Section: graphics
+Architecture: all
+Conflicts: 	cairo-dock-plug-ins (<= 2.0.8.0)
+Replaces: 	cairo-dock-plug-ins (<= 2.0.8.0)
+Depends: 	${misc:Depends}
+Description: Common files for cairo-dock-plug-ins
+ Cairo-Dock-plug-ins is a set of plug-ins for Cairo-Dock. It provides some new
+ functionnalities like controling music players or note-taking, a clock or a
+ desktop switcher but also some views, dialogs and desklets skins, etc.
+ .
+ This package contains all images, locales and configuration files for
+ cairo-dock-plug-ins.
+
+Package: cairo-dock-plug-ins-dbus-interface-python
+Section: graphics
+Architecture: all
+Replaces:	cairo-dock-plug-ins (<< 3.0.0.0alpha1~20111210)
+Breaks:		cairo-dock-plug-ins (<< 3.0.0.0alpha1~20111210)
+Depends: 	cairo-dock-plug-ins (>= ${source:Version}),
+		python,
+		${misc:Depends}
+Description: A Python interface to interact with Cairo-Dock by using DBus
+ Cairo-Dock-plug-ins is a set of plug-ins for Cairo-Dock. It provides some new
+ functionnalities like controling music players or note-taking, a clock or a
+ desktop switcher but also some views, dialogs and desklets skins, etc.
+ .
+ This package contains a Python interface for the DBus plug-in.
+
+Package: cairo-dock-plug-ins-dbus-interface-vala
+Section: graphics
+Architecture: any
+Replaces:	cairo-dock-plug-ins (<< 3.0.0.0alpha1~20111210),
+			cairo-dock-plug-ins-data (<< 3.0.0.0alpha1~20111210)
+Breaks:		cairo-dock-plug-ins (<< 3.0.0.0alpha1~20111210),
+			cairo-dock-plug-ins-data (<< 3.0.0.0alpha1~20111210)
+Depends: 	cairo-dock-plug-ins (>= ${source:Version}),
+		${shlibs:Depends},
+		${misc:Depends}
+Suggests:	valac
+Description: A Vala interface to interact with Cairo-Dock by using DBus
+ Cairo-Dock-plug-ins is a set of plug-ins for Cairo-Dock. It provides some new
+ functionnalities like controling music players or note-taking, a clock or a
+ desktop switcher but also some views, dialogs and desklets skins, etc.
+ .
+ This package contains a Vala interface for the DBus plug-in.
+
+Package: cairo-dock-plug-ins-dbus-interface-ruby
+Section: graphics
+Architecture: any
+Replaces:	cairo-dock-plug-ins (<< 3.0.0.0alpha1~20111210)
+Breaks:		cairo-dock-plug-ins (<< 3.0.0.0alpha1~20111210)
+Depends: 	cairo-dock-plug-ins (>= ${source:Version}),
+		ruby,
+		${misc:Depends}
+Description: A Ruby interface to interact with Cairo-Dock by using DBus
+ Cairo-Dock-plug-ins is a set of plug-ins for Cairo-Dock. It provides some new
+ functionnalities like controling music players or note-taking, a clock or a
+ desktop switcher but also some views, dialogs and desklets skins, etc.
+ .
+ This package contains a Ruby interface for the DBus plug-in.
+
+Package: cairo-dock-plug-ins-dbus-interface-mono
+Section: graphics
+Architecture: any
+Replaces:	cairo-dock-plug-ins (<< 3.0.0.0alpha1~20111210)
+Breaks:		cairo-dock-plug-ins (<< 3.0.0.0alpha1~20111210)
+Depends: 	cairo-dock-plug-ins (>= ${source:Version}),
+		${cli:Depends},
+		${misc:Depends}
+Description: A Mono interface to interact with Cairo-Dock by using DBus
+ Cairo-Dock-plug-ins is a set of plug-ins for Cairo-Dock. It provides some new
+ functionnalities like controling music players or note-taking, a clock or a
+ desktop switcher but also some views, dialogs and desklets skins, etc.
+ .
+ This package contains a Mono interface for the DBus plug-in.

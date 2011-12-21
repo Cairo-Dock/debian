@@ -5,7 +5,7 @@ DH_ALWAYS_EXCLUDE=CVS:.bzr
 
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/cmake.mk
-include /usr/share/cdbs/1/rules/simple-patchsys.mk
+# include /usr/share/cdbs/1/rules/simple-patchsys.mk
 
 DEB_INSTALL_CHANGELOGS_ALL := ChangeLog
 

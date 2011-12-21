@@ -1,5 +1,0 @@
-debian/tmp/usr/share/applications
-debian/tmp/usr/bin
-debian/tmp/usr/share/locale
-debian/tmp/usr/share/man/
-debian/tmp/usr/lib*/*.so*

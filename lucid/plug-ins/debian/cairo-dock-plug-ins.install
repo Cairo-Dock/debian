@@ -1,4 +1,2 @@
 usr/lib*/cairo-dock/libcd-*.so
-usr/lib*/python*/
-usr/lib*/ruby*/
 usr/lib*/cairo-dock/status-notifier-watcher

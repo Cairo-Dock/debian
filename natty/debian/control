@@ -14,11 +14,17 @@ Build-Depends: 	cdbs,
 		libxtst-dev,
 		libxrender-dev,
 		libxcomposite-dev,
-		libgtkglext1-dev,
 		libxinerama-dev,
 		libglib2.0-dev,
+		libgl1-mesa-dev | libgl-dev,
+		libglu1-mesa-dev | libglu-dev,
+		libpango1.0-dev,
+		libcurl4-gnutls-dev,
+		libgl1-mesa-dev | libgl-dev,
+		libglu1-mesa-dev | libglu-dev,
+		libpango1.0-dev,
 		libcurl4-gnutls-dev
-Standards-Version: 3.9.1
+Standards-Version: 3.9.2
 Homepage: http://www.glx-dock.org/
 
 Package: cairo-dock
@@ -26,9 +32,11 @@ Section: graphics
 Architecture: all
 Conflicts: 	cairo-dock (<= 2.0.8.0)
 Depends: 	cairo-dock-core (>= ${source:Version}),
-		cairo-dock-plug-ins (>= ${source:Version}),
-		${misc:Depends}
-Description: A light and eye-candy dock to launch your programs (metapackage)
+			cairo-dock-plug-ins (>= 3.0.0.0alpha1~20111212),
+			cairo-dock-plug-ins-integration (>= 3.0.0.0alpha1~20111212),
+			cairo-dock-plug-ins-dbus-interface-python (>= 3.0.0.0alpha1~20111212),
+			${misc:Depends}
+Description: Light and eye-candy dock to launch your programs (metapackage)
  Cairo-Dock is a pretty, light and convenient interface to your desktop,
   able to replace advantageously your system panel! 
  It features multi-docks, taskbar, launchers and a lot of useful applets. 
@@ -50,11 +58,11 @@ Architecture: any
 Conflicts: cairo-dock (<= 2.0.8.0)
 Replaces: cairo-dock (<= 2.0.8.0) 
 Depends: 	cairo-dock-data (>= ${source:Version}),
-		${shlibs:Depends}, 
-		${misc:Depends}
+			${shlibs:Depends}, 
+			${misc:Depends}
 Recommends:	cairo-dock, cairo-dock-plug-ins
 Suggests:	firefox, gnome-terminal, empathy, inkscape, gimp, shotwell, rhythmbox
-Description: A light and eye-candy dock to launch your programs (core package)
+Description: Light and eye-candy dock to launch your programs (core package)
  Cairo-Dock is a pretty, light and convenient interface to your desktop,
   able to replace advantageously your system panel! 
  It features multi-docks, taskbar, launchers and a lot of useful applets. 
@@ -68,13 +76,12 @@ Description: A light and eye-candy dock to launch your programs (core package)
  .
  This package is the core of Cairo-Dock project.
 
-Package: cairo-dock-dev
+Package: libgldi-dev
 Section: libdevel
-Architecture: all
-Depends: 	cairo-dock-core (>= ${source:Version}),
+Architecture: any
+Depends: 	libgldi3 (= ${binary:Version}),
 		${misc:Depends},
-		cmake,
-		libcairo2-dev, 
+		libcairo2-dev,
 		libgtk2.0-dev, 
 		librsvg2-dev,
 		libdbus-glib-1-dev,
@@ -82,11 +89,14 @@ Depends: 	cairo-dock-core (>= ${source:Version}),
 		libxtst-dev,
 		libxrender-dev,
 		libxcomposite-dev,
-		libgtkglext1-dev,
 		libxinerama-dev,
-		libglib2.0-dev
+		libglib2.0-dev,
+		libgl1-mesa-dev | libgl-dev,
+		libglu1-mesa-dev | libglu-dev,
+		libpango1.0-dev,
+		libcurl4-gnutls-dev
 Recommends:	cairo-dock-plug-ins
-Description: A light and eye-candy dock to launch your programs (dev package)
+Description: Light and eye-candy dock to launch your programs (dev package)
  Cairo-Dock is a pretty, light and convenient interface to your desktop,
   able to replace advantageously your system panel! 
  It features multi-docks, taskbar, launchers and a lot of useful applets. 
@@ -105,10 +115,9 @@ Package: cairo-dock-data
 Section: graphics
 Architecture: all
 Conflicts: cairo-dock (<= 2.0.8.0)
-Replaces: cairo-dock (<= 2.0.8.0) 
-Depends: 	${shlibs:Depends}, 
-		${misc:Depends}
-Description: A light and eye-candy dock to launch your programs (common files)
+Replaces: cairo-dock (<= 2.0.8.0)
+Depends: 	${misc:Depends}
+Description: Light and eye-candy dock to launch your programs (common files)
  Cairo-Dock is a pretty, light and convenient interface to your desktop,
   able to replace advantageously your system panel! 
  It features multi-docks, taskbar, launchers and a lot of useful applets. 
@@ -121,3 +130,27 @@ Description: A light and eye-candy dock to launch your programs (common files)
  Development site: https://launchpad.net/cairo-dock
  .
  This package contains default icons and themes for Cairo-Dock.
+
+Package: libgldi3
+Section: graphics
+Architecture: any
+Conflicts:	cairo-dock (<= 2.0.8.0)
+Replaces:	cairo-dock (<= 2.0.8.0),
+			cairo-dock-core (<< 3.0.0)
+Breaks:		cairo-dock-core (<< 3.0.0)
+Depends: 	${shlibs:Depends}, 
+			${misc:Depends}
+Recommends:	cairo-dock-data (>= ${source:Version})
+Description: Light and eye-candy dock to launch your programs (lib package)
+ Cairo-Dock is a pretty, light and convenient interface to your desktop,
+  able to replace advantageously your system panel! 
+ It features multi-docks, taskbar, launchers and a lot of useful applets. 
+ Applets can be detached from the dock to act as desktop widgets. 
+ Numerous ready-to-use themes are downloadable in 1 click, and can be easily
+  customized at your convenience.
+ It can use hardware acceleration to be very fast and low on CPU.
+ .
+ Some screenshots are available : http://pics.glx-dock.org
+ Development site: https://launchpad.net/cairo-dock
+ .
+ This package contains the library created and used by the Cairo-Dock project.

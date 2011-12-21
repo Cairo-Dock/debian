@@ -3,4 +3,3 @@ debian/tmp/usr/share/locale
 debian/tmp/usr/share/applications
 debian/apport/cairo-dock.py usr/share/apport/package-hooks/
 debian/tmp/usr/share/man/
-debian/tmp/usr/lib*/*.so*
