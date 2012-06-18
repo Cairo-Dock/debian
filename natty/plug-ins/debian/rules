@@ -11,7 +11,7 @@ DEB_CMAKE_EXTRA_FLAGS += -Denable-gnome-integration=yes \
 	-Denable-doncky=yes \
 	-Denable-scooby-do=yes \
 	-Denable-disks=yes \
-	-Denable-application-menu=yes \
+	-Denable-global-menu=yes \
 	-DGMCS_EXECUTABLE=/usr/bin/mono-csc \
 	-DROOT_PREFIX=$(CURDIR)/debian/tmp
 

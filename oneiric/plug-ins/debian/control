@@ -8,7 +8,7 @@ Build-Depends: 	cdbs,
 		debhelper (>= 7.2.6),
 		cmake,
 		libcairo2-dev (>= 1.8.0),
-		libgtk2.0-dev (>= 2.16),
+		libgtk-3-dev,
 		librsvg2-dev (>= 2.22.0),
 		libdbus-glib-1-dev,
 		libxml2-dev,
@@ -19,14 +19,11 @@ Build-Depends: 	cdbs,
 		libpango1.0-dev,
 		libgldi-dev (>= 3.0.0.0alpha1~20111212),
 		libasound2-dev,
-		libvte-dev,
+		libvte-2.90-dev,
 		x11proto-xf86vidmode-dev,
 		libgnome-menu-dev,
-		libgnomevfs2-dev,
-		libgnomeui-dev,
-		libgnome-keyring-dev,
 		libgnutls-dev,
-		libwebkitgtk-dev,
+		libwebkitgtk-3.0-dev,
 		libxklavier-dev,
 		libexif-dev,
 		libcurl4-gnutls-dev,
@@ -96,7 +93,9 @@ Package: cairo-dock-plug-ins-data
 Section: graphics
 Architecture: all
 Conflicts: 	cairo-dock-plug-ins (<= 2.0.8.0)
-Replaces: 	cairo-dock-plug-ins (<= 2.0.8.0)
+Replaces: 	cairo-dock-plug-ins (<= 2.0.8.0),
+		cairo-dock-data (<= 3.0.0.0rc2)
+Breaks: 	cairo-dock-data (<= 3.0.0.0rc2)
 Depends: 	${misc:Depends}
 Description: Common files for cairo-dock-plug-ins
  Cairo-Dock-plug-ins is a set of plug-ins for Cairo-Dock. It provides some new
@@ -168,3 +167,31 @@ Description: A Mono interface to interact with Cairo-Dock by using DBus
  desktop switcher but also some views, dialogs and desklets skins, etc.
  .
  This package contains a Mono interface for the DBus plug-in.
+
+Package: cairo-dock-plug-ins-integration-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends: 	cairo-dock-plug-ins-integration (= ${binary:Version}),
+			${shlibs:Depends},
+			${misc:Depends}
+Description: Debugging symbols of the 'integration' plug-ins
+ Cairo-Dock-plug-ins is a set of plug-ins for Cairo-Dock. It provides some new
+ functionnalities like controling music players or note-taking, a clock or a
+ desktop switcher but also some views, dialogs and desklets skins, etc.
+ .
+ This package contains debugging symbols of 'integration' plug-ins.
+
+Package: cairo-dock-plug-ins-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends: 	cairo-dock-plug-ins (= ${binary:Version}),
+			${shlibs:Depends},
+			${misc:Depends}
+Description: Debugging symbols of Cairo-Dock's plug-ins
+ Cairo-Dock-plug-ins is a set of plug-ins for Cairo-Dock. It provides some new
+ functionnalities like controling music players or note-taking, a clock or a
+ desktop switcher but also some views, dialogs and desklets skins, etc.
+ .
+ This package contains debugging symbols of Cairo-Dock's  plug-ins.

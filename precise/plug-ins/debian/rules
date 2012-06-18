@@ -11,13 +11,14 @@ DEB_CMAKE_EXTRA_FLAGS += -Denable-gnome-integration=yes \
 	-Denable-doncky=yes \
 	-Denable-scooby-do=yes \
 	-Denable-disks=yes \
-	-Denable-application-menu=yes \
+	-Denable-global-menu=yes \
 	-DGMCS_EXECUTABLE=/usr/bin/mono-csc \
 	-DROOT_PREFIX=$(CURDIR)/debian/tmp \
 	-DCMAKE_INSTALL_LIBDIR=lib/$(DEB_HOST_MULTIARCH)
 
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/cmake.mk
+include /usr/share/cdbs/1/rules/utils.mk
 # include /usr/share/cdbs/1/rules/patchsys-quilt.mk
 
 DEB_INSTALL_CHANGELOGS_ALL := ChangeLog
@@ -29,3 +30,5 @@ common-binary-predeb-arch::
 get-orig-source:
 	dh_testdir
 	uscan --force-download --verbose --repack
+
+common-binary-post-install-arch:: list-missing

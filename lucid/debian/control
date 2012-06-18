@@ -150,3 +150,45 @@ Description: Light and eye-candy dock to launch your programs (lib package)
  Development site: https://launchpad.net/cairo-dock
  .
  This package contains the library created and used by the Cairo-Dock project.
+
+Package: libgldi3-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends:	libgldi3 (= ${binary:Version}),
+			${shlibs:Depends}, 
+			${misc:Depends}
+Description: Light and eye-candy dock to launch your programs (dbg package)
+ Cairo-Dock is a pretty, light and convenient interface to your desktop,
+  able to replace advantageously your system panel! 
+ It features multi-docks, taskbar, launchers and a lot of useful applets. 
+ Applets can be detached from the dock to act as desktop widgets. 
+ Numerous ready-to-use themes are downloadable in 1 click, and can be easily
+  customized at your convenience.
+ It can use hardware acceleration to be very fast and low on CPU.
+ .
+ Some screenshots are available : http://pics.glx-dock.org
+ Development site: https://launchpad.net/cairo-dock
+ .
+ This package contains the debugging symbols of Cairo-Dock library.
+
+Package: cairo-dock-core-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends:	cairo-dock-core (= ${binary:Version}),
+			${shlibs:Depends},
+			${misc:Depends}
+Description: Light and eye-candy dock to launch your programs (dbg package)
+ Cairo-Dock is a pretty, light and convenient interface to your desktop,
+  able to replace advantageously your system panel! 
+ It features multi-docks, taskbar, launchers and a lot of useful applets. 
+ Applets can be detached from the dock to act as desktop widgets. 
+ Numerous ready-to-use themes are downloadable in 1 click, and can be easily
+  customized at your convenience.
+ It can use hardware acceleration to be very fast and low on CPU.
+ .
+ Some screenshots are available : http://pics.glx-dock.org
+ Development site: https://launchpad.net/cairo-dock
+ .
+ This package contains the debugging symbols of the core of Cairo-Dock project.
