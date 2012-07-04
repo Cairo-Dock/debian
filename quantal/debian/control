@@ -4,10 +4,10 @@ Priority: optional
 Maintainer: Matthieu Baerts (matttbe) <matttbe@gmail.com>
 XSBC-Original-Maintainer: Matthieu Baerts (matttbe) <matttbe@gmail.com>, Julien Lavergne <julien.lavergne@gmail.com>, Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>, Fabrice Rey <fabounet@glx-dock.org>
 Build-Depends: 	cdbs, 
-		debhelper (>= 7),
+		debhelper (>= 8.1.3),
 		cmake,
 		libcairo2-dev, 
-		libgtk2.0-dev, 
+		libgtk-3-dev, 
 		librsvg2-dev,
 		libdbus-glib-1-dev,
 		libxml2-dev,
@@ -28,9 +28,9 @@ Section: graphics
 Architecture: all
 Conflicts: 	cairo-dock (<= 2.0.8.0)
 Depends: 	cairo-dock-core (>= ${source:Version}),
-			cairo-dock-plug-ins (>= 3.0.0.0alpha1~20111212),
-			cairo-dock-plug-ins-integration (>= 3.0.0.0alpha1~20111212),
-			cairo-dock-plug-ins-dbus-interface-python (>= 3.0.0.0alpha1~20111212),
+			cairo-dock-plug-ins (>= 3.0.98),
+			cairo-dock-plug-ins-integration (>= 3.0.98),
+			cairo-dock-plug-ins-dbus-interface-python (>= 3.0.98),
 			${misc:Depends}
 Description: Light and eye-candy dock to launch your programs (metapackage)
  Cairo-Dock is a pretty, light and convenient interface to your desktop,
@@ -56,7 +56,8 @@ Replaces: cairo-dock (<= 2.0.8.0)
 Depends: 	cairo-dock-data (>= ${source:Version}),
 			${shlibs:Depends}, 
 			${misc:Depends}
-Recommends:	cairo-dock, cairo-dock-plug-ins
+Recommends:	cairo-dock, cairo-dock-plug-ins,
+			compiz-plugins | e17 | kde-window-manager | openbox | xfwm4
 Suggests:	firefox, gnome-terminal, empathy, inkscape, gimp, shotwell, rhythmbox
 Description: Light and eye-candy dock to launch your programs (core package)
  Cairo-Dock is a pretty, light and convenient interface to your desktop,
@@ -78,7 +79,7 @@ Architecture: any
 Depends: 	libgldi3 (= ${binary:Version}),
 		${misc:Depends},
 		libcairo2-dev,
-		libgtk2.0-dev, 
+		libgtk-3-dev,
 		librsvg2-dev,
 		libdbus-glib-1-dev,
 		libxml2-dev,
@@ -91,7 +92,9 @@ Depends: 	libgldi3 (= ${binary:Version}),
 		libglu1-mesa-dev | libglu-dev,
 		libpango1.0-dev,
 		libcurl4-gnutls-dev
-Recommends:	cairo-dock-plug-ins
+Pre-Depends: ${misc:Pre-Depends}
+Recommends:	cairo-dock
+Multi-Arch: same
 Description: Light and eye-candy dock to launch your programs (dev package)
  Cairo-Dock is a pretty, light and convenient interface to your desktop,
   able to replace advantageously your system panel! 
@@ -111,7 +114,7 @@ Package: cairo-dock-data
 Section: graphics
 Architecture: all
 Conflicts: cairo-dock (<= 2.0.8.0)
-Replaces: cairo-dock (<= 2.0.8.0)
+Replaces: cairo-dock (<= 2.0.8.0) 
 Depends: 	${misc:Depends}
 Description: Light and eye-candy dock to launch your programs (common files)
  Cairo-Dock is a pretty, light and convenient interface to your desktop,
@@ -137,6 +140,8 @@ Breaks:		cairo-dock-core (<< 3.0.0)
 Depends: 	${shlibs:Depends}, 
 			${misc:Depends}
 Recommends:	cairo-dock-data (>= ${source:Version})
+Pre-Depends: ${misc:Pre-Depends}
+Multi-Arch: same
 Description: Light and eye-candy dock to launch your programs (lib package)
  Cairo-Dock is a pretty, light and convenient interface to your desktop,
   able to replace advantageously your system panel! 

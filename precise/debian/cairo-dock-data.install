@@ -3,3 +3,4 @@ debian/tmp/usr/share/pixmaps/
 debian/tmp/usr/share/xsessions/
 debian/tmp/usr/share/gnome-session/sessions/
 debian/tmp/usr/bin/cairo-dock-session
+debian/custom_cairo-dock_badge.png usr/share/unity-greeter/
