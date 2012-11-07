@@ -1,0 +1,3 @@
+# Bug reported to upstream.
+cairo-dock-plug-ins-dbus-interface-vala: shlib-without-versioned-soname
+cairo-dock-plug-ins-dbus-interface-vala: package-name-doesnt-match-sonames

@@ -1,8 +1,8 @@
 Source: cairo-dock-plug-ins
 Section: x11
 Priority: optional
-Maintainer: Matthieu Baerts (matttbe) <matttbe@gmail.com>
-XSBC-Original-Maintainer: Matthieu Baerts (matttbe) <matttbe@gmail.com>, Julien Lavergne <julien.lavergne@gmail.com>, Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>, Matthew Walker <matthaeus123@gmail.com>, Fabrice Rey <fabounet@glx-dock.org>
+Maintainer: Matthieu Baerts (matttbe) <matttbe@ubuntu.com>
+XSBC-Original-Maintainer: Matthieu Baerts (matttbe) <matttbe@ubuntu.com>, Julien Lavergne <julien.lavergne@gmail.com>, Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>, Matthew Walker <matthaeus123@gmail.com>, Fabrice Rey <fabounet@glx-dock.org>
 Build-Depends: 	cdbs,
 		libxxf86vm-dev,
 		debhelper (>= 7.2.6),

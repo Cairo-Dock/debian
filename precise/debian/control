@@ -1,8 +1,8 @@
 Source: cairo-dock
 Section: x11
 Priority: optional
-Maintainer: Matthieu Baerts (matttbe) <matttbe@gmail.com>
-XSBC-Original-Maintainer: Matthieu Baerts (matttbe) <matttbe@gmail.com>, Julien Lavergne <julien.lavergne@gmail.com>, Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>, Fabrice Rey <fabounet@glx-dock.org>
+Maintainer: Matthieu Baerts (matttbe) <matttbe@ubuntu.com>
+XSBC-Original-Maintainer: Matthieu Baerts (matttbe) <matttbe@ubuntu.com>, Julien Lavergne <julien.lavergne@gmail.com>, Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>, Fabrice Rey <fabounet@glx-dock.org>
 Build-Depends: 	cdbs, 
 		debhelper (>= 8.1.3),
 		cmake,
@@ -19,7 +19,8 @@ Build-Depends: 	cdbs,
 		libgl1-mesa-dev | libgl-dev,
 		libglu1-mesa-dev | libglu-dev,
 		libpango1.0-dev,
-		libcurl4-gnutls-dev
+		libcurl4-gnutls-dev,
+		python-rsvg
 Standards-Version: 3.9.2
 Homepage: http://www.glx-dock.org/
 

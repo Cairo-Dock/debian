@@ -1,0 +1,22 @@
+Index: cairo-dock/data/desktop-manager/cairo-dock.session
+===================================================================
+--- cairo-dock.orig/data/desktop-manager/cairo-dock.session	2012-08-18 23:56:44.923475186 +0200
++++ cairo-dock/data/desktop-manager/cairo-dock.session	2012-08-18 23:59:11.043473143 +0200
+@@ -4,6 +4,4 @@
+ RequiredProviders=windowmanager;panel;
+ DefaultProvider-windowmanager=compiz
+ DefaultProvider-panel=cairo-dock
+-IsRunnableHelper=/usr/lib/nux/unity_support_test
+-FallbackSession=cairo-dock-fallback
+ DesktopName=GNOME
+Index: cairo-dock/data/desktop-manager/cairo-dock.desktop
+===================================================================
+--- cairo-dock.orig/data/desktop-manager/cairo-dock.desktop	2012-08-18 23:56:44.923475186 +0200
++++ cairo-dock/data/desktop-manager/cairo-dock.desktop	2012-08-18 23:59:23.103472976 +0200
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Cairo-Dock (Gnome + Effects)
++Name=Cairo-Dock (GNOME)
+ Comment=This session logs you into GNOME with Cairo-Dock and with graphical effects.
+ Exec=gnome-session --session=cairo-dock
+ TryExec=cairo-dock-session
