@@ -3,15 +3,15 @@
 
 DH_ALWAYS_EXCLUDE=CVS:.bzr
 
-DEB_CMAKE_EXTRA_FLAGS += -Denable-gnome-integration=yes \
-	-Denable-old-gnome-integration=no \
-	-Denable-kde-integration=yes \
-	-Denable-xfce-integration=yes \
-	-Denable-network-monitor=yes \
-	-Denable-doncky=yes \
-	-Denable-scooby-do=yes \
-	-Denable-disks=yes \
-	-Denable-global-menu=yes \
+DEB_CMAKE_EXTRA_FLAGS += -Denable-gnome-integration=ON \
+	-Denable-old-gnome-integration=OFF \
+	-Denable-kde-integration=ON \
+	-Denable-xfce-integration=ON \
+	-Denable-network-monitor=ON \
+	-Denable-doncky=ON \
+	-Denable-scooby-do=ON \
+	-Denable-disks=ON \
+	-Denable-global-menu=ON \
 	-DGMCS_EXECUTABLE=/usr/bin/mono-csc \
 	-DROOT_PREFIX=$(CURDIR)/debian/tmp \
 	-DCMAKE_INSTALL_LIBDIR=lib/$(DEB_HOST_MULTIARCH)

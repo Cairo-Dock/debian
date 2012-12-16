@@ -55,6 +55,7 @@ Architecture: any
 Conflicts: cairo-dock (<= 2.0.8.0)
 Replaces: cairo-dock (<= 2.0.8.0)
 Depends: cairo-dock-data (>= ${source:Version}),
+         libgldi3 (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: cairo-dock,

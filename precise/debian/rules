@@ -3,8 +3,7 @@
 
 DH_ALWAYS_EXCLUDE=CVS:.bzr
 
-DEB_CMAKE_EXTRA_FLAGS += -Denable_gtk_grip=yes \
-	-Denable-desktop-manager=yes \
+DEB_CMAKE_EXTRA_FLAGS += -Denable-desktop-manager=ON \
 	-DCMAKE_INSTALL_LIBDIR=lib/$(DEB_HOST_MULTIARCH)
 
 include /usr/share/cdbs/1/rules/debhelper.mk
