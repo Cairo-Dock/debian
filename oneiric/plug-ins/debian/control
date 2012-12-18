@@ -17,7 +17,7 @@ Build-Depends: 	cdbs,
 		libgl1-mesa-dev | libgl-dev,
 		libglu1-mesa-dev | libglu-dev,
 		libpango1.0-dev,
-		libgldi-dev (>= 3.0.98),
+		libgldi-dev (>= 3.1.98),
 		libasound2-dev,
 		libvte-2.90-dev,
 		x11proto-xf86vidmode-dev,
@@ -56,7 +56,7 @@ Architecture: any
 Conflicts: 	cairo-dock-plug-ins (<= 2.0.8.0)
 Replaces: 	cairo-dock-plug-ins (<= 2.0.8.0)
 Depends: 	cairo-dock-plug-ins-data (>= ${source:Version}),
-		cairo-dock-core (>= 3.0.98),
+		cairo-dock-core (>= 3.1.98),
 		${misc:Depends}
 Suggests:	gvfs
 Description: Three plug-ins for Cairo-Dock for a better integration in GNOME, KDE and Xfce
@@ -71,7 +71,7 @@ Section: graphics
 Architecture: any
 Conflicts: 	cairo-dock-plug-ins (<= 2.0.8.0)
 Depends: 	cairo-dock-plug-ins-data (>= ${source:Version}),
-		cairo-dock-core (>= 3.0.98),
+		cairo-dock-core (>= 3.1.98),
 		curl,
 		wget,
 		${shlibs:Depends},

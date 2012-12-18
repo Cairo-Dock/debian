@@ -29,9 +29,9 @@ Section: graphics
 Architecture: all
 Conflicts: cairo-dock (<= 2.0.8.0)
 Depends: cairo-dock-core (>= ${source:Version}),
-         cairo-dock-plug-ins (>= 3.0.98),
-         cairo-dock-plug-ins-dbus-interface-python (>= 3.0.98),
-         cairo-dock-plug-ins-integration (>= 3.0.98),
+         cairo-dock-plug-ins (>= 3.1.98),
+         cairo-dock-plug-ins-dbus-interface-python (>= 3.1.98),
+         cairo-dock-plug-ins-integration (>= 3.1.98),
          ${misc:Depends}
 Description: Light and eye-candy dock to launch your programs (metapackage)
  Cairo-Dock is a pretty, light and convenient interface to your desktop,
