@@ -157,7 +157,7 @@ cairo-dock (2.0.3-0ubuntu1) karmic; urgency=low
   [ Julien Lavergne ]
   * debian/control :
    - Replace libglitz build-depends by libxrender-dev, libxcomposite-dev,
-     libgtkglext1-dev and libxinerama-dev.
+     libgtkglext1-dev and libxrandr-dev.
    - Add missing ${misc:Depends} for cairo-dock-dev.
   * debian/cairo-dock-cairo.desktop
    - New desktop file to launch the non-OpenGL version.

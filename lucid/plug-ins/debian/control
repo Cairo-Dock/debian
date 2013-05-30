@@ -79,6 +79,7 @@ Suggests:	compiz,
 		indicator-me,
 		indicator-sound,
 		cairo-dock-plug-ins-dbus-interface-ruby (>= ${source:Version})
+Provides:	indicator-renderer
 Description: A set of plug-ins for Cairo-Dock
  Cairo-Dock-plug-ins is a set of plug-ins for Cairo-Dock. It provides some new
  functionnalities like controling music players or note-taking, a clock or a

@@ -20,7 +20,7 @@ Build-Depends: cdbs,
                libglib2.0-cil-dev,
                libglib2.0-dev (>= 2.20),
                libglu1-mesa-dev | libglu-dev,
-               libgnome-menu-dev,
+               libgnome-menu-3-dev,
                libgnutls-dev,
                libgtk-3-dev,
                libical-dev,
@@ -43,6 +43,7 @@ Build-Depends: cdbs,
                mono-devel,
                mono-gmcs,
                python,
+               python3,
                python-rsvg,
                ruby,
                valac,
@@ -91,6 +92,7 @@ Suggests: cairo-dock-plug-ins-dbus-interface-mono (>= ${source:Version}),
           indicator-printers,
           indicator-sound,
           indicator-sync
+Provides: indicator-renderer
 Multi-Arch: same
 Description: A set of plug-ins for Cairo-Dock
  Cairo-Dock-plug-ins is a set of plug-ins for Cairo-Dock. It provides some new

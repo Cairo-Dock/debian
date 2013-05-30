@@ -21,7 +21,7 @@ Build-Depends: 	cdbs,
 		libasound2-dev,
 		libvte-2.90-dev,
 		x11proto-xf86vidmode-dev,
-		libgnome-menu-dev,
+		libgnome-menu-3-dev,
 		libgnutls-dev,
 		libwebkitgtk-3.0-dev,
 		libxklavier-dev,
@@ -36,6 +36,7 @@ Build-Depends: 	cdbs,
 		libsensors4-dev,
 		libzeitgeist-dev,
 		python,
+		python3,
 		valac,
 		ruby,
 		cli-common-dev (>= 0.7),
@@ -90,6 +91,7 @@ Suggests:	compiz,
 		cairo-dock-plug-ins-dbus-interface-ruby (>= ${source:Version}),
 		cairo-dock-plug-ins-dbus-interface-vala (>= ${source:Version}),
 		cairo-dock-plug-ins-dbus-interface-mono (>= ${source:Version})
+Provides:	indicator-renderer
 Multi-Arch: same
 Description: A set of plug-ins for Cairo-Dock
  Cairo-Dock-plug-ins is a set of plug-ins for Cairo-Dock. It provides some new

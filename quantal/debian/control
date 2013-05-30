@@ -16,7 +16,7 @@ Build-Depends: cdbs,
                libpango1.0-dev,
                librsvg2-dev,
                libxcomposite-dev,
-               libxinerama-dev,
+               libxrandr-dev,
                libxml2-dev,
                libxrender-dev,
                libxtst-dev,
@@ -60,7 +60,7 @@ Depends: cairo-dock-data (>= ${source:Version}),
          ${shlibs:Depends}
 Recommends: cairo-dock,
             cairo-dock-plug-ins,
-            compiz-plugins | e17 | kde-window-manager | openbox | xfwm4
+            compiz-plugins | e17 | kde-window-manager | openbox | xfwm4 | mutter
 Suggests: gnome-session, compiz-plugins
 Description: Light and eye-candy dock to launch your programs (core package)
  Cairo-Dock is a pretty, light and convenient interface to your desktop,
@@ -90,7 +90,7 @@ Depends: libcairo2-dev,
          libpango1.0-dev,
          librsvg2-dev,
          libxcomposite-dev,
-         libxinerama-dev,
+         libxrandr-dev,
          libxml2-dev,
          libxrender-dev,
          libxtst-dev,
