@@ -1,0 +1,7 @@
+# Cairo-Dock Plug-Ins are not linked to gldi
+cairo-dock-plug-ins-integration: pkg-has-shlibs-control-file-but-no-actual-shared-libs
+# These integration plug-ins don't need shlibs and don't have to call ldconfig
+#  (these plug-ins are enable only if a lib is available)
+cairo-dock-plug-ins-integration: postinst-has-useless-call-to-ldconfig
+cairo-dock-plug-ins-integration: postrm-has-useless-call-to-ldconfig
+cairo-dock-plug-ins-integration: missing-dependency-on-libc
