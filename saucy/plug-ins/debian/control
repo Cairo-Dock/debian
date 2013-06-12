@@ -16,7 +16,7 @@ Build-Depends: cdbs,
                libetpan-dev,
                libexif-dev,
                libgl1-mesa-dev | libgl-dev,
-               libgldi-dev (>= 3.1.98),
+               libgldi-dev (>= 3.2.98),
                libglib2.0-cil-dev,
                libglib2.0-dev (>= 2.20),
                libglu1-mesa-dev | libglu-dev,
@@ -56,7 +56,7 @@ Section: graphics
 Architecture: any
 Conflicts: cairo-dock-plug-ins (<= 2.0.8.0)
 Replaces: cairo-dock-plug-ins (<= 2.0.8.0)
-Depends: cairo-dock-core (>= 3.1.98),
+Depends: cairo-dock-core (>= 3.2.98),
          cairo-dock-plug-ins-data (>= ${source:Version}),
          ${misc:Depends}
 Pre-Depends: ${misc:Pre-Depends}
@@ -73,7 +73,7 @@ Package: cairo-dock-plug-ins
 Section: graphics
 Architecture: any
 Conflicts: cairo-dock-plug-ins (<= 2.0.8.0)
-Depends: cairo-dock-core (>= 3.1.98),
+Depends: cairo-dock-core (>= 3.2.98),
          cairo-dock-plug-ins-data (>= ${source:Version}),
          curl,
          python,
