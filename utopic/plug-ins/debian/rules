@@ -1,0 +1,34 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE=1
+
+DH_ALWAYS_EXCLUDE=CVS:.bzr
+
+DEB_CMAKE_EXTRA_FLAGS += -Denable-gnome-integration=ON \
+	-Denable-old-gnome-integration=OFF \
+	-Denable-kde-integration=ON \
+	-Denable-xfce-integration=ON \
+	-Denable-network-monitor=ON \
+	-Denable-doncky=ON \
+	-Denable-scooby-do=ON \
+	-Denable-disks=ON \
+	-Denable-global-menu=ON \
+	-DGMCS_EXECUTABLE=/usr/bin/mono-csc \
+	-DCMAKE_INSTALL_LIBDIR=lib/$(DEB_HOST_MULTIARCH)
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/cmake.mk
+include /usr/share/cdbs/1/rules/utils.mk
+# include /usr/share/cdbs/1/rules/patchsys-quilt.mk
+
+DEB_INSTALL_CHANGELOGS_ALL := ChangeLog
+DEB_BUILD_PARALLEL = yes
+
+common-binary-predeb-arch::
+	dh_clifixperms
+	dh_clideps -d
+
+get-orig-source:
+	dh_testdir
+	uscan --force-download --verbose --repack
+
+common-binary-post-install-arch:: list-missing

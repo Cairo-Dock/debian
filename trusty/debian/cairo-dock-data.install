@@ -1,0 +1,6 @@
+debian/custom_cairo-dock_badge.png usr/share/unity-greeter/
+usr/bin/cairo-dock-session
+usr/share/cairo-dock/
+usr/share/gnome-session/sessions/cairo-dock.session
+usr/share/pixmaps/
+usr/share/xsessions/cairo-dock.desktop

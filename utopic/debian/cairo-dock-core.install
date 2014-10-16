@@ -1,0 +1,6 @@
+debian/apport/cairo-dock.py usr/share/apport/package-hooks/
+usr/bin/cairo-dock
+usr/lib/*/cairo-dock/libcd*.so
+usr/share/applications
+usr/share/locale
+usr/share/man/

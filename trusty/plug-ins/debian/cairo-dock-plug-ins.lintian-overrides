@@ -1,0 +1,2 @@
+# Cairo-Dock Plug-Ins are not linked to gldi
+cairo-dock-plug-ins: pkg-has-shlibs-control-file-but-no-actual-shared-libs
