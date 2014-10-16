@@ -11,6 +11,7 @@ include /usr/share/cdbs/1/class/cmake.mk
 # include /usr/share/cdbs/1/rules/patchsys-quilt.mk
 
 DEB_INSTALL_CHANGELOGS_ALL := ChangeLog
+DEB_BUILD_PARALLEL = yes
 
 get-orig-source:
 	dh_testdir
