@@ -20,6 +20,7 @@ Build-Depends: cdbs,
                libxml2-dev,
                libxrender-dev,
                libxtst-dev,
+               libwayland-dev,
                python-rsvg
 Standards-Version: 3.9.2
 Homepage: http://www.glx-dock.org/
@@ -29,9 +30,9 @@ Section: graphics
 Architecture: all
 Conflicts: cairo-dock (<= 2.0.8.0)
 Depends: cairo-dock-core (>= ${source:Version}),
-         cairo-dock-plug-ins (>= 3.3.99.alpha1),
-         cairo-dock-plug-ins-dbus-interface-python (>= 3.3.99.alpha1),
-         cairo-dock-plug-ins-integration (>= 3.3.99.alpha1),
+         cairo-dock-plug-ins (>= 3.4.0),
+         cairo-dock-plug-ins-dbus-interface-python (>= 3.4.0),
+         cairo-dock-plug-ins-integration (>= 3.4.0),
          ${misc:Depends}
 Description: Light and eye-candy dock to launch your programs (metapackage)
  Cairo-Dock is a pretty, light and convenient interface to your desktop,
@@ -58,9 +59,10 @@ Depends: cairo-dock-data (>= ${source:Version}),
          libgldi3 (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
-Recommends: cairo-dock,
+Recommends:	cairo-dock,
             cairo-dock-plug-ins,
-            compiz-plugins | e17 | kde-window-manager | openbox | xfwm4 | mutter
+			compiz-plugins | e17 | kde-window-manager | openbox | xfwm4 | mutter | marco | muffin,
+            gnome-session | e17 | kde-workspace | openbox | lxsession-logout | xfce4-session | mate-desktop | cinnamon-session
 Suggests: compiz-plugins, gnome-session
 Description: Light and eye-candy dock to launch your programs (core package)
  Cairo-Dock is a pretty, light and convenient interface to your desktop,
