@@ -1,0 +1,4 @@
+usr/lib/*/cairo-dock/appmenu-registrar
+usr/lib/*/cairo-dock/cairo-dock-launcher-API-daemon
+usr/lib/*/cairo-dock/libcd-*.so
+usr/lib/*/cairo-dock/status-notifier-watcher

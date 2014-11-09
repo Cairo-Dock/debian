@@ -1,0 +1,194 @@
+X-Source-Downloaded-From: https://launchpad.net/cairo-dock
+X-Upstream-Author: Fabrice Rey <fabounet@glx-dock.org>
+X-Debianized-By: Matthieu Baerts (matttbe) <matttbe@gmail.com>
+X-Debianized-Date: Sat, 07 Aug 2010 03:37:36 +0200
+
+Files: systray/src/cd-tray.c: LGPL (v2 or later)
+Copyright: 2007 Neil Jagdish Patel
+Licence: LGPL 2+ (See /usr/share/common-licenses/LGPL-2 for complete licence)
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the
+ * Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston,
+ * MA 02110-1301, USA.
+
+Files: 	systray/src/cd-tray.h
+	systray/src/systray-config.*
+	systray/src/systray-init.*
+	systray-menu-functions.*
+	systray/src/systray-struct.h
+Copyright: 2007, 2008 GESTES Cedric
+Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston,
+ * MA 02110-1301, USA.
+
+Files: 	terminal/*
+Copyright: 2007, 2008 GESTES Cedric and Fabrice Rey
+Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
+
+Files: systray/src/na-tray-manager.*
+Copyright: 2002 Anders Carlsson <andersca@gnu.org>, 2003-2006 Vincent Untz
+Licence: LGPL 2+ (See /usr/share/common-licenses/LGPL-2 for complete licence)
+
+Files: 	nVidia/*
+	stack/*
+	wifi/*
+	xmms/*
+Copyright: 2008, 2009 Rémy Robertson
+Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
+
+Files: 	slider/*
+Copyright: 2008, 2009 Fabrice Rey and Rémy Robertson
+Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
+
+Files: 	cpusage/*
+	netspeed/*
+	rame/*
+Copyright: 2008 parAdOxxx_ZeRo
+Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
+
+Files: 	dock-rendering/*
+Copyright: 2008, 2009 Fabrice Rey and parAdOxxx_ZeRo
+Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
+
+Files: 	Dbus/*
+Copyright: 2008 Fabrice Rey and Adrien Pilleboue
+Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
+
+Files: 	powermanager/*
+	tomboy/*
+Copyright: 2008 Adrien Pilleboue
+Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
+
+Files: 	mail/*
+Copyright: Christophe Chapuis and Fabrice Rey
+Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
+
+Files: 	weblets/*
+	xfce-integration/*
+Copyright: Christophe Chapuis
+Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
+
+Files: 	shortcuts/*
+Copyright: Benjamin SANS and Fabrice Rey
+Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
+
+Files: 	showDesktop/*
+Copyright: Romain PEROL
+Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
+
+Files: 	switcher/*
+Copyright: Cchumi and Fabrice Rey <fabounet@glx-dock.org>
+Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
+
+Files: 	musicPlayer/*
+Copyright: Rémy Robertson, Yann Sladek, Yann Dulieu and Fabrice Rey <fabounet@glx-dock.org>
+Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
+
+Files: dnd2share/*
+Copyright: Yann Dulieu and Fabrice Rey <fabounet@glx-dock.org>
+Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
+
+Files: 	RSSreader/*
+Copyright: 2008 Yann Dulieu and Fabrice Rey <fabounet@glx-dock.org>
+Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
+
+Files: 	Doncky/*
+Copyright: 2008 Yann Dulieu
+Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
+
+Files: 	Network-Monitor/*
+Copyright: 2008 Yann Sladek and Fabrice Rey <fabounet@glx-dock.org>
+Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
+
+Files: 	Disks/*
+Copyright: 2011 SQP <contact@glx-dock.org>
+Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
+
+Files: 	Impulse/*
+Copyright: 2011 Matthieu Baerts <matttbe@glx-dock.org>
+Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
+
+Files: 	alsaMixer/*
+	Animated-icons/*
+	Cairo-Penguin/*
+	Clipper/*
+	clock/*
+	desklet-rendering/*
+	dialog-rendering/*
+	drop-indicator/*
+	dustbin/*
+	GMenu/*
+	Global-Menu/*
+	gnome-integration/*
+	gnome-integration-old/*
+	icon-effect/*
+	illusion/*
+	keyboard-indicator/*
+	logout/*
+	motion-blur/*
+	quick-browser/*
+	rendering/*
+	Scooby-Do/*
+	showDesklets/*
+	show-mouse/*
+	Toons/*
+	weather/*
+	Xgamma/*
+	*Menu/*
+	Folders/*
+	Indicator-applet/*
+	Status-Notifier/*
+	gvfs-integration/*
+	Composite-manager/*
+	*/*
+Copyright: Fabrice Rey <fabounet@glx-dock.org>
+Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
+
+Icons inspired of the Humanity Icons theme and recolorized by Matthieu Baerts
+Copyright: Daniel Fore, Jonian Guveli and K.Vishnoo Charan Reddy.
+Licence: GPL v2  (See /usr/share/common-licenses/GPL-2 for complete licence)
+
+Pictures on slider/data/preview.jpg:
+Copyright: Matthieu Baerts <matttbe@glx-dock.org>
+Licence: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete licence)
+
+Files: 	debian/*
+Copyright: Copyright (C) Julien Lavergne <julien.lavergne@gmail.com>
+Licence: GPL 2+ (See /usr/share/common-licenses/GPL-2 for complete licence)
+Updated by Matthieu Baerts and Didier Roche for new releases.
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston,
+ * MA 02110-1301, USA.
