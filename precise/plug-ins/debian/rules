@@ -22,10 +22,6 @@ include /usr/share/cdbs/1/rules/utils.mk
 DEB_INSTALL_CHANGELOGS_ALL := ChangeLog
 DEB_BUILD_PARALLEL = yes
 
-common-binary-predeb-arch::
-	dh_clifixperms
-	dh_clideps -d
-
 get-orig-source:
 	dh_testdir
 	uscan --force-download --verbose --repack
