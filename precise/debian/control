@@ -59,7 +59,7 @@ Depends: 	cairo-dock-data (>= ${source:Version}),
 			${shlibs:Depends}, 
 			${misc:Depends}
 Recommends:	cairo-dock, cairo-dock-plug-ins,
-			compiz-plugins | e17 | kde-window-manager | openbox | xfwm4 | mutter
+			compiz-plugins | e17 | kde-window-manager | openbox | xfwm4 | mutter | muffin
 Suggests:	firefox, gnome-terminal, empathy, inkscape, gimp, shotwell, rhythmbox
 Description: Light and eye-candy dock to launch your programs (core package)
  Cairo-Dock is a pretty, light and convenient interface to your desktop,

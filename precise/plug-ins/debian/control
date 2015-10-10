@@ -38,12 +38,6 @@ Build-Depends: 	cdbs,
 		python3,
 		valac,
 		ruby,
-		cli-common-dev (>= 0.7),
-		mono-devel,
-		mono-gmcs,
-		libglib2.0-cil-dev,
-		libndesk-dbus1.0-cil-dev,
-		libndesk-dbus-glib1.0-cil-dev,
 		libpulse-dev,
 		libupower-glib-dev,
 		python-rsvg
@@ -88,8 +82,7 @@ Suggests:	compiz,
 		indicator-sound,
 		indicator-printers,
 		cairo-dock-plug-ins-dbus-interface-ruby (>= ${source:Version}),
-		cairo-dock-plug-ins-dbus-interface-vala (>= ${source:Version}),
-		cairo-dock-plug-ins-dbus-interface-mono (>= ${source:Version})
+		cairo-dock-plug-ins-dbus-interface-vala (>= ${source:Version})
 Provides:	indicator-renderer
 Multi-Arch: same
 Description: A set of plug-ins for Cairo-Dock
@@ -162,21 +155,6 @@ Description: A Ruby interface to interact with Cairo-Dock by using DBus
  desktop switcher but also some views, dialogs and desklets skins, etc.
  .
  This package contains a Ruby interface for the DBus plug-in.
-
-Package: cairo-dock-plug-ins-dbus-interface-mono
-Section: graphics
-Architecture: any
-Replaces:	cairo-dock-plug-ins (<< 3.0.0.0alpha1~20111210)
-Breaks:		cairo-dock-plug-ins (<< 3.0.0.0alpha1~20111210)
-Depends: 	cairo-dock-plug-ins (>= ${source:Version}),
-		${cli:Depends},
-		${misc:Depends}
-Description: A Mono interface to interact with Cairo-Dock by using DBus
- Cairo-Dock-plug-ins is a set of plug-ins for Cairo-Dock. It provides some new
- functionnalities like controling music players or note-taking, a clock or a
- desktop switcher but also some views, dialogs and desklets skins, etc.
- .
- This package contains a Mono interface for the DBus plug-in.
 
 Package: cairo-dock-plug-ins-integration-dbg
 Section: debug
