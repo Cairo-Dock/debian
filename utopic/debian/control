@@ -61,9 +61,9 @@ Depends: cairo-dock-data (>= ${source:Version}),
          ${shlibs:Depends}
 Recommends:	cairo-dock,
             cairo-dock-plug-ins,
-			compiz-plugins | e17 | kde-window-manager | openbox | xfwm4 | mutter | marco | muffin,
-            gnome-session | e17 | kde-workspace | openbox | lxsession-logout | xfce4-session | mate-desktop | cinnamon-session
-Suggests: compiz-plugins, gnome-session
+            compiz-plugins | e17 | kde-window-manager | openbox | xfwm4 | gnome-shell | mutter | marco | muffin | cinnamon | fluxbox,
+            ubuntu-session | gnome-session | gnome-session-flashback | gnome-session-wayland | e17 | kde-workspace | openbox | lxsession | xfce4-session | mate-session-manager | razorqt-session | cinnamon-session
+Suggests: compiz-plugins, ubuntu-session
 Description: Light and eye-candy dock to launch your programs (core package)
  Cairo-Dock is a pretty, light and convenient interface to your desktop,
   able to replace advantageously your system panel!
