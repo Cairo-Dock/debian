@@ -1,11 +1,9 @@
 usr/bin/cairo-dock
-usr/bin/cairo-dock-session
-usr/share/cairo-dock
+usr/lib/*/cairo-dock/libcd-Help.so
+usr/lib/*/libgldi.so.*
+usr/lib/systemd/user/cairo-dock.service
 usr/share/applications
-usr/share/gnome-session
+usr/share/cairo-dock
 usr/share/locale
 usr/share/man
 usr/share/pixmaps
-usr/share/xsessions
-usr/lib/*/libgldi.so.*
-usr/lib/*/cairo-dock/libcd-Help.so

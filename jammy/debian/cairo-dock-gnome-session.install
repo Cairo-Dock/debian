@@ -1,0 +1,5 @@
+usr/bin/cairo-dock-session
+usr/lib/systemd/user/gnome-session-x11@cairo-dock-compiz.target
+usr/lib/systemd/user/gnome-session-x11@cairo-dock-metacity.target
+usr/share/gnome-session
+usr/share/xsessions

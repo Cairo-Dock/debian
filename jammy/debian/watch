@@ -1,2 +1,8 @@
-version=3
-https://launchpad.net/cairo-dock-core/+download .*/cairo-dock-([\d\.]+.*)?.tar.gz
+version=4
+opts="searchmode=plain, \
+  pgpmode=none, \
+  dversionmangle=auto" \
+https://api.github.com/repos/Cairo-Dock/cairo-dock-core/releases \
+https://api.github.com/repos/Cairo-Dock/cairo-dock-core/tarball/@ANY_VERSION@ \
+debian
+
