@@ -1,3 +1,19 @@
+cairo-dock (3.5.99-1) jammy; urgency=medium
+
+  * New upstream release.
+  * Initial support for Wayland.
+  * Add a .service file for Systemd
+  * Split out session files to a separate package.
+  
+ -- Daniel Kondor <kondor.dani@gmail.com>  Sat, 9 Mar 2024 23:16:01 +0100
+
+cairo-dock (3.5.0) unreleased
+
+  * Update to 3.5.0
+  * Several bug fixes since the last release.
+  
+ -- Daniel Kondor <kondor.dani@gmail.com>  Sat, 9 Mar 2024 23:16:00 +0100
+
 cairo-dock (3.4.1+git20201103.0836f5d1-1) unstable; urgency=medium
 
   * Snapshot, taken from the master (20201103). (Closes: #963494)
