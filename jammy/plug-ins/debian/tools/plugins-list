@@ -17,6 +17,7 @@ GMenu: cairo-dock-gmenu-plugin
 gnome-integration: cairo-dock-gnome-integration-plugin
 icon-effect: cairo-dock-icon-effect-plugin
 illusion: cairo-dock-illusion-plugin
+Indicator-Generic: cairo-dock-indicator-generic-plug-in
 keyboard-indicator: cairo-dock-keyboard-indicator-plugin
 logout: cairo-dock-logout-plugin
 mail: cairo-dock-mail-plugin
@@ -33,6 +34,7 @@ showDesktop; cairo-dock-showdesktop-plugin
 show-mouse: cairo-dock-showmouse-plugin
 slider: cairo-dock-slider-plugin
 stack: cairo-dock-stack-plugin
+Status-Notifier: cairo-dock-status-notifier-plug-in
 switcher: cairo-dock-switcher-plugin
 System-Monitor: cairo-dock-system-monitor-plugin
 systray: cairo-dock-systray-plugin

@@ -1,2 +1,8 @@
-version=3
-https://launchpad.net/cairo-dock-plug-ins/+download .*/cairo-dock-plugins-([\d\.]+.*)?.tar.gz
+version=4
+opts="searchmode=plain, \
+  pgpmode=none, \
+  dversionmangle=auto" \
+https://api.github.com/repos/Cairo-Dock/cairo-dock-plug-ins/releases \
+https://api.github.com/repos/Cairo-Dock/cairo-dock-plug-ins/tarball/@ANY_VERSION@ \
+debian
+

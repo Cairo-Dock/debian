@@ -1,3 +1,20 @@
+cairo-dock-plug-ins (3.5.99-1) jammy; urgency=medium
+
+  * New release
+  * Add plug-ins missing from the official repository:
+    Status-Notifier, Indicator-Generic
+  * Fix incorrect subdock rendering on HiDPI screens with EGL / Wayland.
+  * Small improvements in rendering dialogs and menus.
+
+ -- Daniel Kondor <kondor.dani@gmail.com>  Sat, 9 Mar 2024 23:40:00 +0100
+
+cairo-dock-plug-ins (3.5.0) unreleased
+
+  * Update to 3.5.0
+  * Several bug fixes since the last release.
+  
+ -- Daniel Kondor <kondor.dani@gmail.com>  Sat, 9 Mar 2024 23:16:00 +0100
+
 cairo-dock-plug-ins (3.4.1+git20201022.a0d3415c-1.1) unstable; urgency=medium
 
   * Non-maintainer upload

@@ -50,6 +50,12 @@ License: GPL-3+
 
 Files:  dock-rendering/*
 Copyright: 2008, 2009 Fabrice Rey and parAdOxxx_ZeRo
+           2024 Daniel Kondor <kondor.dani@gmail.com>
+License: GPL-3+
+
+Files:  dialog-rendering/*
+Copyright: 2007-2014 Fabrice Rey
+           2024 Daniel Kondor <kondor.dani@gmail.com>
 License: GPL-3+
 
 Files:  Dbus/*
@@ -104,6 +110,11 @@ License: GPL-3+
 
 Files:  Composite-Manager/data/composite*.svg
 Copyright: John Varouhakis
+License: GPL-3+
+
+Files:  logout/*
+Copyright: 2007-2014 Fabrice Rey
+           2024 Daniel Kondor <kondor.dani@gmail.com>
 License: GPL-3+
 
 Files:  shared-images/*.svg
