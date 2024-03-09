@@ -1,0 +1,85 @@
+From 8e9b69c228433d224c8d601d6e4e77934944d7a3 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sun, 3 Jan 2021 01:22:12 +0900
+Subject: [PATCH] Change pkg-config from indicator3-0.4 to
+ ayatana-indicator3-0.4
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ CMakeLists.txt                              | 6 +++---
+ Indicator-applet/indicator-applet.h         | 4 ++--
+ Indicator-applet3/indicator-applet3-utils.h | 2 +-
+ Indicator-applet3/indicator-applet3.h       | 2 +-
+ 4 files changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 5f5db1b..55ee45b 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -197,7 +197,7 @@ endif()
+ ## Indicator
+ enable_if_not_defined (enable-indicator-support)
+ if (enable-indicator-support)
+-	set (INDICATOR_APPLET_MODULE indicator3-0.4)
++	set (INDICATOR_APPLET_MODULE ayatana-indicator3-0.4)
+ 	pkg_check_modules (INDICATOR_APPLET ${INDICATOR_APPLET_MODULE})
+ 	if (INDICATOR_APPLET_FOUND)
+ 		set (INDICATOR_NEW_VERSION TRUE)  # oneiric and newer
+@@ -264,10 +264,10 @@ if (INDICATOR_APPLET_FOUND)
+ 
+ 	if (INDICATOR_NEW_VERSION)  # oneiric and newer
+ 		execute_process(
+-			COMMAND pkg-config --variable=iconsdir indicator3-0.4
++			COMMAND pkg-config --variable=iconsdir ayatana-indicator3-0.4
+ 			OUTPUT_VARIABLE INDICATORICONSDIR)
+ 		execute_process(
+-			COMMAND pkg-config --variable=indicatordir indicator3-0.4
++			COMMAND pkg-config --variable=indicatordir ayatana-indicator3-0.4
+ 			OUTPUT_VARIABLE INDICATORDIR)
+ 		STRING (REGEX REPLACE "\n" "" INDICATORDIR ${INDICATORDIR})
+ 		set (with_indicator3 yes)
+diff --git a/Indicator-applet/indicator-applet.h b/Indicator-applet/indicator-applet.h
+index 52a3d4e..deebaec 100755
+--- a/Indicator-applet/indicator-applet.h
++++ b/Indicator-applet/indicator-applet.h
+@@ -23,9 +23,9 @@
+ 
+ #include <cairo-dock.h>
+ 
+-#include <libindicator/indicator.h>
++#include <libayatana-indicator/indicator.h>
+ ///#include <libindicator/indicator-object.h>
+-#include <libindicator/indicator-service-manager.h>
++#include <libayatana-indicator/indicator-service-manager.h>
+ 
+ #include <libdbusmenu-gtk/menuitem.h>
+ #include <libdbusmenu-gtk/menu.h>
+diff --git a/Indicator-applet3/indicator-applet3-utils.h b/Indicator-applet3/indicator-applet3-utils.h
+index 81bc89b..07e803a 100644
+--- a/Indicator-applet3/indicator-applet3-utils.h
++++ b/Indicator-applet3/indicator-applet3-utils.h
+@@ -22,7 +22,7 @@
+ 
+ #include <gtk/gtk.h>
+ #include <cairo-dock.h>
+-#include <libindicator/indicator-object.h>
++#include <libayatana-indicator/indicator-object.h>
+ 
+ /**
+  * Use the image of a GtkImage to draw a Cairo-Dock Icon
+diff --git a/Indicator-applet3/indicator-applet3.h b/Indicator-applet3/indicator-applet3.h
+index 3157370..af29b75 100644
+--- a/Indicator-applet3/indicator-applet3.h
++++ b/Indicator-applet3/indicator-applet3.h
+@@ -22,7 +22,7 @@
+ 
+ #include <glib.h>
+ #include <gtk/gtk.h>
+-#include <libindicator/indicator-object.h>
++#include <libayatana-indicator/indicator-object.h>
+ 
+ #define INDICATOR_SERVICE_DIR "/usr/share/unity/indicators"
+ 
+-- 
+2.30.0.rc2
+

@@ -1,0 +1,29 @@
+From e5fd204b3cf7fef03d07c55f1f46637b23d08172 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sat, 2 Jan 2021 21:52:57 +0900
+Subject: [PATCH] Use correct C# compiler
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ CMakeLists.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 5c2c90b..3699bb8 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -565,9 +565,9 @@ enable_if_not_defined (enable-mono-interface)
+ if (enable-mono-interface)
+ 	message (STATUS " * Mono:")
+ 	#find_package (Mono)
+-	find_program (GMCS_EXECUTABLE gmcs)
++	find_program (GMCS_EXECUTABLE mcs)
+ 	if (NOT GMCS_EXECUTABLE OR NOT EXISTS ${GMCS_EXECUTABLE})
+-		message (STATUS "Could not find Mono compiler gmcs, won't build Mono interface.")
++		message (STATUS "Could not find Mono compiler mcs, won't build Mono interface.")
+ 	else()
+ 		pkg_check_modules (MONO_PACKAGE dbus-sharp-2.0 dbus-sharp-glib-2.0 glib-sharp-2.0)
+ 		if (NOT MONO_PACKAGE_FOUND)
+-- 
+2.30.0.rc2
+

@@ -1,0 +1,58 @@
+From 175c0cc695624e8557c276753f8e0a9112f7d5a6 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sat, 2 Jan 2021 21:56:58 +0900
+Subject: [PATCH] Drop python2 support
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ CMakeLists.txt | 15 +++------------
+ 1 file changed, 3 insertions(+), 12 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 3699bb8..e69a19e 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -495,17 +495,12 @@ enable_if_not_defined (enable-python-interface)
+ if (enable-python-interface)
+ 	message (STATUS " * Python:")
+ 	# find python executables
+-	find_program (PYTHON2_EXECUTABLE python2)  # if both python2&3 are installed, usually we will have 'python2' and 'python3' available (one of them being a link to 'python')
+-	if (PYTHON2_EXECUTABLE AND EXISTS ${PYTHON2_EXECUTABLE})
+-		set (PYTHON2_FOUND TRUE)
+-		set (with_python2 yes)
+-	endif()
+ 	find_program (PYTHON3_EXECUTABLE python3)
+ 	if (PYTHON3_EXECUTABLE AND EXISTS ${PYTHON3_EXECUTABLE})
+ 		set (PYTHON3_FOUND TRUE)
+ 		set (with_python3 yes)
+ 	endif()
+-	if (NOT PYTHON2_FOUND OR NOT PYTHON3_FOUND)  # if we didn't find one of them, 
++	if (NOT PYTHON3_FOUND)  # if we didn't find one of them, 
+ 		find_program (PYTHON_EXECUTABLE python)
+ 		if (PYTHON_EXECUTABLE AND EXISTS ${PYTHON_EXECUTABLE})
+ 			EXECUTE_PROCESS(COMMAND ${PYTHON_EXECUTABLE} -c
+@@ -513,11 +508,7 @@ if (enable-python-interface)
+ 				OUTPUT_VARIABLE PYTHON_VERSION)
+ 			STRING (REGEX REPLACE "\\..*" "" PYTHON_VERSION ${PYTHON_VERSION})
+ 			message (STATUS "   Python Version: ${PYTHON_VERSION}")
+-			if ("${PYTHON_VERSION}" STREQUAL "2")
+-				set (PYTHON2_EXECUTABLE ${PYTHON_EXECUTABLE})
+-				set (PYTHON2_FOUND TRUE)
+-				set (with_python2 yes)
+-			elseif ("${PYTHON_VERSION}" STREQUAL "3")
++			if ("${PYTHON_VERSION}" STREQUAL "3")
+ 				set (PYTHON3_EXECUTABLE ${PYTHON_EXECUTABLE})
+ 				set (PYTHON3_FOUND TRUE)
+ 				set (with_python3 yes)
+@@ -526,7 +517,7 @@ if (enable-python-interface)
+ 	endif()
+ 	
+ 	# see if we found anything
+-	if (NOT PYTHON2_FOUND AND NOT PYTHON3_FOUND)
++	if (NOT PYTHON3_FOUND)
+ 		message (STATUS "Could not find Python, won't install Python interface.")
+ 		message (WARNING "This program is required to compile DBus applet with Python interface: python (version 2)")
+ 		set (PROGRAMS_MISSING "${PROGRAMS_MISSING} python")
+-- 
+2.30.0.rc2
+

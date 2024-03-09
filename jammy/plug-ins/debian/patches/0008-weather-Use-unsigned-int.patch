@@ -1,0 +1,26 @@
+From 1c48cff70d534e8ef416a876cc382ebe0f60920c Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Date: Sat, 2 Jan 2021 23:37:44 +0900
+Subject: [PATCH] weather: Use unsigned int
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+---
+ weather/src/applet-read-data.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/weather/src/applet-read-data.c b/weather/src/applet-read-data.c
+index 2fb828d..8621da3 100755
+--- a/weather/src/applet-read-data.c
++++ b/weather/src/applet-read-data.c
+@@ -359,7 +359,7 @@ static guchar *_hmac_sha1_base64(const gchar *key, const gchar *data)
+ 	size_t key_len = strlen(++key);
+ 	size_t data_len = strlen(data);
+ 	uint8_t md[64];  // SHA1_Message_Block_Size = 64 bytes
+-	uint md_len=64;
++	unsigned int md_len=64;
+ 	if (!HMAC(EVP_sha1(), key, key_len, (guchar*)data, data_len, md, &md_len))  // data is URL-encoded, so is actually a guchar*
+ 	{
+ 		//#include <openssl/err.h>
+-- 
+2.30.0.rc2
+

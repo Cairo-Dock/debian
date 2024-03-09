@@ -1,0 +1,401 @@
+cairo-dock-plug-ins (3.4.1+git20201022.a0d3415c-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload
+  * Drop  cairo-dock-dbus-plug-in-interface-mono (Closes: #1043350)
+
+ -- Bastian Germann <bage@debian.org>  Mon, 28 Aug 2023 13:54:37 +0200
+
+cairo-dock-plug-ins (3.4.1+git20201022.a0d3415c-1) unstable; urgency=medium
+
+  * Snapshot, taken from the master (20201022). (Closes: #966901)
+  * Update d/control.
+    * Add libssl-dev to B-D.
+    * Switch from libsensors4-dev to libsensors-dev in B-D (Closes: #917433)
+    * Use libayatana-ido3-dev instead of libayatana-ido3-0.4-dev.
+      (Closes: #907375)
+    * Use libayatana-indicator3-dev instead of libindicator3-dev.
+      (Closes: #956760)
+  * Update d/*.lintian-overrides.
+    * Drop malformed-override Unknown tag.
+  * Update d/copyright
+    * Switch copyright in https mode.
+    * Fix lintian warning: source: globbing-patterns-out-of-order.
+  * Bump d/compat to 10.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Sun, 03 Jan 2021 00:32:07 +0900
+
+cairo-dock-plug-ins (3.4.1-6) unstable; urgency=medium
+
+  * Drop python2 support of cairo-dock-plug-ins (Closes: #936263)
+  * Fix build with lastet libetpan-dev (Closes: #944424)
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Wed, 01 Apr 2020 15:56:27 +0900
+
+cairo-dock-plug-ins (3.4.1-5) unstable; urgency=medium
+
+  [ Scott Kitterman ]
+  * Drop python2 parts of cairo-dock-plug-ins (Closes: #936263)
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Thu, 12 Dec 2019 09:10:37 +0900
+
+cairo-dock-plug-ins (3.4.1-4) unstable; urgency=medium
+
+  * Change team mail address. (Closes: #899966)
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Fri, 25 May 2018 09:05:47 +0900
+
+cairo-dock-plug-ins (3.4.1-3) unstable; urgency=medium
+
+  * Move to salsa.
+  * Bump Standards-Version to 4.1.4.
+  * Stop using libido3-0.1-dev and use libayatana-ido3-0.4-dev in B-D.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Mon, 23 Apr 2018 08:34:07 +0900
+
+cairo-dock-plug-ins (3.4.1-2) unstable; urgency=medium
+
+  * Add -D_POSIX_C_SOURCE=200809L to CFLAGS and CXXFLAGS (Closes: #882418)
+  * Update Standards-Version to 4.1.1.
+  * Change Priority from extra to optional.
+  * Fix override data of cairo-dock-dbus-plug-in-interface-vala.
+  * Delete duplicate license in debian/copyright.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Tue, 05 Dec 2017 15:01:01 +0900
+
+cairo-dock-plug-ins (3.4.1-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Stop building cairo-dock-weblets-plug-in, it required a version
+    of WebKitGTK+ that won't be in buster. (Closes: #866634)
+
+ -- Adrian Bunk <bunk@debian.org>  Wed, 09 Aug 2017 12:19:29 +0300
+
+cairo-dock-plug-ins (3.4.1-1) unstable; urgency=medium
+
+  * Imported Upstream version 3.4.1.
+  * Update debian/control.
+    - Update version of cairo-dock-dev to 3.4.1.
+    - Bump Standard Version: 3.9.8.
+    - Use a secure transport for the Vcs-Git and Vcs-Browser URL.
+    - Update debhelper version to 9.
+  * Update debian/patches.
+    - Fix API of weather.com. (Closes: #825379)
+      Add debian/patches/weather-url.patch. Thanks to Elimar Riesebieter
+      <riesebie@lxtec.de>.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Sun, 30 Oct 2016 04:31:54 +0900
+
+cairo-dock-plug-ins (3.4.0-1.4) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * The architectures list is in two places? Of course it is. Make the
+    rule conditional upon the existence of a file only installed if
+    on a Mono platform, so it only needs maintaining in one place.
+
+ -- Jo Shields <directhex@apebox.org>  Tue, 22 Dec 2015 18:12:32 +0000
+
+cairo-dock-plug-ins (3.4.0-1.3) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * d/p/use_correct_csharp_compiler.patch:
+    Debian now has Mono 4.0+, which means "gmcs" no longer exists
+  * debian/control: Updated list of architectures supported by Mono (Closes:
+    #808502)
+
+ -- Jo Shields <directhex@apebox.org>  Mon, 21 Dec 2015 09:32:11 +0000
+
+cairo-dock-plug-ins (3.4.0-1.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * d/p/0005-Use-dbus-sharp-not-unmaintained-NDesk.patch, debian/control: 
+    Use dbus-sharp instead of ndesk-dbus (Closes: #804537)
+
+ -- Jo Shields <directhex@apebox.org>  Wed, 18 Nov 2015 12:49:35 +0000
+
+cairo-dock-plug-ins (3.4.0-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Use libzeitgeist-2.0-dev instead of libzeitgeist-dev, libzeitgeist 1.0 is
+    deprecated for quite some time and this package is the last one to use it.
+    (Closes: #801969)
+  * d/p/0004-Add-CMake-check-for-vte-2.91-and-fix-VTE_CHECK_VERSI.patch: Use
+    libvte-2.91 instead of libvte-2.90 (Thanks to Rodolphe PELLOUX-PRAYER
+    <rodolphe@damsy.net>, Closes: #788019)
+
+ -- Laurent Bigonville <bigon@debian.org>  Fri, 16 Oct 2015 16:25:44 +0200
+
+cairo-dock-plug-ins (3.4.0-1) unstable; urgency=medium
+
+  * Imported Upstream version 3.4.0.
+  * Update debian/control.
+    - Update version of cairo-dock-dev to 3.4.0.
+    - Update description for each packages.
+    - Bump Standard Version: 3.9.6.
+  * Remove patches/bzr3083-3084_Support_UPower0.99.patch.
+    This patch is included in new version.
+  * Update debian/copyright.
+    - Use * instaed of */*.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Thu, 23 Oct 2014 14:27:28 +0900
+
+cairo-dock-plug-ins (3.3.2-3.3) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Add debian/patches/bzr3083-3084_Support_UPower0.99.patch (Closes: #748929)
+    - Borrowed from the ubuntu package, supposedly originally from upstream.
+    - Massage the patch to apply without first applying
+      bzr3057_GMenu_new_apps_show_dialog_after_installation.patch
+
+ -- Andreas Henriksson <andreas@fatal.se>  Mon, 14 Jul 2014 12:01:25 +0200
+
+cairo-dock-plug-ins (3.3.2-3.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Build depend on libgnutls28-dev to make the package buildable
+    again. Closes: #753488.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Tue, 08 Jul 2014 22:44:54 +0200
+
+cairo-dock-plug-ins (3.3.2-3.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Build for the default Ruby version, instead of hardcoding any.
+     (Closes: #745926)
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Sat, 26 Apr 2014 17:56:53 +0200
+
+cairo-dock-plug-ins (3.3.2-3) unstable; urgency=low
+
+  * Update debian/rules.
+    - Remove sparc from mono (cli) support. (Closes: #727593)
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Mon, 18 Nov 2013 14:24:52 +0900
+
+cairo-dock-plug-ins (3.3.2-2) unstable; urgency=low
+
+  * Update debian/control.
+    - Remove sparc from mono support. (Closes: #727593)
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Mon, 18 Nov 2013 08:18:48 +0900
+
+cairo-dock-plug-ins (3.3.2-1) unstable; urgency=low
+
+  * Imported Upstream version 3.3.2
+  * Update debian/control.
+    - Remove mono support by ia64. (Closes: #727593)
+    - Update version of cairo-dock-dev to 3.3.2.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Thu, 07 Nov 2013 13:24:49 +0900
+
+cairo-dock-plug-ins (3.3.1-2) unstable; urgency=low
+
+  * Update debian/control.
+    - Update version of cairo-dock-dev to 3.3.1.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Tue, 22 Oct 2013 17:40:50 +0900
+
+cairo-dock-plug-ins (3.3.1-1) unstable; urgency=low
+
+  * Imported Upstream version 3.3.1
+  * Fix lintian warning: copyright-refers-to-symlink-license
+  * Fix lintian warning: debian-control-has-unusual-field-spacing
+  * Refresh patches
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Tue, 15 Oct 2013 16:37:54 +0900
+
+cairo-dock-plug-ins (3.2.1-4) unstable; urgency=low
+
+  * Update debian/rukes.
+    - Fix function which checks the architecture.
+  * Remove armhf from cli supported architecture.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Sat, 06 Jul 2013 09:47:50 +0900
+
+cairo-dock-plug-ins (3.2.1-3) unstable; urgency=low
+
+  * Fix FTBFS on kFreeBSD.
+    Add patches/0001-Fix-MATCH-as-FreeBSD.patch.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Fri, 05 Jul 2013 12:25:43 +0900
+
+cairo-dock-plug-ins (3.2.1-2) unstable; urgency=low
+
+  * Only CLI supporting architectures performs dh_clifixperms and dh_clideps.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Fri, 05 Jul 2013 08:08:02 +0900
+
+cairo-dock-plug-ins (3.2.1-1) unstable; urgency=low
+
+  [ Youhei SASAKI ]
+  * Imported Upstream version 3.2.1
+  * Enable multiarch support
+  * Drop obsolete DM-Upload-Allowed
+  * Use canonical URI in Vcs-* fields
+  * Update build-depnds, use valac (Closes: #709709, #709698)
+  * Update patch: fix typo.
+  * Fix linitan info: python -> Python
+  * Bump Standard version: 3.9.4
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Sun, 02 Jun 2013 00:05:23 +0900
+
+cairo-dock-plug-ins (3.1.1.1-1) unstable; urgency=low
+
+  [ Youhei SASAKI ]
+  * Imported Upstream version 3.1.1.1
+  * Add dpkg-dev (>= 1.16.1~) to Build-Depends
+  * Add dpkg-buildflags for hardening build
+  * Fix missing license paragraph: LGPL-2 -> LGPL-2+
+  * Drop libthunar-vfs-1-dev in order to use GIO/GVFS directly
+    (Closes: #668029)
+  * Add patch: Fix spelling error: ressources -> resources
+
+  [ Nobuhiro Iwamatsu ]
+  * Update debian/control.
+    Switch valac from 0.14 to 0.16. (Closes: #675631)
+  * Add cairo-dock-dbus-plug-in-interface-* packages.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Thu, 22 Nov 2012 12:09:16 +0900
+
+cairo-dock-plug-ins (3.0.0-1) unstable; urgency=low
+
+  [ Youhei SASAKI ]
+  * Add debian/watch
+  * Bump Standard Version: 3.9.3
+  * Update Build-Depends
+
+  [ Nobuhiro Iwamatsu ]
+  * New Upstream version 3.0.0.
+  * Add libido3-0.1-dev Build-Depends.
+  * Install shared files of plugins into cairo-dock-plug-in-data package.
+    (Closes: 661733)
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Thu, 12 Apr 2012 18:39:01 +0900
+
+cairo-dock-plug-ins (2.4.0~2-2) unstable; urgency=low
+
+  [ Nobuhiro Iwamatsu ]
+  * Remove libindicator-dev which there were two.
+  * Remove cairo-dock-memenu-plug-in package. (Closes: #647816)
+    - cairo-dock-memenu-plug-in has been merge to 
+      cairo-dock-messaging-menu-plug-in.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Mon, 20 Feb 2012 12:25:51 +0900
+
+cairo-dock-plug-ins (2.4.0~2-1) unstable; urgency=low
+
+  * New Upstream version 2.4.0~2. (Closes: #645492, #634382).
+  * Rename source package name.
+  * Rename binary package name from *-plugin to *-plug-in.
+  * Drop compiz-icon-plug-in.
+  * Add new plug-ins.
+    - cairo-dock-folders-plug-in
+    - cairo-dock-impluise-plug-in
+    - cairo-dock-memenu-plug-in
+    - cairo-dock-messeaging-menu-plug-in
+    - cairo-dock-recent-events-plug-in
+    - cairo-dock-remote-control-plug-in
+  * Add libupower-glib-dev, libindicator-dev,
+    libdbusmenu-gtk-dev (>= 0.4), libido-0.1-dev, libpulse-dev,
+    libfftw3-dev, libsensors4-dev, libzeitgeist-dev,
+    libndesk-dbus-glib1.0-cil-dev, libglib2.0-cil-dev, ruby1.9.1,
+    ruby1.9.1-dev iand valac-0.14 to Build-Depneds.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Wed, 19 Oct 2011 09:32:53 +0900
+
+cairo-dock-plugins (2.3.0~3-3) unstable; urgency=low
+
+  * Change kfreebsd-* to linux-any in Build-Depends and Depends. (Closes:#634382)
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Wed, 27 Jul 2011 01:45:54 +0900
+
+cairo-dock-plugins (2.3.0~3-2) unstable; urgency=low
+
+  * Transition to Webkit 1.3. Change libwebkit-dev to libwebkitgtk-dev.
+    (Closes: #635404)
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Tue, 26 Jul 2011 17:35:46 +0900
+
+cairo-dock-plugins (2.3.0~3-1) unstable; urgency=low
+
+  * New Upstream version 2.3.0~3.
+  * Update debian/control.
+    - Bump Standard Version 3.9.2.
+    - Update version of cairo-dock-core and cairo-dock-dev.
+    - Fix typos in package description (Closes: #624424).
+      Thanks to Erik Esterer.
+    - Add armhf to cairo-dock-alsamixer-plugin (Closes: #629478).
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Mon, 04 Jul 2011 12:25:34 +0900
+
+cairo-dock-plugins (2.3.0~0rc1-1) unstable; urgency=low
+
+  [ Nobuhiro Iwamatsu ]
+  * Fix plugin version of Scooby-Do.
+  * Fix plugin version of Network-Monitor.
+  * Fix package build
+  * Fix typo in cairo-dock-illusion-plugin (Closes: #588463, #588449).
+  * Update debian/control (Closes: #583144).
+    - Update depends version of cairo-dock.
+    - Drop cairo-dock from Depends.
+    - Change Depends version of cairo-dock-plugin-data.
+    - Add powerpcspe added powerpcspe to Architecture of cairo-dock-
+      alsamixer-plugin
+
+  [ Youhei SASAKI ]
+  * Update debian/changelog
+  * New Upstream version 2.3.0~0rc1
+  * Change autotools to cmake for upstream change
+  * Bump standard Version: 3.9.1
+  * Remove unneeded patches
+    - fix-plugin-version: change Scooby-Do and Network-monitor reqired version
+    - fix-lintian-interreter_error: fix dustbin.conf VERSION_DUSTBIN
+    - modified_clean_target: exclude clean_target for data/*.conf
+  * Update Build-Depends cairo-dock-dev version
+  * Remove Scooby-Do, NetworkMonitor
+    - upstream indicates these plugin still 
+      buggy/untested/under heavy development.
+  * change install library name for upstream change
+    - debian/cairo-dock-system-monitor-plugin.install
+    - debian/cairo-dock-rssreader-plugin.install
+
+ -- Youhei SASAKI <uwabami@gfd-dennou.org>  Tue, 01 Mar 2011 19:23:36 +0900
+
+cairo-dock-plugins (2.1.3.10-1) unstable; urgency=low
+
+  [ Youhei SASAKI ]
+  * New Upstream version 2.1.3.10
+  * drop obsolute patch: Remove-preview.jpg-target(merge upstream)
+  * remove extra charactor (Closes: #580111)
+  * change cairo-dock-plugins Architecture "all" to "any" (Closes: #581299)
+
+  [ Nobuhiro Iwamatsu ]
+  * Update debian/control and debian/changelog
+    - Add cairo-dock-gnome-integration-plugin, cairo-dock-kde-integration-plugin
+      and cairo-dock-xfce-integration-plugin to cairo-dock-plugins.
+    - Change remove dfsg from package name.
+    - Update version of cairo-dock-dev.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Thu, 20 May 2010 12:59:07 +0900
+
+cairo-dock-plugins (2.1.3.5+dfsg-2) unstable; urgency=low
+
+  [ Nobuhiro Iwamatsu ]
+  * Change 3.0/quilt source format.
+  * Update debian/contorl.
+    - Change Homepege from http://www.cairo-dock.org to
+      http://www.glx-dock.org (Closes: #574408, #574427)
+    - Remove some package from Depends of cairo-dock-plugins package.
+  * Fix build kfreebsd-i386 and kfreebsd-amd64.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Thu, 25 Mar 2010 05:37:21 +0900
+
+cairo-dock-plugins (2.1.3.5+dfsg-1) unstable; urgency=low
+
+  [ Youhei SASAKI ]
+  * Initial release (Closes: #493737)
+
+  [ Nobuhiro Iwamatsu ]
+  * Remove slider/data/preview.jpg
+    Because this image file has copyright of problem.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Tue, 16 Feb 2010 18:33:36 +0900

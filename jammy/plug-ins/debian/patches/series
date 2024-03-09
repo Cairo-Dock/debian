@@ -1,0 +1,10 @@
+0001-Fix-typo-about-SystemMonitor-Mail-dnd2share-Stack-GV.patch
+0002-Fix-MATCH-as-FreeBSD.patch
+0003-Change-ruby-dir-to-vendor.patch
+0004-Use-correct-C-compiler.patch
+0005-Drop-python2-support.patch
+0006-Fix-support-libetpan-pkgconfig.patch
+0007-Change-version-to-3.4.1-in-CMakeLists.txt.patch
+0008-weather-Use-unsigned-int.patch
+0009-Swith-use-libido3-0.1-to-libayatana-ido3-0.4.patch
+0010-Change-pkg-config-from-indicator3-0.4-to-ayatana-ind.patch
