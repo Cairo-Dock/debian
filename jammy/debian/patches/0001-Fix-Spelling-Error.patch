@@ -1,0 +1,54 @@
+From e0d33d19c1b7e9c82685b20c57592f9e162fe135 Mon Sep 17 00:00:00 2001
+From: Youhei SASAKI <uwabami@gfd-dennou.org>
+Date: Sun, 14 Oct 2012 04:33:46 +0900
+Subject: [PATCH] Fix Spelling Error
+
+Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+---
+ src/cairo-dock-user-menu.c                   | 2 +-
+ src/implementations/cairo-dock-X-manager.c   | 2 +-
+ src/implementations/cairo-dock-X-utilities.c | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/src/cairo-dock-user-menu.c b/src/cairo-dock-user-menu.c
+index aa93cb9..5ed8fcd 100644
+--- a/src/cairo-dock-user-menu.c
++++ b/src/cairo-dock-user-menu.c
+@@ -926,7 +926,7 @@ static void _cairo_dock_set_custom_appli_icon (G_GNUC_UNUSED GtkMenuItem *pMenuI
+ 			}  // apres la boucle, i = nbre d'elements, j = l'element qui a ete enleve.
+ 			if (j != -1)  // un element a ete enleve.
+ 			{
+-				cd_warning ("The class '%s' was explicitely set up to use the X icon, we'll change this behavior automatically.", icon->cClass);
++				cd_warning ("The class '%s' was explicitly set up to use the X icon, we'll change this behavior automatically.", icon->cClass);
+ 				if (j < i - 1)  // ce n'est pas le dernier
+ 				{
+ 					pExceptions[j] = pExceptions[i-1];
+diff --git a/src/implementations/cairo-dock-X-manager.c b/src/implementations/cairo-dock-X-manager.c
+index 373140f..dfe7ade 100644
+--- a/src/implementations/cairo-dock-X-manager.c
++++ b/src/implementations/cairo-dock-X-manager.c
+@@ -581,7 +581,7 @@ static gboolean _cairo_dock_unstack_Xevents (G_GNUC_UNUSED gpointer data)
+ 						if (xactor->bIgnored)  // was ignored, simply recreate it
+ 						{
+ 							// remove it from the table, so that the XEvent loop detects it again
+-							g_hash_table_remove (s_hXWindowTable, &Xid);  // remove it explicitely, because the 'unref' might not free it
++							g_hash_table_remove (s_hXWindowTable, &Xid);  // remove it explicitly, because the 'unref' might not free it
+ 							xactor->iLastCheckTime = -1;
+ 							_delete_actor (xactor);  // unref it since we don't need it anymore
+ 						}
+diff --git a/src/implementations/cairo-dock-X-utilities.c b/src/implementations/cairo-dock-X-utilities.c
+index 26217da..e399b6d 100644
+--- a/src/implementations/cairo-dock-X-utilities.c
++++ b/src/implementations/cairo-dock-X-utilities.c
+@@ -1581,7 +1581,7 @@ cairo_surface_t *cairo_dock_create_surface_from_xpixmap (Pixmap Xid, int iWidth,
+ 	GdkPixbuf *pPixbuf = cairo_dock_get_pixbuf_from_pixmap (Xid, TRUE);
+ 	if (pPixbuf == NULL)
+ 	{
+-		cd_warning ("No thumbnail available.\nEither the WM doesn't support this functionnality, or the window was minimized when the dock has been launched.");
++		cd_warning ("No thumbnail available.\nEither the WM doesn't support this explicitly, or the window was minimized when the dock has been launched.");
+ 		return NULL;
+ 	}
+ 	
+-- 
+2.30.0.rc2
+

@@ -1,0 +1,88 @@
+From a3b7c2eac93b8df39012e2801a82a04e4425795c Mon Sep 17 00:00:00 2001
+From: Debian Cairo-dock Maintainers
+ <pkg-cairo-dock-devel@lists.alioth.debian.org>
+Date: Mon, 15 Jun 2015 16:16:44 +0900
+Subject: [PATCH] Use "gnome-calculator" instead of "gcalctool"
+
+Signed-off-by: Youhei SASAKI <uwabami@gfd-dennou.org>
+---
+ .../{01gcalctool.desktop => 01gnome-calculator.desktop}      | 2 +-
+ data/themes/default-theme-panel/launchers/CMakeLists.txt     | 2 +-
+ .../{01gcalctool.desktop => 01gnome-calculator.desktop}      | 2 +-
+ data/themes/default-theme/launchers/CMakeLists.txt           | 2 +-
+ tests/config.py                                              | 5 +----
+ 5 files changed, 5 insertions(+), 8 deletions(-)
+ rename data/themes/default-theme-panel/launchers/{01gcalctool.desktop => 01gnome-calculator.desktop} (94%)
+ rename data/themes/default-theme/launchers/{01gcalctool.desktop => 01gnome-calculator.desktop} (94%)
+
+diff --git a/data/themes/default-theme-panel/launchers/01gcalctool.desktop b/data/themes/default-theme-panel/launchers/01gnome-calculator.desktop
+similarity index 94%
+rename from data/themes/default-theme-panel/launchers/01gcalctool.desktop
+rename to data/themes/default-theme-panel/launchers/01gnome-calculator.desktop
+index 406aeca..c800680 100644
+--- a/data/themes/default-theme-panel/launchers/01gcalctool.desktop
++++ b/data/themes/default-theme-panel/launchers/01gnome-calculator.desktop
+@@ -47,4 +47,4 @@ Order=6.25
+ 
+ Icon Type=0
+ Type=Application
+-Origin=/usr/share/applications/gcalctool.desktop;kcalc.desktop;galculator.desktop
++Origin=/usr/share/applications/gnome-calculator.desktop;kcalc.desktop
+diff --git a/data/themes/default-theme-panel/launchers/CMakeLists.txt b/data/themes/default-theme-panel/launchers/CMakeLists.txt
+index 2025d9d..4f31229 100644
+--- a/data/themes/default-theme-panel/launchers/CMakeLists.txt
++++ b/data/themes/default-theme-panel/launchers/CMakeLists.txt
+@@ -4,7 +4,7 @@
+ install(FILES
+ 	01container.desktop
+ 	01firefox.desktop
+-	01gcalctool.desktop
++	01gnome-calculator.desktop
+ 	01libreoffice-calc.desktop
+ 	01libreoffice-impress.desktop
+ 	01libreoffice-writer.desktop
+diff --git a/data/themes/default-theme/launchers/01gcalctool.desktop b/data/themes/default-theme/launchers/01gnome-calculator.desktop
+similarity index 94%
+rename from data/themes/default-theme/launchers/01gcalctool.desktop
+rename to data/themes/default-theme/launchers/01gnome-calculator.desktop
+index 1ab6a99..d7b7398 100644
+--- a/data/themes/default-theme/launchers/01gcalctool.desktop
++++ b/data/themes/default-theme/launchers/01gnome-calculator.desktop
+@@ -47,4 +47,4 @@ Order=4
+ 
+ Icon Type=0
+ Type=Application
+-Origin=/usr/share/applications/gcalctool.desktop;kcalc.desktop;galculator.desktop
++Origin=/usr/share/applications/gnome-calculator.desktop;kcalc.desktop
+diff --git a/data/themes/default-theme/launchers/CMakeLists.txt b/data/themes/default-theme/launchers/CMakeLists.txt
+index b9566d4..5da53b5 100644
+--- a/data/themes/default-theme/launchers/CMakeLists.txt
++++ b/data/themes/default-theme/launchers/CMakeLists.txt
+@@ -3,7 +3,7 @@
+ 
+ install(FILES
+ 	01firefox.desktop
+-	01gcalctool.desktop
++	01gnome-calculator.desktop
+ 	01gimp.desktop
+ 	01gnome-terminal.desktop
+ 	01ooo-writer.desktop
+diff --git a/tests/config.py b/tests/config.py
+index 51166b2..eb7cfe5 100644
+--- a/tests/config.py
++++ b/tests/config.py
+@@ -1,10 +1,7 @@
+ 
+-#exe = 'galculator' # name of a program that can be launched several times, and is usually not running
+-#wmclass = 'galculator'  # its class
+-#desktop_file = 'fedora-galculator.desktop'  # its desktop file
+ exe = 'gnome-calculator' # name of a program that can be launched several times, and is usually not running
+ wmclass = 'gnome-calculator'  # its class
+-desktop_file = 'gcalctool.desktop'  # its desktop file
++desktop_file = 'gnome-calculator.desktop'  # its desktop file
+ 
+ exe1 = 'gnome-session-properties'  # a program that doesn't have a launcher yet
+ wmclass1 = 'gnome-session-properties'  # its class
+-- 
+2.30.0.rc2
+
