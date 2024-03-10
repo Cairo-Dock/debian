@@ -4,7 +4,6 @@ Priority: optional
 Maintainer: Daniel Kondor <kondor.dani@gmail.com>
 Build-Depends: cdbs, debhelper-compat (= 12), cmake(>= 2.8.12), dpkg-dev (>= 1.16.1~),
  cairo-dock-dev (>= 3.5.99),
- cli-common-dev [amd64 armel armhf i386 mipsel kfreebsd-any ppc64 ppc64el s390x],
  libasound2-dev [linux-any],
  libcairo2-dev (>= 1.8.0),
  libcurl4-gnutls-dev,
@@ -21,8 +20,8 @@ Build-Depends: cdbs, debhelper-compat (= 12), cmake(>= 2.8.12), dpkg-dev (>= 1.1
  libgnutls28-dev,
  libgtk-3-dev,
  libical-dev,
- libido3-0.1-dev,
- libindicator3-dev,
+ libayatana-ido3-dev,
+ libayatana-indicator3-dev,
  libpango1.0-dev,
  libpulse-dev,
  librsvg2-dev,
@@ -676,6 +675,7 @@ Description: Status notification plug-in for Cairo-dock
 Package: cairo-dock-indicator-generic-plug-in
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Recommends: ayatana-indicator-application, ayatana-indicator-keyboard, ayatana-indicator-messages, ayatana-indicator-notifications, ayatana-indicator-printers, ayatana-indicator-sound
 Description: Indicator plug-in for Cairo-dock
  A collection of official plug-ins and applets for cairo-dock.
  .
