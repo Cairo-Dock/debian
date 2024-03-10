@@ -628,7 +628,7 @@ Package: cairo-dock-impulse-plug-in
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
 	cairo-dock-plug-in-data (= ${source:Version}),
-	pulseaudio
+	pulseaudio | pipewire-pulse
 Description: Implus plug-in Cairo-dock
  A collection of official plug-ins and applets for cairo-dock.
  .
