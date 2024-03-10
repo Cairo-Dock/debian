@@ -21,6 +21,7 @@ Indicator-Generic: cairo-dock-indicator-generic-plug-in
 keyboard-indicator: cairo-dock-keyboard-indicator-plugin
 logout: cairo-dock-logout-plugin
 mail: cairo-dock-mail-plugin
+Messaging-Menu: cairo-dock-messaging-menu-plug-in
 motion-blur: cairo-dock-motion-blur-plugin
 musicPlayer: cairo-dock-musicplayer-plugin
 netspeed: cairo-dock-netspeed-plugin
@@ -29,6 +30,7 @@ quick-browser: cairo-dock-quick-browser-plugin
 dock-rendering: cairo-dock-rendering-plugin
 RSSreader: cairo-dock-rssreader-plugin
 Scooby-Do: cairo-dock-scooby-do-plugin
+Screenshot: cairo-dock-screenshot-plug-in
 shortcuts: cairo-dock-shortcuts-plugin
 showDesktop; cairo-dock-showdesktop-plugin
 show-mouse: cairo-dock-showmouse-plugin

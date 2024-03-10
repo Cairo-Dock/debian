@@ -684,3 +684,13 @@ Description: Indicator plug-in for Cairo-dock
  for instance, an indicator to control the printer jobs. Idle Indicators
  are automatically hidden. You can also blacklist indicators you don't
  want to see.
+
+Package: cairo-dock-screenshot-plug-in
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Description: Screenshot plug-in for Cairo-dock
+ A collection of official plug-ins and applets for cairo-dock.
+ .
+ This plug-in provides a simple way to take screenshots.
+
+
