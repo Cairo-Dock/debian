@@ -34,7 +34,7 @@ Homepage: http://www.glx-dock.org/
 Package: cairo-dock
 Architecture: any
 Depends: cairo-dock-core (= ${binary:Version}),
-         cairo-dock-plug-ins (>= 3.4.1),
+         cairo-dock-plug-ins (>= 3.5.99),
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: cairo-dock-gnome-session
@@ -66,9 +66,9 @@ Description: Light eye-candy fully themable animated dock for Linux desktop
 
 Package: cairo-dock-gnome-session
 Architecture: any
-Depends: cairo-dock-core (>= 3.4.1),
+Depends: cairo-dock-core (>= 3.5.99),
          cairo-dock-gnome-integration-plug-in,
-         cairo-dock-plug-ins (>= 3.4.1),
+         cairo-dock-plug-ins (>= 3.5.99),
          compiz | metacity,
          gnome-flashback,
          gnome-session-bin,
