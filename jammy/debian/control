@@ -25,6 +25,7 @@ Build-Depends: autotools-dev,
                libxrandr-dev,
                libxrender-dev,
                libxtst-dev,
+               nlohmann-json3-dev,
                pkg-config,
                systemd,
                quilt
