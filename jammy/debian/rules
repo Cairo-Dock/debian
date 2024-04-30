@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- -Denable-desktop-manager=True
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -f src/config.h
+	rm -f src/gldit/gldi-config.h
+	rm -f src/gldit/gldi-module-config.h
+
+override_dh_installsystemduser:
+	dh_installsystemduser --no-enable

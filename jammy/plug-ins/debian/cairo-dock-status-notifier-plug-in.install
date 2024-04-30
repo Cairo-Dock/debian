@@ -1,0 +1,3 @@
+usr/lib/*/cairo-dock/libcd-status-notifier.so
+usr/lib/*/cairo-dock/status-notifier-watcher
+usr/share/cairo-dock/plug-ins/Status-Notifier/*

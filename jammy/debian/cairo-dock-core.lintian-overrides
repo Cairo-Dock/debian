@@ -1,0 +1,2 @@
+cairo-dock-core: package-name-doesnt-match-sonames libgldi3
+cairo-dock-core: unused-shlib-entry-in-control-file libcd Help

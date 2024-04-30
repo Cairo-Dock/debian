@@ -1,0 +1,3 @@
+usr/lib/*/cairo-dock/libcd-Dbus.so
+usr/lib/*/cairo-dock/cairo-dock-launcher-API-daemon
+usr/share/cairo-dock/plug-ins/Dbus/*
