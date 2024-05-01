@@ -3,15 +3,14 @@ Upstream-Name: cairo-dock
 Source: https://launchpad.net/cairo-dock
 
 Files: */*
+ *
 Copyright: 2007-2014 Fabrice Rey <fabounet@glx-dock.org>
 License: GPL-3+
 
 Files:  src/cairo-dock.c
  src/gldit/cairo-dock-animations.c
- src/gldit/cairo-dock-application-facility.c
- src/gldit/cairo-dock-applications-manager.c
- src/gldit/cairo-dock-application-facility.c
- src/gldit/cairo-dock-applications-manager.c
+ src/gldit/cairo-dock-application-facility.?
+ src/gldit/cairo-dock-applications-manager.?
  src/gldit/cairo-dock-class-icon-manager.c
  src/gldit/cairo-dock-class-manager.c
  src/gldit/cairo-dock-container.?
@@ -32,12 +31,12 @@ Files:  src/cairo-dock.c
  src/gldit/cairo-dock-opengl.h
  src/gldit/cairo-dock-surface-factory.?
  src/gldit/cairo-dock-windows-manager.?
- src/implementations/cairo-dock-egl-*
+ src/implementations/cairo-dock-egl.?
  src/implementations/cairo-dock-wayland-manager.c
  src/implementations/cairo-dock-wayland-manager.h
 Copyright: 2007-2014 Fabrice Rey <fabounet@glx-dock.org>
            2020-2024 Daniel Kondor <kondor.dani@gmail.com>
-License: GPL 3+
+License: GPL-3+
 
 Files: src/implementations/cairo-dock-foreign-toplevel.?
  src/implementations/cairo-dock-plasma-*
@@ -45,8 +44,9 @@ Files: src/implementations/cairo-dock-foreign-toplevel.?
  src/implementations/cairo-dock-wayfire-*
  src/implementations/cairo-dock-wayland-wm.?
  src/implementations/cairo-dock-wayland-hotspots.?
-Copyright: 2020-2023 Daniel Kondor <kondor.dani@gmail.com>
-License: GPL 3+ (See /usr/share/common-licenses/GPL-3 for complete license)
+ README_Wayland.md
+Copyright: 2020-2024 Daniel Kondor <kondor.dani@gmail.com>
+License: GPL-3+
 
 Files: src/implementations/gdk-move-to-rect-hack.?
 Copyright: 2020 Sophie Winter
@@ -100,7 +100,7 @@ License: GPL-3+
 
 Files: src/implementations/proto/plasma-window-management.xml
 Copyright: 2013-2014 Pier Luigi Fiorini
-License: LGPL 2.1+
+License: LGPL-2.1+
 
 Files: src/implementations/proto/wayfire-shell-unstable-v2.xml
 Copyright: Copyright (c) 2018 Iliya Bozhinov
@@ -129,6 +129,10 @@ Copyright: 2019 Christopher Billington
            2022 Victoria Brekenfeld
 License: MIT-no-advertising
 
+Files: LICENSE
+ LGPL-2
+Copyright: Copyright (C) 1991, 2007 Free Software Foundation, Inc.
+License: FSF-no-changes
 
 License: GPL-3+
  This program is free software; you can redistribute it and/or modify
@@ -179,11 +183,27 @@ License: LGPL-2.0+
  On Debian systems, the complete text of the GNU Lesser General
  Public License can be found in "/usr/share/common-licenses/LGPL-2".
 
+License: LGPL-2.1+
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License can be found in "/usr/share/common-licenses/LGPL-2.1".
+
 License: LGPL-3
  This library is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
- License as published by the Free Software Foundation; either
- version 3 of the License, or (at your option) any later version.
+ License, version 3, as published by the Free Software Foundation.
  .
  This library is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -237,3 +257,27 @@ License: MIT-no-advertising
  RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF 
  CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN 
  CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+License: MIT
+ Permission is hereby granted, free of charge, to any person obtaining 
+ a copy of this software and associated documentation files (the 
+ "Software"), to deal in the Software without restriction, including 
+ without limitation the rights to use, copy, modify, merge, publish, 
+ distribute, sublicense, and/or sell copies of the Software, and to 
+ permit persons to whom the Software is furnished to do so, subject to 
+ the following conditions:
+ .
+ The above copyright notice and this permission notice shall be
+ included in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY 
+ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
+ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+License: FSF-no-changes
+ Everyone is permitted to copy and distribute verbatim copies
+ of this license document, but changing it is not allowed.
