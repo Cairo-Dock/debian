@@ -2,8 +2,7 @@ Source: cairo-dock
 Section: x11
 Priority: optional
 Maintainer: Daniel Kondor <kondor.dani@gmail.com>
-Build-Depends: autotools-dev,
-               cmake (>= 3.16.0),
+Build-Depends: cmake (>= 3.16.0),
                debhelper (>= 10),
                debhelper-compat (= 12),
                dpkg-dev (>= 1.16.1~),
@@ -27,8 +26,8 @@ Build-Depends: autotools-dev,
                libxtst-dev,
                nlohmann-json3-dev,
                pkg-config,
-               systemd,
-               quilt
+               quilt,
+               systemd
 Standards-Version: 4.5.0
 Homepage: http://www.glx-dock.org/
 
@@ -73,7 +72,8 @@ Depends: cairo-dock-core (>= 3.5.99),
          compiz | metacity,
          gnome-flashback,
          gnome-session-bin,
-         gnome-settings-daemon (>= 3.24)
+         gnome-settings-daemon (>= 3.24),
+         ${misc:Depends}
 Description: An X11 desktop session for Cairo-Dock
  Cairo-dock has a family-likeness with OS X dock, but with more options.
  It uses cairo to render nice graphics, and Glitz to use hardware acceleration.

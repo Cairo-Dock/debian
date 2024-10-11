@@ -2,95 +2,97 @@ Source: cairo-dock-plug-ins
 Section: x11
 Priority: optional
 Maintainer: Daniel Kondor <kondor.dani@gmail.com>
-Build-Depends: cdbs, debhelper-compat (= 12), cmake(>= 2.8.12), dpkg-dev (>= 1.16.1~),
- cairo-dock-dev (>= 3.5.99),
- libasound2-dev [linux-any],
- libcairo2-dev (>= 1.8.0),
- libcurl4-gnutls-dev,
- libssl-dev,
- libdbus-glib-1-dev,
- libdbusmenu-glib-dev,
- libdbusmenu-gtk3-dev,
- libetpan-dev,
- libexif-dev,
- libgl1-mesa-dev | libgl-dev,
- libglib2.0-dev,
- libglu1-mesa-dev | libglu-dev,
- libgnome-menu-3-dev,
- libgnutls28-dev,
- libgtk-3-dev,
- libical-dev,
- libayatana-ido3-dev,
- libayatana-indicator3-dev,
- libpango1.0-dev,
- libpulse-dev,
- librsvg2-dev,
- libsensors-dev,
- libupower-glib-dev,
- libvte-2.91-dev,
- libxklavier-dev,
- libxml2-dev,
- libxtst-dev,
- libxxf86vm-dev,
- libzeitgeist-2.0-dev,
- python3,
- python3-setuptools,
- ruby,
- ruby-dev,
- valac,
- x11proto-xf86vidmode-dev
+Build-Depends: cairo-dock-dev (>= 3.5.99),
+               cmake(>= 3.16.0),
+               debhelper-compat (= 12),
+               dpkg-dev (>= 1.16.1~),
+               libasound2-dev [linux-any],
+               libayatana-ido3-dev,
+               libayatana-indicator3-dev,
+               libcairo2-dev (>= 1.8.0),
+               libcurl4-gnutls-dev,
+               libdbus-glib-1-dev,
+               libdbusmenu-glib-dev,
+               libdbusmenu-gtk3-dev,
+               libetpan-dev,
+               libexif-dev,
+               libgl1-mesa-dev | libgl-dev,
+               libglib2.0-dev,
+               libglu1-mesa-dev | libglu-dev,
+               libgnome-menu-3-dev,
+               libgnutls28-dev,
+               libgtk-3-dev,
+               libical-dev,
+               libpango1.0-dev,
+               libpulse-dev,
+               librsvg2-dev,
+               libsensors-dev,
+               libssl-dev,
+               libupower-glib-dev,
+               libvte-2.91-dev,
+               libxklavier-dev,
+               libxml2-dev,
+               libxtst-dev,
+               libxxf86vm-dev,
+               libzeitgeist-2.0-dev,
+               python3,
+               python3-setuptools,
+               ruby,
+               ruby-dev,
+               valac,
+               x11proto-xf86vidmode-dev
 Build-Conflicts: libwebkitgtk-3.0-dev, python-minimal
 Standards-Version: 4.1.4
 Homepage: http://www.glx-dock.org/
 
 Package: cairo-dock-plug-ins
 Architecture: any
-Depends: ${misc:Depends},
-  cairo-dock-alsamixer-plug-in [linux-any],
-  cairo-dock-animated-icons-plug-in,
-  cairo-dock-cairo-penguin-plug-in,
-  cairo-dock-clipper-plug-in,
-  cairo-dock-clock-plug-in,
-  cairo-dock-dbus-plug-in,
-  cairo-dock-desklet-rendering-plug-in,
-  cairo-dock-dialog-rendering-plug-in,
-  cairo-dock-drop-indicator-plug-in,
-  cairo-dock-dustbin-plug-in,
-  cairo-dock-icon-effect-plug-in,
-  cairo-dock-illusion-plug-in,
-  cairo-dock-indicator-generic-plug-in,
-  cairo-dock-logout-plug-in,
-  cairo-dock-motion-blur-plug-in,
-  cairo-dock-netspeed-plug-in,
-  cairo-dock-powermanager-plug-in,
-  cairo-dock-quick-browser-plug-in,
-  cairo-dock-rendering-plug-in,
-  cairo-dock-shortcuts-plug-in,
-  cairo-dock-showdesktop-plug-in,
-  cairo-dock-showmouse-plug-in,
-  cairo-dock-slider-plug-in,
-  cairo-dock-stack-plug-in,
-  cairo-dock-status-notifier-plug-in,
-  cairo-dock-switcher-plug-in,
-  cairo-dock-systray-plug-in,
-  cairo-dock-tomboy-plug-in,
-  cairo-dock-toons-plug-in,
-  cairo-dock-weather-plug-in,
-  cairo-dock-wifi-plug-in,
-  cairo-dock-xgamma-plug-in,
-  cairo-dock-gmenu-plug-in,
-  cairo-dock-keyboard-indicator-plug-in,
-  cairo-dock-terminal-plug-in,
-  cairo-dock-mail-plug-in,
-  cairo-dock-rssreader-plug-in,
-  cairo-dock-system-monitor-plug-in,
-  cairo-dock-dnd2share-plug-in,
-  cairo-dock-musicplayer-plug-in,
-  cairo-dock-folders-plug-in,
-  cairo-dock-impulse-plug-in,
-  cairo-dock-messaging-menu-plug-in,
-  cairo-dock-recent-events-plug-in,
-  cairo-dock-remote-control-plug-in
+Depends: cairo-dock-alsamixer-plug-in [linux-any],
+         cairo-dock-animated-icons-plug-in,
+         cairo-dock-cairo-penguin-plug-in,
+         cairo-dock-clipper-plug-in,
+         cairo-dock-clock-plug-in,
+         cairo-dock-dbus-plug-in,
+         cairo-dock-desklet-rendering-plug-in,
+         cairo-dock-dialog-rendering-plug-in,
+         cairo-dock-dnd2share-plug-in,
+         cairo-dock-drop-indicator-plug-in,
+         cairo-dock-dustbin-plug-in,
+         cairo-dock-folders-plug-in,
+         cairo-dock-gmenu-plug-in,
+         cairo-dock-icon-effect-plug-in,
+         cairo-dock-illusion-plug-in,
+         cairo-dock-impulse-plug-in,
+         cairo-dock-indicator-generic-plug-in,
+         cairo-dock-keyboard-indicator-plug-in,
+         cairo-dock-logout-plug-in,
+         cairo-dock-mail-plug-in,
+         cairo-dock-messaging-menu-plug-in,
+         cairo-dock-motion-blur-plug-in,
+         cairo-dock-musicplayer-plug-in,
+         cairo-dock-netspeed-plug-in,
+         cairo-dock-powermanager-plug-in,
+         cairo-dock-quick-browser-plug-in,
+         cairo-dock-recent-events-plug-in,
+         cairo-dock-remote-control-plug-in,
+         cairo-dock-rendering-plug-in,
+         cairo-dock-rssreader-plug-in,
+         cairo-dock-shortcuts-plug-in,
+         cairo-dock-showdesktop-plug-in,
+         cairo-dock-showmouse-plug-in,
+         cairo-dock-slider-plug-in,
+         cairo-dock-stack-plug-in,
+         cairo-dock-status-notifier-plug-in,
+         cairo-dock-switcher-plug-in,
+         cairo-dock-system-monitor-plug-in,
+         cairo-dock-systray-plug-in,
+         cairo-dock-terminal-plug-in,
+         cairo-dock-tomboy-plug-in,
+         cairo-dock-toons-plug-in,
+         cairo-dock-weather-plug-in,
+         cairo-dock-wifi-plug-in,
+         cairo-dock-xgamma-plug-in,
+         ${misc:Depends}
 Breaks: cairo-dock-plugins (<< 2.4.0~2-1)
 Replaces: cairo-dock-plugins (<< 2.4.0~2-1)
 Description: Cairo-dock - All plug-ins
@@ -101,7 +103,7 @@ Description: Cairo-dock - All plug-ins
 
 Package: cairo-dock-plug-in-data
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Breaks: cairo-dock-plugin-data (<< 2.4.0~2-1)
 Replaces: cairo-dock-plugin-data (<< 2.4.0~2-1)
 Description: Cairo-dock - Plug-in data files
@@ -111,7 +113,9 @@ Description: Cairo-dock - Plug-in data files
 
 Package: cairo-dock-alsamixer-plug-in
 Architecture: linux-any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-alsamixer-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-alsamixer-plugin (<< 2.4.0~2-1)
 Description: Alsamixer plug-in for Cairo-dock
@@ -122,7 +126,9 @@ Description: Alsamixer plug-in for Cairo-dock
 
 Package: cairo-dock-animated-icons-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-animated-icons-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-animated-icons-plugin (<< 2.4.0~2-1)
 Description: Animated icons plug-in Cairo-dock
@@ -132,7 +138,9 @@ Description: Animated icons plug-in Cairo-dock
 
 Package: cairo-dock-cairo-penguin-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-cairo-penguin-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-cairo-penguin-plugin (<< 2.4.0~2-1)
 Description: Cairo-Penguin plug-in for Cairo-dock
@@ -144,7 +152,9 @@ Description: Cairo-Penguin plug-in for Cairo-dock
 
 Package: cairo-dock-clipper-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-clipper-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-clipper-plugin (<< 2.4.0~2-1)
 Description: Clipper plug-in for Cairo-dock
@@ -157,7 +167,9 @@ Description: Clipper plug-in for Cairo-dock
 
 Package: cairo-dock-clock-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-clock-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-clock-plugin (<< 2.4.0~2-1)
 Description: Clock plug-in for Cairo-dock
@@ -172,12 +184,14 @@ Description: Clock plug-in for Cairo-dock
 
 Package: cairo-dock-dbus-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-dbus-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-dbus-plugin (<< 2.4.0~2-1)
 Suggests: cairo-dock-dbus-plug-in-interface-python (>= ${source:Version}),
-	cairo-dock-dbus-plug-in-interface-ruby (>= ${source:Version}),
-	cairo-dock-dbus-plug-in-interface-vala (>= ${source:Version})
+          cairo-dock-dbus-plug-in-interface-ruby (>= ${source:Version}),
+          cairo-dock-dbus-plug-in-interface-vala (>= ${source:Version})
 Description: Dbus plug-in for Cairo-dock
  A collection of official plug-ins and applets for cairo-dock
  .
@@ -186,7 +200,7 @@ Description: Dbus plug-in for Cairo-dock
 
 Package: cairo-dock-dbus-plug-in-interface-python
 Architecture: all
-Depends: cairo-dock-plug-ins (>= ${source:Version}), ${misc:Depends}, python3
+Depends: cairo-dock-plug-ins (>= ${source:Version}), python3, ${misc:Depends}
 Description: library of D-Bus interface for Python of Cairo-dock
  A collection of official plug-ins and applets for cairo-dock.
  .
@@ -194,7 +208,7 @@ Description: library of D-Bus interface for Python of Cairo-dock
 
 Package: cairo-dock-dbus-plug-in-interface-ruby
 Architecture: all
-Depends: cairo-dock-plug-ins (>= ${source:Version}), ${misc:Depends}, ruby
+Depends: cairo-dock-plug-ins (>= ${source:Version}), ruby, ${misc:Depends}
 Description: library of D-Bus interface for ruby of Cairo-dock
  A collection of official plug-ins and applets for cairo-dock.
  .
@@ -202,8 +216,10 @@ Description: library of D-Bus interface for ruby of Cairo-dock
 
 Package: cairo-dock-dbus-plug-in-interface-vala
 Architecture: any
-Depends: cairo-dock-plug-ins (>= ${source:Version}), ${shlibs:Depends},
-	${misc:Depends}, valac
+Depends: cairo-dock-plug-ins (>= ${source:Version}),
+         valac,
+         ${misc:Depends},
+         ${shlibs:Depends}
 Description: library of D-Bus interface for vala of Cairo-dock
  A collection of official plug-ins and applets for cairo-dock.
  .
@@ -211,7 +227,9 @@ Description: library of D-Bus interface for vala of Cairo-dock
 
 Package: cairo-dock-desklet-rendering-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-desklet-rendering-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-desklet-rendering-plugin (<< 2.4.0~2-1)
 Description: Desklet rendering plug-in for Cairo-dock
@@ -221,7 +239,9 @@ Description: Desklet rendering plug-in for Cairo-dock
 
 Package: cairo-dock-dialog-rendering-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-dialog-rendering-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-dialog-rendering-plugin (<< 2.4.0~2-1)
 Description: Dialog rendering plug-in for Cairo-dock
@@ -231,7 +251,9 @@ Description: Dialog rendering plug-in for Cairo-dock
 
 Package: cairo-dock-drop-indicator-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-drop-indicator-plugin  (<< 2.4.0~2-1)
 Replaces: cairo-dock-drop-indicator-plugin (<< 2.4.0~2-1)
 Description: Drop indicator plug-in for Cairo-dock
@@ -242,7 +264,9 @@ Description: Drop indicator plug-in for Cairo-dock
 
 Package: cairo-dock-dustbin-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-dustbin-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-dustbin-plugin (<< 2.4.0~2-1)
 Description: Dustbin plug-in for Cairo-dock
@@ -255,7 +279,9 @@ Description: Dustbin plug-in for Cairo-dock
 
 Package: cairo-dock-icon-effect-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-icon-effect-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-icon-effect-plugin (<< 2.4.0~2-1)
 Description: Icon effect plug-in for Cairo-dock
@@ -265,7 +291,9 @@ Description: Icon effect plug-in for Cairo-dock
 
 Package: cairo-dock-illusion-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-illusion-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-illusion-plugin (<< 2.4.0~2-1)
 Description: Illusion plug-in for Cairo-dock
@@ -275,7 +303,9 @@ Description: Illusion plug-in for Cairo-dock
 
 Package: cairo-dock-logout-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-logout-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-logout-plugin (<< 2.4.0~2-1)
 Description: Logout plug-in for Cairo-dock
@@ -285,7 +315,9 @@ Description: Logout plug-in for Cairo-dock
 
 Package: cairo-dock-motion-blur-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-motion-blur-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-motion-blur-plugin (<< 2.4.0~2-1)
 Description: Motion blur plug-in for Cairo-dock
@@ -295,7 +327,9 @@ Description: Motion blur plug-in for Cairo-dock
 
 Package: cairo-dock-netspeed-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-netspeed-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-netspeed-plugin (<< 2.4.0~2-1)
 Description: Netspeed plug-in for Cairo-dock
@@ -306,8 +340,10 @@ Description: Netspeed plug-in for Cairo-dock
 
 Package: cairo-dock-powermanager-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version}),
-	gnome-power-manager
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         gnome-power-manager,
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-powermanager-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-powermanager-plugin  (<< 2.4.0~2-1)
 Description: Powermanager plug-in for Cairo-dock
@@ -318,7 +354,9 @@ Description: Powermanager plug-in for Cairo-dock
 
 Package: cairo-dock-quick-browser-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-quick-browser-plugin  (<< 2.4.0~2-1)
 Replaces: cairo-dock-quick-browser-plugin (<< 2.4.0~2-1)
 Description: Quick browser plug-in for Cairo-dock
@@ -328,7 +366,9 @@ Description: Quick browser plug-in for Cairo-dock
 
 Package: cairo-dock-rendering-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-rendering-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-rendering-plugin (<< 2.4.0~2-1)
 Description: Rendering plug-in for Cairo-dock
@@ -341,8 +381,10 @@ Description: Rendering plug-in for Cairo-dock
 
 Package: cairo-dock-shortcuts-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version}),
-	nautilus
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         nautilus,
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-shortcuts-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-shortcuts-plugin (<< 2.4.0~2-1)
 Description: Shortcuts plug-in for Cairo-dock
@@ -353,7 +395,9 @@ Description: Shortcuts plug-in for Cairo-dock
 
 Package: cairo-dock-showdesktop-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-showdesktop-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-showdesktop-plugin (<< 2.4.0~2-1)
 Description: Show desktop plug-in for Cairo-dock
@@ -364,7 +408,9 @@ Description: Show desktop plug-in for Cairo-dock
 
 Package: cairo-dock-showmouse-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-showmouse-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-showmouse-plugin (<< 2.4.0~2-1)
 Description: Showmouse plug-in Cairo-dock
@@ -375,7 +421,9 @@ Description: Showmouse plug-in Cairo-dock
 
 Package: cairo-dock-slider-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-slider-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-slider-plugin (<< 2.4.0~2-1)
 Description: Slider plug-in Cairo-dock
@@ -386,7 +434,9 @@ Description: Slider plug-in Cairo-dock
 
 Package: cairo-dock-stack-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-stack-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-stack-plugin (<< 2.4.0~2-1)
 Description: Stack plug-in for Cairo-dock
@@ -397,7 +447,9 @@ Description: Stack plug-in for Cairo-dock
 
 Package: cairo-dock-switcher-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-switcher-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-switcher-plugin (<< 2.4.0~2-1)
 Description: Switcher plug-in for Cairo-dock
@@ -408,7 +460,9 @@ Description: Switcher plug-in for Cairo-dock
 
 Package: cairo-dock-systray-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-systray-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-systray-plugin (<< 2.4.0~2-1)
 Description: Systray plug-in for Cairo-dock
@@ -418,8 +472,10 @@ Description: Systray plug-in for Cairo-dock
 
 Package: cairo-dock-tomboy-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version}),
-	gnote | tomboy
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         gnote | tomboy,
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-tomboy-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-tomboy-plugin (<< 2.4.0~2-1)
 Description: Tomboy plug-in for Cairo-dock
@@ -430,7 +486,9 @@ Description: Tomboy plug-in for Cairo-dock
 
 Package: cairo-dock-toons-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-toons-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-toons-plugin (<< 2.4.0~2-1)
 Description: Toons plug-in for Cairo-dock
@@ -440,7 +498,9 @@ Description: Toons plug-in for Cairo-dock
 
 Package: cairo-dock-weather-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-weather-plugin  (<< 2.4.0~2-1)
 Replaces: cairo-dock-weather-plugin (<< 2.4.0~2-1)
 Description: Weather plug-in for Cairo-dock
@@ -452,7 +512,9 @@ Description: Weather plug-in for Cairo-dock
 
 Package: cairo-dock-wifi-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-wifi-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-wifi-plugin (<< 2.4.0~2-1)
 Description: Wifi plug-in for Cairo-dock
@@ -463,10 +525,12 @@ Description: Wifi plug-in for Cairo-dock
 
 Package: cairo-dock-xgamma-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-xgamma-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-xgamma-plugin (<< 2.4.0~2-1)
-Description:  Xgamma plug-in for Cairo-dock
+Description: Xgamma plug-in for Cairo-dock
  A collection of official plug-ins and applets for cairo-dock.
  .
  This plug-in setup the luminosity of your screen directly from your dock.
@@ -475,7 +539,9 @@ Description:  Xgamma plug-in for Cairo-dock
 
 Package: cairo-dock-gmenu-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-gmenu-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-gmenu-plugin (<< 2.4.0~2-1)
 Description: GMenu plug-in for Cairo-dock
@@ -486,7 +552,9 @@ Description: GMenu plug-in for Cairo-dock
 
 Package: cairo-dock-keyboard-indicator-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-keyboard-indicator-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-keyboard-indicator-plugin (<< 2.4.0~2-1)
 Description: Keyboard indicator plug-in for Cairo-dock
@@ -497,7 +565,9 @@ Description: Keyboard indicator plug-in for Cairo-dock
 
 Package: cairo-dock-terminal-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-terminal-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-terminal-plugin (<< 2.4.0~2-1)
 Description: Terminal plug-in for Cairo-dock
@@ -508,7 +578,9 @@ Description: Terminal plug-in for Cairo-dock
 
 Package: cairo-dock-mail-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-mail-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-mail-plugin (<< 2.4.0~2-1)
 Description: Mail plug-in for Cairo-dock
@@ -519,7 +591,9 @@ Description: Mail plug-in for Cairo-dock
 
 Package: cairo-dock-rssreader-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-rssreader-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-rssreader-plugin (<< 2.4.0~2-1)
 Description: RSS Reader plug-in for Cairo-dock
@@ -530,7 +604,9 @@ Description: RSS Reader plug-in for Cairo-dock
 
 Package: cairo-dock-system-monitor-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-system-monitor-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-system-monitor-plugin (<< 2.4.0~2-1)
 Description: System Monitor plug-in for Cairo-dock
@@ -542,7 +618,9 @@ Description: System Monitor plug-in for Cairo-dock
 
 Package: cairo-dock-dnd2share-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-dnd2share-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-dnd2share-plugin (<< 2.4.0~2-1)
 Description: Dnd2share plug-in for Cairo-dock
@@ -556,7 +634,9 @@ Description: Dnd2share plug-in for Cairo-dock
 
 Package: cairo-dock-musicplayer-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Suggests: audacious | amarok | banshee | exaile | listen | quodlibet | rhythmbox | xmms2
 Breaks: cairo-dock-musicplayer-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-musicplayer-plugin (<< 2.4.0~2-1)
@@ -569,7 +649,9 @@ Description: Music player plug-in for Cairo-dock
 
 Package: cairo-dock-gnome-integration-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-gnome-integration-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-gnome-integration-plugin (<< 2.4.0~2-1)
 Description: GNOME integration plug-in for Cairo-dock
@@ -582,7 +664,9 @@ Description: GNOME integration plug-in for Cairo-dock
 
 Package: cairo-dock-kde-integration-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-kde-integration-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-kde-integration-plugin (<< 2.4.0~2-1)
 Description: KDE integration plug-in for Cairo-dock
@@ -595,7 +679,9 @@ Description: KDE integration plug-in for Cairo-dock
 
 Package: cairo-dock-xfce-integration-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Breaks: cairo-dock-xfce-integration-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-xfce-integration-plugin (<< 2.4.0~2-1)
 Description: Xfce integration plug-in for Cairo-dock
@@ -605,19 +691,11 @@ Description: Xfce integration plug-in for Cairo-dock
  Xfce environment.
  This is auto-activated, so you don't need to activate it.
 
-#Package: cairo-dock-weblets-plug-in
-#Architecture: any
-#Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
-#Breaks: cairo-dock-weblets-plugin (<< 2.4.0~2-1)
-#Replaces:  cairo-dock-weblets-plugin(<< 2.4.0~2-1)
-#Description: Weblets plug-in for Cairo-dock
-# A collection of official plug-ins and applets for cairo-dock.
-# .
-# This plug-in allows you to show an interactive web page on your desktop.
-
 Package: cairo-dock-folders-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Description: Folders plug-in Cairo-dock
  A collection of official plug-ins and applets for cairo-dock.
  .
@@ -627,9 +705,10 @@ Description: Folders plug-in Cairo-dock
 
 Package: cairo-dock-impulse-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends},
-	cairo-dock-plug-in-data (= ${source:Version}),
-	pulseaudio | pipewire-pulse
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         pulseaudio | pipewire-pulse,
+         ${misc:Depends},
+         ${shlibs:Depends}
 Description: Implus plug-in Cairo-dock
  A collection of official plug-ins and applets for cairo-dock.
  .
@@ -638,7 +717,9 @@ Description: Implus plug-in Cairo-dock
 
 Package: cairo-dock-messaging-menu-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Description: Messaging menu plug-in Cairo-dock
  A collection of official plug-ins and applets for cairo-dock.
  .
@@ -647,7 +728,9 @@ Description: Messaging menu plug-in Cairo-dock
 
 Package: cairo-dock-recent-events-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Description: Recent events plug-in for Cairo-dock
  A collection of official plug-ins and applets for cairo-dock.
  .
@@ -655,7 +738,9 @@ Description: Recent events plug-in for Cairo-dock
 
 Package: cairo-dock-remote-control-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Description: Remote control plug-in for Cairo-dock
  A collection of official plug-ins and applets for cairo-dock.
  .
@@ -664,7 +749,9 @@ Description: Remote control plug-in for Cairo-dock
 
 Package: cairo-dock-status-notifier-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Description: Status notification plug-in for Cairo-dock
  A collection of official plug-ins and applets for cairo-dock.
  .
@@ -675,8 +762,14 @@ Description: Status notification plug-in for Cairo-dock
 
 Package: cairo-dock-indicator-generic-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
-Recommends: ayatana-indicator-keyboard, ayatana-indicator-notifications, ayatana-indicator-printers, ayatana-indicator-bluetooth, ayatana-indicator-display
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Recommends: ayatana-indicator-bluetooth,
+            ayatana-indicator-display,
+            ayatana-indicator-keyboard,
+            ayatana-indicator-notifications,
+            ayatana-indicator-printers
 Description: Indicator plug-in for Cairo-dock
  A collection of official plug-ins and applets for cairo-dock.
  .
@@ -688,10 +781,10 @@ Description: Indicator plug-in for Cairo-dock
 
 Package: cairo-dock-screenshot-plug-in
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cairo-dock-plug-in-data (= ${source:Version})
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Description: Screenshot plug-in for Cairo-dock
  A collection of official plug-ins and applets for cairo-dock.
  .
  This plug-in provides a simple way to take screenshots.
-
-

@@ -1,10 +1,11 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: cairo-dock-plugins
-Source: https://launchpad.net/cairo-dock-plug-ins
+Source: https://github.com/Cairo-Dock/cairo-dock-plug-ins
 
 Files: *
+ */*
 Copyright: 2007-2011 Fabrice Rey <fabounet@glx-dock.org>
-Commnet: Icons inspired of the Humanity Icons theme and recolorized by
+Comment: Icons inspired of the Humanity Icons theme and recolorized by
          Matthieu Baerts. Copyright: Daniel Fore, Jonian Guveli and
          K.Vishnoo Charan Reddy. under GPL-2+
 License: GPL-3+
@@ -124,6 +125,7 @@ License: GPL-3+
 Files: debian/*
 Copyright: 2009-2012 Nobuhiro Iwamatsu <iwamatsu@debian.org>
            2009-2012 Youhei SASAKI <uwabami@gfd-dennou.org>
+           2024 Daniel Kondor <kondor.dani@gmail.com>
 License: GPL-3+
 
 License: GPL-3+
