@@ -24,7 +24,7 @@ Build-Depends: cmake (>= 3.16.0),
                libxrandr-dev,
                libxrender-dev,
                libxtst-dev,
-               nlohmann-json3-dev,
+               libjson-c-dev,
                pkg-config,
                quilt,
                systemd
