@@ -209,7 +209,7 @@ Description: library of D-Bus interface for Python of Cairo-dock
 
 Package: cairo-dock-dbus-plug-in-interface-ruby
 Architecture: all
-Depends: cairo-dock-plug-ins (>= ${source:Version}), ruby, ${misc:Depends}
+Depends: cairo-dock-plug-ins (>= ${source:Version}), ruby, ruby-parseconfig, ruby-dbus, ${misc:Depends}
 Description: library of D-Bus interface for ruby of Cairo-dock
  A collection of official plug-ins and applets for cairo-dock.
  .
