@@ -1,2 +1,3 @@
-usr/lib/python*/dist-packages/*.py
-usr/lib/python*/dist-packages/*/*.pyc
+usr/share/cairo-dock/plug-ins/Dbus/*.py
+usr/share/cairo-dock/plug-ins/Dbus/CDBashApplet.sh
+usr/share/cairo-dock/plug-ins/Dbus/*/*.pyc

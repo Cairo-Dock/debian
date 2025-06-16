@@ -1,3 +1,4 @@
-usr/share/vala*
+usr/share/vala*/vapi/CDApplet.*
 usr/lib/*/libCDApplet*.so*
-usr/lib/*/pkgconfig/
+usr/lib/*/pkgconfig/CDApplet.pc
+usr/share/cairo-dock/plug-ins/Dbus/CDApplet.h
