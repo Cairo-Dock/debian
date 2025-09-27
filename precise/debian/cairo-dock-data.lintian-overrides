@@ -1,5 +1,0 @@
-# Cairo-dock plugin config files uses shebang
-# upstream is warned
-cairo-dock-data: interpreter-not-absolute
-cairo-dock-data: script-not-executable
-cairo-dock-data: unusual-interpreter
