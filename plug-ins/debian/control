@@ -2,7 +2,7 @@ Source: cairo-dock-plug-ins
 Section: x11
 Priority: optional
 Maintainer: Daniel Kondor <kondor.dani@gmail.com>
-Build-Depends: cairo-dock-dev (>= 3.5.99),
+Build-Depends: cairo-dock-dev (>= 3.6.0),
                cmake(>= 3.16.0),
                debhelper-compat (= 12),
                dpkg-dev (>= 1.16.1~),
@@ -16,12 +16,12 @@ Build-Depends: cairo-dock-dev (>= 3.5.99),
                libdbusmenu-gtk3-dev,
                libetpan-dev,
                libexif-dev,
-               libgl1-mesa-dev | libgl-dev,
+               libglvnd-dev | libgl-dev,
                libglib2.0-dev,
                libglu1-mesa-dev | libglu-dev,
                libgnome-menu-3-dev,
                libgnutls28-dev,
-               libgtk-3-dev,
+               libgtk-3-dev (>= 3.22.0),
                libical-dev,
                libjson-c-dev,
                libpango1.0-dev,
@@ -40,6 +40,7 @@ Build-Depends: cairo-dock-dev (>= 3.5.99),
                ruby,
                ruby-dev,
                valac,
+               pkgconf,
                x11proto-xf86vidmode-dev
 Build-Conflicts: libwebkitgtk-3.0-dev, python-minimal
 Standards-Version: 4.1.4
@@ -61,10 +62,12 @@ Depends: cairo-dock-alsamixer-plug-in [linux-any],
          cairo-dock-dustbin-plug-in,
          cairo-dock-folders-plug-in,
          cairo-dock-gmenu-plug-in,
+         cairo-dock-gnome-integration-plug-in,
          cairo-dock-icon-effect-plug-in,
          cairo-dock-illusion-plug-in,
          cairo-dock-impulse-plug-in,
          cairo-dock-indicator-generic-plug-in,
+         cairo-dock-kde-integration-plug-in,
          cairo-dock-keyboard-indicator-plug-in,
          cairo-dock-logout-plug-in,
          cairo-dock-mail-plug-in,
@@ -92,6 +95,7 @@ Depends: cairo-dock-alsamixer-plug-in [linux-any],
          cairo-dock-toons-plug-in,
          cairo-dock-weather-plug-in,
          cairo-dock-wifi-plug-in,
+         cairo-dock-xfce-integration-plug-in,
          cairo-dock-xgamma-plug-in,
          ${misc:Depends}
 Breaks: cairo-dock-plugins (<< 2.4.0~2-1)
@@ -105,7 +109,7 @@ Description: Cairo-dock - All plug-ins
 Package: cairo-dock-plug-in-data
 Architecture: all
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Breaks: cairo-dock-plugin-data (<< 2.4.0~2-1)
+Breaks: cairo-dock-plugin-data (<< 2.4.0~2-1), cairo-dock-core (<< 3.6.0)
 Replaces: cairo-dock-plugin-data (<< 2.4.0~2-1)
 Description: Cairo-dock - Plug-in data files
  A collection of official plug-ins and applets for cairo-dock.
