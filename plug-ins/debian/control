@@ -43,7 +43,7 @@ Build-Depends: cairo-dock-dev (>= 3.6.0),
                pkgconf,
                x11proto-xf86vidmode-dev
 Build-Conflicts: libwebkitgtk-3.0-dev, python-minimal
-Standards-Version: 4.1.4
+Standards-Version: 4.5.0
 Homepage: https://github.com/Cairo-Dock/cairo-dock-core
 
 Package: cairo-dock-plug-ins
