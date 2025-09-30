@@ -1,8 +1,8 @@
-cairo-dock (3.6.0~rc1) noble; urgency=medium
+cairo-dock (3.6.0) noble; urgency=medium
 
-  * New upstream release.
+  * New upstream release
 
- -- Daniel Kondor <kondor.dani@gmail.com>  Sat, 27 Sep 2025 22:10:32 +0100
+ -- Daniel Kondor <kondor.dani@gmail.com>  Tue, 30 Sep 2025 23:28:28 +0100
 
 cairo-dock (3.5.99-1) jammy; urgency=medium
 

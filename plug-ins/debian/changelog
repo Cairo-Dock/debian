@@ -1,8 +1,8 @@
-cairo-dock-plug-ins (3.6.0~rc1) noble; urgency=medium
+cairo-dock-plug-ins (3.6.0) noble; urgency=medium
 
   * New upstream release
 
- -- Daniel Kondor <kondor.dani@gmail.com>  Sat, 27 Sep 2025 22:12:14 +0100
+ -- Daniel Kondor <kondor.dani@gmail.com>  Tue, 30 Sep 2025 23:28:54 +0100
 
 cairo-dock-plug-ins (3.5.99-1) jammy; urgency=medium
 
