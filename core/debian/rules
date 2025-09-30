@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+DPKG_EXPORT_BUILDFLAGS = 1
+include /usr/share/dpkg/buildflags.mk
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- -Denable-desktop-manager=True -Denable-systemd-service=True
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -f src/config.h
+	rm -f src/gldit/gldi-config.h
+	rm -f src/gldit/gldi-module-config.h
+
+override_dh_installsystemduser:
+	dh_installsystemduser --no-enable
