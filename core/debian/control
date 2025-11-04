@@ -73,6 +73,7 @@ Depends: cairo-dock-core (>= 3.6.0),
          gnome-flashback,
          gnome-session-bin,
          gnome-settings-daemon (>= 3.24),
+         systemd,
          ${misc:Depends}
 Description: An X11 desktop session for Cairo-Dock
  Cairo-dock has a family-likeness with OS X dock, but with more options.
