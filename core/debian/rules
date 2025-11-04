@@ -7,7 +7,7 @@ include /usr/share/dpkg/buildflags.mk
 	dh $@
 
 override_dh_auto_configure:
-	dh_auto_configure -- -Denable-desktop-manager=True -Denable-systemd-service=True
+	dh_auto_configure -- -Denable-desktop-manager=True -Denable-systemd-service=True -Dgnome-session-use-systemd=True
 
 override_dh_auto_clean:
 	dh_auto_clean
