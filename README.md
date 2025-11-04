@@ -13,4 +13,5 @@ To build the packages, copy the respective `debian` subfolders to the source tre
 
 Packages built targeting the latest LTS release of Ubuntu (currently 24.04 / "noble"). However, they should build on all recent Ubuntu releases. Currently, they can be successfully built on at least the following: 22.04 / "jammy", 24.04 / "noble", 25.04 / "plucky", 25.10 / "questing" -- all that is needed is to change the release codename in `debian/changelog`. The packages should also build on recent Debian releases, but this is untested.
 
+Note: packaging in the `master` branch is intended for the latest development version of Cairo-Dock. To package the latest stable version (currently 3.6.1), use the `3.6` branch.
 
