@@ -2,7 +2,7 @@ Source: cairo-dock-plug-ins
 Section: x11
 Priority: optional
 Maintainer: Daniel Kondor <kondor.dani@gmail.com>
-Build-Depends: cairo-dock-dev (>= 3.6.0),
+Build-Depends: cairo-dock-dev (>= 3.6.90),
                cmake(>= 3.16.0),
                debhelper-compat (= 12),
                dpkg-dev (>= 1.16.1~),
