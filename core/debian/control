@@ -52,7 +52,7 @@ Description: Metapackage for cairo-dock
 Package: cairo-dock-core
 Architecture: any
 Pre-Depends: ${misc:Pre-Depends}
-Depends: libwayland-egl1, ${misc:Depends}, ${shlibs:Depends}
+Depends: libwayland-egl1, x11-utils, ${misc:Depends}, ${shlibs:Depends}
 Breaks: cairo-dock (<= 2.1.3.5-2), cairo-dock-plug-in-data (<< 3.6.93)
 Replaces: cairo-dock (<= 2.1.3.5-2)
 Provides: cairo-dock
