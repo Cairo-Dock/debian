@@ -1,3 +1,9 @@
+cairo-dock (3.6.2) noble; urgency=medium
+
+  * New upstream bugfix release
+
+ -- Daniel Kondor <kondor.dani@gmail.com>  Mon, 22 Dec 2025 13:03:16 +0100
+
 cairo-dock (3.6.1) noble; urgency=medium
 
   * New upstream bugfix release
