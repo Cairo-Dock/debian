@@ -35,7 +35,7 @@ Homepage: https://github.com/Cairo-Dock/cairo-dock-core
 Package: cairo-dock
 Architecture: any
 Depends: cairo-dock-core (= ${binary:Version}),
-         cairo-dock-plug-ins (>= 3.6.93),
+         cairo-dock-plug-ins (>= 3.6.95),
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: cairo-dock-gnome-session
@@ -53,10 +53,10 @@ Package: cairo-dock-core
 Architecture: any
 Pre-Depends: ${misc:Pre-Depends}
 Depends: libwayland-egl1, x11-utils, ${misc:Depends}, ${shlibs:Depends}
-Breaks: cairo-dock (<= 2.1.3.5-2), cairo-dock-plug-in-data (<< 3.6.93)
+Breaks: cairo-dock (<= 2.1.3.5-2), cairo-dock-plug-in-data (<< 3.6.95)
 Replaces: cairo-dock (<= 2.1.3.5-2)
 Provides: cairo-dock
-Recommends: cairo-dock-plugins (>= 3.6.91), curl
+Recommends: cairo-dock-plugins (>= 3.6.95), curl
 Description: Light eye-candy fully themable animated dock for Linux desktop
  Cairo-dock has a family-likeness with OS X dock, but with more options.
  It uses cairo to render nice graphics, and Glitz to use hardware acceleration.
@@ -67,9 +67,9 @@ Description: Light eye-candy fully themable animated dock for Linux desktop
 
 Package: cairo-dock-gnome-session
 Architecture: any
-Depends: cairo-dock-core (>= 3.6.91),
+Depends: cairo-dock-core (>= 3.6.95),
          cairo-dock-gnome-integration-plug-in,
-         cairo-dock-plug-ins (>= 3.6.91),
+         cairo-dock-plug-ins (>= 3.6.95),
          compiz | metacity,
          gnome-flashback,
          gnome-session-bin,
