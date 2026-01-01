@@ -725,6 +725,7 @@ Architecture: any
 Depends: cairo-dock-plug-in-data (= ${source:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
+Recommends: ayatana-indicator-messages
 Description: Messaging menu plug-in Cairo-dock
  A collection of official plug-ins and applets for cairo-dock.
  .
