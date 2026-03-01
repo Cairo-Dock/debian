@@ -61,6 +61,7 @@ Depends: cairo-dock-alsamixer-plug-in [linux-any],
          cairo-dock-drop-indicator-plug-in,
          cairo-dock-dustbin-plug-in,
          cairo-dock-folders-plug-in,
+         cairo-dock-global-menu-plug-in,
          cairo-dock-gmenu-plug-in,
          cairo-dock-gnome-integration-plug-in,
          cairo-dock-icon-effect-plug-in,
@@ -795,3 +796,17 @@ Description: Screenshot plug-in for Cairo-dock
  A collection of official plug-ins and applets for cairo-dock.
  .
  This plug-in provides a simple way to take screenshots.
+
+Package: cairo-dock-global-menu-plug-in
+Architecture: any
+Depends: cairo-dock-plug-in-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Global menu plug-in Cairo-dock
+ A collection of official plug-ins and applets for cairo-dock.
+ .
+ This provides a plugin to display the menubar of compatible apps
+ directly in Cairo-Dock. Works with most GTK3 and Qt apps on X11.
+ GTK4 apps are only supported if they explicitly export their menus;
+ Wayland support depends on the compositor, see our Wiki for more
+ information.
