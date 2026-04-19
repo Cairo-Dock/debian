@@ -2,7 +2,7 @@ Source: cairo-dock-plug-ins
 Section: x11
 Priority: optional
 Maintainer: Daniel Kondor <kondor.dani@gmail.com>
-Build-Depends: cairo-dock-dev (>= 3.6.97),
+Build-Depends: cairo-dock-dev (>= 3.6.99),
                cmake(>= 3.16.0),
                debhelper-compat (= 12),
                dpkg-dev (>= 1.16.1~),
@@ -11,7 +11,6 @@ Build-Depends: cairo-dock-dev (>= 3.6.97),
                libayatana-indicator3-dev,
                libcairo2-dev (>= 1.8.0),
                libcurl4-gnutls-dev,
-               libdbus-glib-1-dev,
                libdbusmenu-glib-dev,
                libdbusmenu-gtk3-dev,
                libetpan-dev,
@@ -110,7 +109,7 @@ Description: Cairo-dock - All plug-ins
 Package: cairo-dock-plug-in-data
 Architecture: all
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Breaks: cairo-dock-plugin-data (<< 2.4.0~2-1), cairo-dock-core (<< 3.6.97)
+Breaks: cairo-dock-plugin-data (<< 2.4.0~2-1), cairo-dock-core (<< 3.6.99)
 Replaces: cairo-dock-plugin-data (<< 2.4.0~2-1)
 Description: Cairo-dock - Plug-in data files
  A collection of official plug-ins and applets for cairo-dock.
