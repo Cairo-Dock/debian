@@ -28,7 +28,7 @@ Build-Depends: cairo-dock-dev (>= 3.6.99),
                librsvg2-dev,
                libsensors-dev,
                libssl-dev,
-               libupower-glib-dev,
+               libupower-glib-dev (>= 0.99.14),
                libvte-2.91-dev,
                libxklavier-dev,
                libxml2-dev,
@@ -346,9 +346,9 @@ Description: Netspeed plug-in for Cairo-dock
 Package: cairo-dock-powermanager-plug-in
 Architecture: any
 Depends: cairo-dock-plug-in-data (= ${source:Version}),
-         gnome-power-manager,
          ${misc:Depends},
          ${shlibs:Depends}
+Recommends: gnome-power-manager
 Breaks: cairo-dock-powermanager-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-powermanager-plugin  (<< 2.4.0~2-1)
 Description: Powermanager plug-in for Cairo-dock
@@ -483,10 +483,10 @@ Depends: cairo-dock-plug-in-data (= ${source:Version}),
          ${shlibs:Depends}
 Breaks: cairo-dock-tomboy-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-tomboy-plugin (<< 2.4.0~2-1)
-Description: Tomboy plug-in for Cairo-dock
+Description: Gnote plug-in for Cairo-dock
  A collection of official plug-ins and applets for cairo-dock.
  .
- This plug-in controls Gnote or TomBoy's notes directly in the dock.
+ This plug-in controls Gnote's notes directly in the dock.
  User can search inside notes and display their content on the icons.
 
 Package: cairo-dock-toons-plug-in
