@@ -90,6 +90,7 @@ Section: devel
 Architecture: any
 Pre-Depends: ${misc:Pre-Depends}
 Depends: cairo-dock-core (= ${binary:Version}),
+         libarchive-dev,
          libcairo2-dev | libcairo-dev,
          libcurl4-gnutls-dev,
          libglvnd-dev | libgl-dev,
