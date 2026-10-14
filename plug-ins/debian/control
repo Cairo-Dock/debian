@@ -390,7 +390,6 @@ Description: Rendering plug-in for Cairo-dock
 Package: cairo-dock-shortcuts-plug-in
 Architecture: any
 Depends: cairo-dock-plug-in-data (= ${source:Version}),
-         nautilus,
          ${misc:Depends},
          ${shlibs:Depends}
 Breaks: cairo-dock-shortcuts-plugin (<< 2.4.0~2-1)
