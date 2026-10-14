@@ -38,7 +38,6 @@ Depends: cairo-dock-core (= ${binary:Version}),
          cairo-dock-plug-ins (>= 3.6.102),
          ${misc:Depends},
          ${shlibs:Depends}
-Recommends: cairo-dock-gnome-session
 Description: Metapackage for cairo-dock
  Cairo-dock has a family-likeness with OS X dock, but with more options.
  It uses cairo to render nice graphics, and Glitz to use hardware acceleration.
@@ -64,26 +63,6 @@ Description: Light eye-candy fully themable animated dock for Linux desktop
  You can easily plug applets into it.
  .
  This package provides Cairo-dock-core application.
-
-Package: cairo-dock-gnome-session
-Architecture: any
-Depends: cairo-dock-core (>= ${binary:Version}),
-         cairo-dock-gnome-integration-plug-in,
-         cairo-dock-plug-ins (>= 3.6.102),
-         compiz | metacity,
-         gnome-flashback,
-         gnome-session-bin,
-         gnome-settings-daemon (>= 3.24),
-         systemd,
-         ${misc:Depends}
-Description: An X11 desktop session for Cairo-Dock
- Cairo-dock has a family-likeness with OS X dock, but with more options.
- It uses cairo to render nice graphics, and Glitz to use hardware acceleration.
- It's fully configurable and can be a taskbar too.
- You can easily plug applets into it.
- .
- This package provides a desktop environment using Cairo-Dock, either the
- Compiz or Metacity window manager and GNOME components.
 
 Package: cairo-dock-dev
 Section: devel
