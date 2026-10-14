@@ -645,7 +645,7 @@ Architecture: any
 Depends: cairo-dock-plug-in-data (= ${source:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
-Suggests: audacious | amarok | banshee | exaile | listen | quodlibet | rhythmbox | xmms2
+Suggests: audacious | clementine | exaile | qmm | quodlibet | rhythmbox | xmms2
 Breaks: cairo-dock-musicplayer-plugin (<< 2.4.0~2-1)
 Replaces: cairo-dock-musicplayer-plugin (<< 2.4.0~2-1)
 Description: Music player plug-in for Cairo-dock
