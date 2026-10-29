@@ -206,7 +206,7 @@ Description: Dbus plug-in for Cairo-dock
 
 Package: cairo-dock-dbus-plug-in-interface-python
 Architecture: all
-Depends: cairo-dock-plug-ins (>= ${source:Version}), python3, ${misc:Depends}
+Depends: cairo-dock-dbus-plug-in (>= ${source:Version}), python3, ${misc:Depends}
 Description: library of D-Bus interface for Python of Cairo-dock
  A collection of official plug-ins and applets for cairo-dock.
  .
@@ -214,7 +214,7 @@ Description: library of D-Bus interface for Python of Cairo-dock
 
 Package: cairo-dock-dbus-plug-in-interface-ruby
 Architecture: all
-Depends: cairo-dock-plug-ins (>= ${source:Version}), ruby, ruby-parseconfig, ruby-dbus, ${misc:Depends}
+Depends: cairo-dock-dbus-plug-in (>= ${source:Version}), ruby, ruby-parseconfig, ruby-dbus, ${misc:Depends}
 Description: library of D-Bus interface for ruby of Cairo-dock
  A collection of official plug-ins and applets for cairo-dock.
  .
@@ -222,7 +222,7 @@ Description: library of D-Bus interface for ruby of Cairo-dock
 
 Package: cairo-dock-dbus-plug-in-interface-vala
 Architecture: any
-Depends: cairo-dock-plug-ins (>= ${source:Version}),
+Depends: cairo-dock-dbus-plug-in (>= ${source:Version}),
          valac,
          ${misc:Depends},
          ${shlibs:Depends}
